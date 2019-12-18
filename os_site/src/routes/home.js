@@ -1,28 +1,28 @@
 import React from "react";
-import "../assets/js/jquery.min.js";
-import "../assets/js/jquery.scrollex.min.js";
-import "../assets/js/browser.min.js";
-import "../assets/js/breakpoints.min.js";
-import "../assets/js/util.js";
-import "../assets/js/main.js";
-import "../assests/css/main.css";
+import "../../assets/js/jquery.min.js";
+import "../../assets/js/jquery.scrollex.min.js";
+import "../../assets/js/browser.min.js";
+import "../../assets/js/breakpoints.min.js";
+import "../../assets/js/util.js";
+import "../../assets/js/main.js";
+import "../../assets/css/main.css";
 class Home extends React.Component {
-	render () {
+	constructor(props) {
+		super(props);
+		this.state = {}
+	}
+	render() {
 		return (
 			<div>
-	<head>
-		<title>Open Source at UCSD</title>
-		<meta charset="utf-8" />
-	</head>
-	<body class="is-preload">
+	<div class="is-preload">
 
-		<!-- Header -->
+		{/*Header*/} 
 			<header id="header" class="alt">
 				<h1><a href="index.html"><img src="../images/os-logo.png" ALT="some text" HEIGHT=150%></a></h1>
 				<a href="#menu">Menu</a>
 			</header>
 
-		<!-- Menu -->
+		{/*Menu*/} 
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
@@ -35,7 +35,8 @@ class Home extends React.Component {
 				</ul>
 			</nav>
 
-		<!-- Banner -->
+		
+		{/*Banner*/} 
 			<section id="banner">
 				<div class="inner">
 					<div class="content">
@@ -49,7 +50,7 @@ class Home extends React.Component {
 				</div>
 			</section>
 
-		<!-- One -->
+		{/*One*/} 
 			<section id="one" class="wrapper style1 split">
 				<div class="inner">
 					<div class="content">
@@ -191,10 +192,9 @@ class Home extends React.Component {
 			</footer>
 
 
-	</body>
 	</div>
-
-		) // end of return
+			</div>
+		)
 	}
 }
 export default Home;
