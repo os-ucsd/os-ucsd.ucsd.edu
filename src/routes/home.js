@@ -1,10 +1,10 @@
 import React from "react";
-import "../../assets/js/jquery.min.js";
-import "../../assets/js/jquery.scrollex.min.js";
+//import "../../assets/js/jquery.min.js";
+//import "../../assets/js/jquery.scrollex.min.js";
 import "../../assets/js/browser.min.js";
 import "../../assets/js/breakpoints.min.js";
-import "../../assets/js/util.js";
-import "../../assets/js/main.js";
+//import "../../assets/js/util.js";
+//import "../../assets/js/main.js";
 import "../../assets/css/main.css";
 class Home extends React.Component {
 	constructor(props) {
@@ -14,135 +14,133 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
-	<div class="is-preload">
+	<div className="is-preload">
 
 		{/*Header*/} 
-			<header id="header" class="alt">
-				<h1><a href="index.html"><img src="../images/os-logo.png" ALT="some text" HEIGHT=150%></a></h1>
+			<header id="header" className="alt">
+				<h1><a href="index.html"><img src="../images/os-logo.png" alt="some text" height="150%"/></a></h1>
 				<a href="#menu">Menu</a>
 			</header>
 
 		{/*Menu*/} 
 			<nav id="menu">
-				<ul class="links">
+				<ul className="links">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="generic.html">Generic</a></li>
 					<li><a href="elements.html">Elements</a></li>
 				</ul>
-				<ul class="actions stacked">
-					<li><a href="#" class="button primary fit">Sign Up</a></li>
-					<li><a href="#" class="button fit">Log In</a></li>
+				<ul className="actions stacked">
+					<li><a href="#" className="button primary fit">Sign Up</a></li>
+					<li><a href="#" className="button fit">Log In</a></li>
 				</ul>
 			</nav>
 
 		
 		{/*Banner*/} 
 			<section id="banner">
-				<div class="inner">
-					<div class="content">
+				<div className="inner">
+					<div className="content">
 						<h2>Learn about Open Source Software!</h2>
 						<p>Amet tincidunt arcu suspendisse consequat</p>
 					</div>
-					<ul class="actions stacked">
-						<li><a href="#" class="button primary major">Get Started</a></li>
-						<li><a href="#" class="button major">More Info</a></li>
+					<ul className="actions stacked">
+						<li><a href="#" className="button primary major">Get Started</a></li>
+						<li><a href="#" className="button major">More Info</a></li>
 					</ul>
 				</div>
 			</section>
 
 		{/*One*/} 
-			<section id="one" class="wrapper style1 split">
-				<div class="inner">
-					<div class="content">
+			<section id="one" className="wrapper style1 split">
+				<div className="inner">
+					<div className="content">
 						<h2>Lorem ipsum accumsan nisl feugiat<br />
 						sed consequat adipiscing</h2>
 						<p>Amet lorem vivamus viverra, quis semper consequat, sem nibh mattis arcu, dolore porttitor lorem justo in tellus. Aenean lacinia felis et dui viverra, nec accumsan et quam ultricies. Phasellus sapien lorem, rhoncus ultricies.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Our Story</a></li>
+						<ul className="actions">
+							<li><a href="#" className="button">Our Story</a></li>
 						</ul>
 					</div>
-					<div class="image-circles">
-						<div class="images">
-							<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-							<span class="image"><img src="images/pic02.jpg" alt="" /></span>
+					<div className="image-circles">
+						<div className="images">
+							<span className="image"><img src="images/pic01.jpg" alt="" /></span>
+							<span className="image"><img src="images/pic02.jpg" alt="" /></span>
 						</div>
-						<div class="images">
-							<span class="image"><img src="images/pic03.jpg" alt="" /></span>
-							<span class="image"><img src="images/pic04.jpg" alt="" /></span>
+						<div className="images">
+							<span className="image"><img src="images/pic03.jpg" alt="" /></span>
+							<span className="image"><img src="images/pic04.jpg" alt="" /></span>
 						</div>
 					</div>
 				</div>
 			</section>
 
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="inner">
-					<header class="major">
+			<section id="two" className="wrapper style2">
+				<div className="inner">
+					<header className="major">
 						<h2>Gravida nunc accumsan</h2>
 						<p>Ipsum quis semper consequat, sem nibh mattis arcu, quis porttitor lorem justo in tellus. Aenean lacinia<br />
 						interdum nisl felis et dui viverra, nec accumsan tempus quam ultricies.</p>
 					</header>
-					<div class="features">
+					<div className="features">
 						<section>
-							<span class="icon solid major fa-tag"></span>
+							<span className="icon solid major fa-tag"></span>
 							<h3>Quam adipiscing</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
-							<span class="icon solid major fa-camera-retro"></span>
+							<span className="icon solid major fa-camera-retro"></span>
 							<h3>Semper accumsan</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
-							<span class="icon solid major fa-cloud"></span>
+							<span className="icon solid major fa-cloud"></span>
 							<h3>Ipsum lorem magna</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
-							<span class="icon solid major fa-cube"></span>
+							<span className="icon solid major fa-cube"></span>
 							<h3>Tempus sed mattis</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
-							<span class="icon solid major fa-file-alt"></span>
+							<span className="icon solid major fa-file-alt"></span>
 							<h3>Odio fermentum</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
-							<span class="icon solid major fa-plane"></span>
+							<span className="icon solid major fa-plane"></span>
 							<h3>Risus et interdum</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 					</div>
-					<footer class="major">
-						<ul class="actions special">
-							<li><a href="#" class="button major">More Features</a></li>
+					<footer className="major">
+						<ul className="actions special">
+							<li><a href="#" className="button major">More Features</a></li>
 						</ul>
 					</footer>
 				</div>
 			</section>
 
-		<!-- Three -->
-			<section id="three" class="wrapper style1">
-				<div class="inner">
-					<div class="spotlights">
+			<section id="three" className="wrapper style1">
+				<div className="inner">
+					<div className="spotlights">
 						<section>
-							<span class="image"><img src="images/pic05.jpg" alt="" /></span>
-							<div class="content">
+							<span className="image"><img src="images/pic05.jpg" alt="" /></span>
+							<div className="content">
 								<h2>Convallis integer iaculis</h2>
 								<p>Donec elementum odio ut suscipit congue. Fusce magna mattis vel fermentum, ultricies et velit. Suspendisse viverra, ante in eleifend vulputate, lacus lorem pretium ligula, tincidunt posuere sapien neque a augue. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
 							</div>
 						</section>
 						<section>
-							<span class="image"><img src="images/pic06.jpg" alt="" /></span>
-							<div class="content">
+							<span className="image"><img src="images/pic06.jpg" alt="" /></span>
+							<div className="content">
 								<h2>Ultrices augue faucibus</h2>
 								<p>Donec elementum odio ut suscipit congue. Fusce magna mattis vel fermentum, ultricies et velit. Suspendisse viverra, ante in eleifend vulputate, lacus lorem pretium ligula, tincidunt posuere sapien neque a augue. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
 							</div>
 						</section>
 						<section>
-							<span class="image"><img src="images/pic07.jpg" alt="" /></span>
-							<div class="content">
+							<span className="image"><img src="images/pic07.jpg" alt="" /></span>
+							<div className="content">
 								<h2>Integer sed sodales</h2>
 								<p>Donec elementum odio ut suscipit congue. Fusce magna mattis vel fermentum, ultricies et velit. Suspendisse viverra, ante in eleifend vulputate, lacus lorem pretium ligula, tincidunt posuere sapien neque a augue. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
 							</div>
@@ -151,43 +149,41 @@ class Home extends React.Component {
 				</div>
 			</section>
 
-		<!-- Four -->
-			<section id="four" class="wrapper style2 special">
-				<div class="inner">
+			<section id="four" className="wrapper style2 special">
+				<div className="inner">
 					<header>
 						<h2>Sed vitae massa curabitur</h2>
 						<p>Ipsum quis semper consequat, sem nibh mattis arcu, quis porttitor lorem justo in tellus. Aenean lacinia<br />
 						interdum nisl felis et dui viverra, nec accumsan tempus quam ultricies.</p>
 					</header>
-					<ul class="actions special">
-						<li><a href="#" class="button primary major">Get Started</a></li>
+					<ul className="actions special">
+						<li><a href="#" className="button primary major">Get Started</a></li>
 					</ul>
 				</div>
 			</section>
 
-		<!-- Footer -->
 			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Envelope</span></a></li>
+				<div className="inner">
+					<ul className="icons">
+						<li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
+						<li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
+						<li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
+						<li><a href="#" className="icon brands fa-github"><span className="label">GitHub</span></a></li>
+						<li><a href="#" className="icon brands fa-linkedin-in"><span className="label">LinkedIn</span></a></li>
+						<li><a href="#" className="icon solid fa-envelope"><span className="label">Envelope</span></a></li>
 					</ul>
-					<ul class="contact">
+					<ul className="contact">
 						<li>12345 Somewhere Road</li>
 						<li>Nashville, TN 00000</li>
 						<li>(000) 000-0000</li>
 					</ul>
-					<ul class="links">
+					<ul className="links">
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">Support</a></li>
 						<li><a href="#">Terms</a></li>
 						<li><a href="#">Contact</a></li>
 					</ul>
-					<p class="copyright">&copy; Untitled. All rights reserved. Lorem ipsum dolor.</p>
+					<p className="copyright">&copy; Untitled. All rights reserved. Lorem ipsum dolor.</p>
 				</div>
 			</footer>
 
