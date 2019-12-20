@@ -1,28 +1,80 @@
 import React from "react";
+//import jquery from 'jquery';
+import MenuBar from '../navbar';
+//import Nav from "react-bootstrap/Nav";
+//import $ from 'jquery';
 //import "../../assets/js/jquery.min.js";
 //import "../../assets/js/jquery.scrollex.min.js";
 import "../../assets/js/browser.min.js";
-import "../../assets/js/breakpoints.min.js";
+//import "../../assets/js/breakpoints.min.js";
 //import "../../assets/js/util.js";
 //import "../../assets/js/main.js";
 import "../../assets/css/main.css";
+
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {}
 	}
+	componentDidMount() {
+		this._isMounted = true;
+		/*function() {
+			$('#menu')
+			.append('<a href="#menu" class="close"></a>')
+			.appendTo("#is-preload")
+			.panel({
+				delay: 500,
+				hideOnClick: true,
+				hideOnSwipe: true,
+				resetScroll: true,
+				resetForms: true,
+				side: 'right'
+			});
+		}
+		var	$window = $(window),
+		$body = $('body'),
+		$header = $('#header'),
+		$banner = $('#banner');
+
+	// Play initial animations on page load.
+		$window.on('load', function() {
+			window.setTimeout(function() {
+				$body.removeClass('is-preload');
+			}, 100);
+		});
+
+	// Header.
+		if ($banner.length > 0
+		&&	$header.hasClass('alt')) {
+
+			$window.on('resize', function() { $window.trigger('scroll'); });
+
+			$banner.scrollex({
+				bottom:		$header.outerHeight(),
+				terminate:	function() { $header.removeClass('alt'); },
+				enter:		function() { $header.addClass('alt'); },
+				leave:		function() { $header.removeClass('alt'); $header.addClass('reveal'); }
+			});
+
+		}
+*/
+
+	}
 	render() {
+			// Menu.
+
 		return (
 			<div>
-	<div className="is-preload">
+			  <MenuBar />
+			<div className="is-preload">
 
-		{/*Header*/} 
+		{/*Header
 			<header id="header" className="alt">
-				<h1><a href="index.html"><img src="../images/os-logo.png" alt="some text" height="150%"/></a></h1>
+				<h1><a href="/"><img src="https://i.ibb.co/1sNPYWn/os-logo.png" alt="some text" height="150%"/></a></h1>
 				<a href="#menu">Menu</a>
 			</header>
 
-		{/*Menu*/} 
+		Menu
 			<nav id="menu">
 				<ul className="links">
 					<li><a href="index.html">Home</a></li>
@@ -34,7 +86,7 @@ class Home extends React.Component {
 					<li><a href="#" className="button fit">Log In</a></li>
 				</ul>
 			</nav>
-
+*/} 
 		
 		{/*Banner*/} 
 			<section id="banner">
