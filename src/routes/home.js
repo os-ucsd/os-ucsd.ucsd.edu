@@ -18,7 +18,7 @@ class Home extends React.Component {
 
 		{/*Header*/} 
 			<header id="header" className="alt">
-				<h1><a href="index.html"><img src="../images/os-logo.png" alt="some text" height="150%"/></a></h1>
+				<h1><a href="/"><img src="https://i.ibb.co/1sNPYWn/os-logo.png" alt="some text" height="150%"/></a></h1>
 				<a href="#menu">Menu</a>
 			</header>
 
@@ -77,24 +77,24 @@ class Home extends React.Component {
 			<section id="two" className="wrapper style2">
 				<div className="inner">
 					<header className="major">
-						<h2>Gravida nunc accumsan</h2>
+						<h2>What we work on</h2>
 						<p>Ipsum quis semper consequat, sem nibh mattis arcu, quis porttitor lorem justo in tellus. Aenean lacinia<br />
 						interdum nisl felis et dui viverra, nec accumsan tempus quam ultricies.</p>
 					</header>
 					<div className="features">
 						<section>
 							<span className="icon solid major fa-tag"></span>
-							<h3>Quam adipiscing</h3>
+							<h3>Projects</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
 							<span className="icon solid major fa-camera-retro"></span>
-							<h3>Semper accumsan</h3>
+							<h3>Workshops</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
 							<span className="icon solid major fa-cloud"></span>
-							<h3>Ipsum lorem magna</h3>
+							<h3>Tutorials</h3>
 							<p>Feugiat lorem quis semper consequat, sem nibh mattis arcu, amet porttitor lorem justo in cumsan quam ultricies magna tempus.</p>
 						</section>
 						<section>
