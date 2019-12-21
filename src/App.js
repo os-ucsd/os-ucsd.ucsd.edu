@@ -6,17 +6,19 @@ import Project from "./routes/projects";
 import Contact from "./routes/contact";
 import Event from "./routes/event";
 import WorkShop from "./routes/workshop";
-
+import { slide as Menu } from 'react-burger-menu'
+import "./css/menuBarAnimation.css";
 function App() {
   return (
     <Router>
-      <div className="App">
+ 
+      <main id="page-wrap" className="App">
         <Route exact path="/" component={Home} />
         <Route exact path="/project" component={Project} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/event" component={Event} />
         <Route exact path="/workshop" component={WorkShop} />
-      </div>
+      </main>
     </Router>
   );
 }
