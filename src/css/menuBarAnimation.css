@@ -74,5 +74,7 @@
   
   /* Styling of overlay */
   .bm-overlay {
+	top: 0px; 
+	left:0px;
 	background: rgba(122, 80, 80, 0.3);
   }
