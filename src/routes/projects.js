@@ -1,5 +1,5 @@
 import React from "react";
-import MenuBar from "./navbar";
+import MenuBar from "../components/navbar";
 import "../css/project.css";
 
 class Project extends React.Component {

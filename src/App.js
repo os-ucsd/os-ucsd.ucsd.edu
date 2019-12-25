@@ -6,12 +6,11 @@ import Project from "./routes/projects";
 import Contact from "./routes/contact";
 import Event from "./routes/event";
 import WorkShop from "./routes/workshop";
-import { slide as Menu } from 'react-burger-menu'
+//import { slide as Menu } from 'react-burger-menu'
 import "./css/menuBarAnimation.css";
 function App() {
   return (
     <Router>
- 
       <main id="page-wrap" className="App">
         <Route exact path="/" component={Home} />
         <Route exact path="/project" component={Project} />

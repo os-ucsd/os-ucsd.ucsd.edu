@@ -1,7 +1,7 @@
 import React from "react";
-import MenuBar from "./navbar";
+import MenuBar from "../components/navbar";
 import "../assets/css/main.css";
-import Footer from "./footer";
+import Footer from "../components/footer";
 
 class Home extends React.Component {
   constructor(props) {
