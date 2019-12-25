@@ -2,6 +2,7 @@ import React from "react";
 import MenuBar from "../components/navbar";
 import "../assets/css/main.css";
 import Footer from "../components/footer";
+import "../css/home.css";
 
 class Home extends React.Component {
   constructor(props) {
@@ -104,11 +105,7 @@ class Home extends React.Component {
           <section id="one" className="wrapper style1 split">
             <div className="inner">
               <div className="content">
-                <h2>
-                  Lorem ipsum accumsan nisl feugiat
-                  <br />
-                  sed consequat adipiscing
-                </h2>
+                <h2 className="firstHeader">What is Open Source?</h2>
                 <p>
                   Amet lorem vivamus viverra, quis semper consequat, sem nibh
                   mattis arcu, dolore porttitor lorem justo in tellus. Aenean
