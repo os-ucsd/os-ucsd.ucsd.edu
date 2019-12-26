@@ -16,6 +16,7 @@ class Project extends React.Component {
     axios
       .get("https://api.github.com/search/repositories?q=topic:os-ucsd-project")
       .then(res => {
+        console.log(res.data);
         this.setState({ projects: res.data });
       })
       .catch(err => console.log(err));
