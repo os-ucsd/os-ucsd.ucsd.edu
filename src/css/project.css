@@ -1,0 +1,9 @@
+.projectList {
+  padding-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+}
