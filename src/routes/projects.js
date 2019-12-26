@@ -50,7 +50,7 @@ class Project extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="projectpage">
         <MenuBar />
         <div className="projectList">{this.showProject()}</div>
       </div>
