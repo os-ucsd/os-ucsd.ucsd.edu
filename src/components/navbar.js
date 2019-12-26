@@ -2,15 +2,16 @@
 import React from "react";
 //import Icon from '@material-ui/core/Icon';
 //import {Icon} from "antd";
-import "../../assets/css/main.css";
+import "../assets/css/main.css";
 import "../css/menuBarAnimation.css";
-import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from "react-burger-menu";
+
 class MenuBar extends React.Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
 
     // for animations
-   // this.wrapRef = React.createRef();
+    // this.wrapRef = React.createRef();
 
     if (this._isMounted) {
       this.setState(props);
@@ -25,7 +26,7 @@ class MenuBar extends React.Component {
   componentDidMount() {
     this._isMounted = true;
   }
-  showSettings (event) {
+  showSettings(event) {
     event.preventDefault();
   }
   /*handleClick() {
@@ -45,17 +46,46 @@ class MenuBar extends React.Component {
                 height="150%"
               />
             </a>
-            <Menu right isOpen={ false } width={ '20%' } customBurgerIcon={ <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" /> }>
-      <a id="home" className="menu-item" href="/">Home</a>
-      <a id="about" className="menu-item" href="/about">About</a>
-      <a id="contact" className="menu-item" href="/contact">Contact</a>
-      <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-    </Menu> 
+            <Menu
+              right
+              isOpen={false}
+      
+              customBurgerIcon={
+                <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" />
+              }
+            >
+              <a id="home" className="menu-item" href="/">
+              <i class="fas fa-home"></i>
+              <span> Home</span>
+              </a>
 
+              <a id="about" className="menu-item" href="/about">
+              <i class="fas fa-users"></i>
+              <span> About</span>
+              </a>
+
+              <a id="project" className="menu-item" href="/project">
+              <i class="fas fa-laptop-code"></i>
+              <span> Projects</span>
+              </a>
+
+              <a id="contact" className="menu-item" href="/contact">
+              <i class="fas fa-envelope-square"></i>
+              <span> Contact</span>
+              </a>
+
+              <a
+                onClick={this.showSettings}
+                className="menu-item--small"
+                href=""
+              >
+              <i class="fas fa-cogs"></i>
+              <span> Settings</span>
+              </a>
+            </Menu>
           </h1>
         </header>
-
-    </div>
+      </div>
     );
   }
   /*
@@ -94,7 +124,7 @@ class MenuBar extends React.Component {
               helloworld
             </div>
         </header>*/
-    /*
+  /*
        <header id="header" className="alt">
           <h1>
             <a href="/">
@@ -136,7 +166,7 @@ class MenuBar extends React.Component {
           </ul>
         </nav>
     */
-   /*
+  /*
      Routes the user to the home page.
      */
 

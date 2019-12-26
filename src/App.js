@@ -8,13 +8,10 @@ import Event from "./routes/event";
 import WorkShop from "./routes/workshop";
 import Tutorials from "./routes/tutorials";
 import TutorialPage from "./routes/tutorial-page";
-
-import { slide as Menu } from 'react-burger-menu'
 import "./css/menuBarAnimation.css";
 function App() {
   return (
     <Router>
- 
       <main id="page-wrap" className="App">
         <Route exact path="/" component={Home} />
         <Route exact path="/project" component={Project} />
