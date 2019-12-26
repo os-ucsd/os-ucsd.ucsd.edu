@@ -2,7 +2,7 @@
 import React from "react";
 //import Icon from '@material-ui/core/Icon';
 //import {Icon} from "antd";
-//import "../assets/css/main.css";
+import "../assets/css/main.css";
 import "../css/menuBarAnimation.css";
 import { slide as Menu } from "react-burger-menu";
 
@@ -59,6 +59,9 @@ class MenuBar extends React.Component {
               </a>
               <a id="about" className="menu-item" href="/about">
                 About
+              </a>
+              <a id="project" className="menu-item" href="/project">
+                Projects
               </a>
               <a id="contact" className="menu-item" href="/contact">
                 Contact
