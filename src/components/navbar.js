@@ -49,29 +49,38 @@ class MenuBar extends React.Component {
             <Menu
               right
               isOpen={false}
-              width={"20%"}
+      
               customBurgerIcon={
                 <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" />
               }
             >
               <a id="home" className="menu-item" href="/">
-                Home
+              <i class="fas fa-home"></i>
+              <span> Home</span>
               </a>
+
               <a id="about" className="menu-item" href="/about">
-                About
+              <i class="fas fa-users"></i>
+              <span> About</span>
               </a>
+
               <a id="project" className="menu-item" href="/project">
-                Projects
+              <i class="fas fa-laptop-code"></i>
+              <span> Projects</span>
               </a>
+
               <a id="contact" className="menu-item" href="/contact">
-                Contact
+              <i class="fas fa-envelope-square"></i>
+              <span> Contact</span>
               </a>
+
               <a
                 onClick={this.showSettings}
                 className="menu-item--small"
                 href=""
               >
-                Settings
+              <i class="fas fa-cogs"></i>
+              <span> Settings</span>
               </a>
             </Menu>
           </h1>

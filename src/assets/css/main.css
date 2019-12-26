@@ -4,7 +4,7 @@
 	Prototype by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
-*/
+*/ 
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -116,7 +116,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "Courier New", monospace;
 		font-size: 14pt;
 		font-weight: normal;
 		line-height: 1.65;
