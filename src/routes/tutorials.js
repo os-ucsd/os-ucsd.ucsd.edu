@@ -6,6 +6,7 @@ import "../css/home.css";
 import tutorialMeta from "./tutorials-meta.js";
 import Container from "react-bootstrap/Container";
 import Background from "../images/space5.jpg";
+import Footer from "../components/footer";
 
 var moment = require("moment");
 
@@ -81,6 +82,7 @@ class Tutorials extends React.Component {
             </div>
           </section>
         </div>
+        <Footer />
       </div>
     );
   }
