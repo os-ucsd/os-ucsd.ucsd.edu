@@ -85,4 +85,5 @@ async function getAllPRs(){
 	return getRepos();
 }
 
-module.exports = getAllPRs;
+//module.exports = getAllPRs;
+export default getAllPRs;

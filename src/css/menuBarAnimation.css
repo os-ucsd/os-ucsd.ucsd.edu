@@ -71,11 +71,13 @@
         }
   }
   /* screen larger than 800px*/ 
-        #header {
-          position: fixed !important;
-        }
+
         .bm-burger-button {
           position: fixed;
+          width:40px;
+          height: 40px;
+          right: 4.0%;
+          top: 4.6%;
           }
          
         /* Color/shape of burger icon bars */
@@ -97,9 +99,6 @@
         /* Color/shape of close button cross*/
         .bm-cross {
         background: #bdc3c7;
-        }
-        #header {
-          position: fixed !important;
         }
         
         /*Sidebar wrapper styles

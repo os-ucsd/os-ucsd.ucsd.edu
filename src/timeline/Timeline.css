@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 40px 0;
+    margin: 25px 0;
+    font-family: "Courier New", monospace;
 }
 
 .list-container::after{
@@ -25,7 +26,7 @@
 .pr-list-container{
     display: flex;
     justify-content: flex-end;
-    padding-right: 30px;
+    padding-right: 0;
     position: relative;
     margin: 10px -27px;
     width: 50%;
@@ -34,7 +35,7 @@
 .pr-list-container:nth-child(odd){
     align-self: flex-end;
     justify-content: flex-start;
-    padding-left: 30px;
+    padding-left: 0;
     padding-right: 0;
 }
 
@@ -54,8 +55,8 @@
     position: relative;
     /*width: 400px;*/
     width: wrap;
-    padding: 25px 50px;
-    max-width: 70%;
+    padding: 10px 20px;
+    max-width: 55%;
     text-align: right;
     transition: all .2s ease-in-out;
 }
@@ -70,7 +71,7 @@
     border-radius: 50%;
     position: absolute;
     top: calc(50% - 10px);
-    right: -67px;
+    right: -37px;
     width: 20px;
     height: 20px;
     z-index: 100;
@@ -78,5 +79,5 @@
 
 .pr-list-container:nth-child(odd) .pr-list-content .circle{
     right: auto;
-    left: -67px;
+    left: -37px;
 }

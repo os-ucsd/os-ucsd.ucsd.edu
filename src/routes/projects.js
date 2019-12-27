@@ -73,7 +73,7 @@ class Project extends React.Component {
           <div className="projectList">{this.showProject()}</div>
           <br />
 
-          <Button variant="primary" size="lg" href="/project">
+          <Button variant="primary" size="lg" href="/form">
             Large button
           </Button>
         </div>

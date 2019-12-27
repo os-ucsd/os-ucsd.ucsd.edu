@@ -4,19 +4,14 @@ import PullRequestItem from './PullRequestItem';
 
 class Timeline extends React.Component{
 	render(){
-		let {prs} = this.props;
+        let {prs} = this.props;
 		let listOfPRs = 
-				prs ? Object.keys(prs).map((date) => {
+				prs ? prs.map((pr, i) => {
 					return(
-						<div className="pr-list-container">
+						<div key={i} className="pr-list-container">
 							<div className="pr-list-content">	
-								<h5 className="date-text">{date}</h5>
 								<div className="pr-info">
-                                    {prs[date].map((pr) => {
-                                        return(
-                                            <PullRequestItem prData={pr} />
-                                        );
-                                    })}
+                                    <PullRequestItem prData={pr} />
 								</div>
 							</div>
 						</div>	
