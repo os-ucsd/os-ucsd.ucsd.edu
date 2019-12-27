@@ -1,16 +1,3 @@
-import Layout from 'components/TutorialLayout';
-
-export default Layout;
-
-export const meta = {
-  title: "How to create a Github-synced Website as a UCSD Student",
-  publish: new Date("2019-10-31T12:00:00Z"),
-  authors: [
-    {name: "Alex Garcia", github: "asg017"}
-  ]
-}
-
-
 **Goal** - By the end of this tutorial, you will have your own ACSWeb site set up, and a repository on Github that will sync your site automatically on every push!
 
 **WARNING** - If you do this, and you already have files in your acsweb server, they will be deleted! You can back them up by using `scp` to [save them locally](https://unix.stackexchange.com/questions/188285/how-to-copy-a-file-from-a-remote-server-to-a-local-machine). 

@@ -1,12 +1,14 @@
 import React from "react";
-import MenuBar from "./navbar";
-import "../../assets/css/main.css";
-import "../../assets/css/tutorial-style.css";
-import "../../assets/js/browser.min.js";
+import MenuBar from "../components/navbar";
+import "../assets/css/main.css";
+import "../assets/css/tutorial-style.css";
+import "../css/home.css";
 import tutorialMeta from "./tutorials-meta.js";
 import Container from "react-bootstrap/Container"
+import Background from "../images/space5.jpg"
 
 var moment = require('moment');
+
 
 class Tutorials extends React.Component {
     constructor(props) {
@@ -35,16 +37,15 @@ class Tutorials extends React.Component {
 
         let tutorialCards = [];
 
+        //Create a card for each tutorial in the meta file
         tutorialCards = Object.keys(this.state.tutorialMeta).map(key =>{
             let tutorial = this.state.tutorialMeta[key];
             return(
-                    <section key={tutorial.url} onClick={() => {this.openTutorial(tutorial)}}>
+                    <section key={tutorial.url} onClick={() => {this.openTutorial(tutorial)}} style={{backgroundColor: "#fafafa"}}>
                         <span className="icon solid major fa-cube"></span>
-                        <h3>{tutorial["title"]}</h3>
-                        <p>
-                            By: {tutorial["authors"].name} (Github: {tutorial["authors"].github})
-                            Published: {moment(tutorial['publish']).format("lll")}
-                        </p>
+                        <h3 style={{minHeight: "10rem", paddingTop:"0.5rem"}}>{tutorial["title"]}</h3>
+                        <p className={"mb-0"}>By: {tutorial["authors"].name}</p>
+                        <p>Published: {moment(tutorial['publish']).format("lll")}</p>
                     </section>
             );
         });
@@ -52,12 +53,12 @@ class Tutorials extends React.Component {
 
 
         return (
-            <Container>
+            <div>
                 <MenuBar />
 
                 <div className="is-preload">
                     {/*Banner*/}
-                    <section id="tutorial-banner">
+                    <section id="banner" style={{backgroundImage: `url(${Background})`, height: "20px"}}>
                         <div className="inner">
                             <div  className="content">
                                 <h2>Open Source at UCSD Tutorials</h2>
@@ -77,7 +78,7 @@ class Tutorials extends React.Component {
                         </div>
                     </section>
                 </div>
-            </Container>
+            </div>
         );
     }
 }
