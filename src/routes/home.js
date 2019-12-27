@@ -10,11 +10,12 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      prs:{}
+      prs:[]
     };
   }
 
   componentWillMount() {
+    localStorage.clear();
     const data = JSON.parse(localStorage.getItem('prs'));
     // if haven't gotten data before or if data is old, then retrieve the data again
     if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
@@ -23,14 +24,13 @@ class Home extends React.Component {
       getAllPRs()
       .then(res => {
         // only get the first 16 PRs
-        res = res.slice(0, 16);
-        // group each pr with other prs that were made on the same day
-        let orderedPRs = this.groupByDate(res);
-        this.setState({prs: orderedPRs});
-
+        res = res.slice(0, 10);
+        const noRepeats = this.combineRepeats(res);
+        this.setState({prs:noRepeats})
+        console.log(noRepeats);
         // store in local storage
         const dataToStore = {
-          data: orderedPRs,
+          data: noRepeats,
           lastRetrieved: new Date(),
         }
         localStorage.setItem('prs', JSON.stringify(dataToStore));
@@ -39,82 +39,34 @@ class Home extends React.Component {
     else{
       // didn't need to call api, so just set state to stored data
       console.log('no new data');
-      this.setState({prs: data.data});
+      const noRepeats = this.combineRepeats(data.data);
+      console.log(noRepeats);
+      this.setState({prs: noRepeats});
     }
   }
 
   componentDidMount() {
     this._isMounted = true;
-    /*function() {
-			$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo("#is-preload")
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right'
-			});
-		}
-		var	$window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$banner = $('#banner');
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Header.
-		if ($banner.length > 0
-		&&	$header.hasClass('alt')) {
-
-			$window.on('resize', function() { $window.trigger('scroll'); });
-
-			$banner.scrollex({
-				bottom:		$header.outerHeight(),
-				terminate:	function() { $header.removeClass('alt'); },
-				enter:		function() { $header.addClass('alt'); },
-				leave:		function() { $header.removeClass('alt'); $header.addClass('reveal'); }
-			});
-
-		}
-*/
   }
 
   /*
-	 * groups prs in a given list of prs with other prs that were made 
-	 * in the same day
-	 */
-	groupByDate(listOfPRs){
-		// group by date
-		let groupedPRs = {}
-		for (let i = 0; i < listOfPRs.length; i++){
-			// get date to set as key (need to convert into a readable string first)
-			let dateStr = new Date(listOfPRs[i].merged_time).toDateString();
-			if (dateStr in groupedPRs){
-				groupedPRs[dateStr].push(listOfPRs[i]);
-			}
-			else{
-				groupedPRs[dateStr] = [listOfPRs[i]];
-			}
-		}
-
-		// sort the object by date
-		let sortedGroup = {}
-		Object.keys(groupedPRs).sort((date1, date2) => {
-			let first = new Date(date1);
-			let sec = new Date(date2);
-			return sec - first;
-		}).forEach(function(key){
-			sortedGroup[key] = groupedPRs[key];
-		});
-		return sortedGroup;
+  When there are multiple PRs in a row by the same person to the same repo,
+  combine the PRs into a single element
+  */
+  combineRepeats(prs){
+    let noRepeatPRs = [];
+    for (let i = 0; i < prs.length; i++){
+      prs[i].allMergedDates = [prs[i].merged_time];
+      let j = i + 1;
+      while (j < prs.length && prs[j].user === prs[i].user && prs[j].repoName === prs[i].repoName){
+        prs[i].allMergedDates.push(prs[j].merged_time);
+        j++;
+      }
+      noRepeatPRs.push(prs[i]);
+      // skip the repeats
+      i = j - 1;
+    }
+    return noRepeatPRs;
   }
   
   render() {
