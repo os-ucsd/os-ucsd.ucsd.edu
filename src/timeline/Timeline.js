@@ -19,8 +19,10 @@ class Timeline extends React.Component{
 				}) : <p>No pull requests to show currently.</p>
 		
 		return(
-			<div className="list-container">
-				{listOfPRs}
+			<div className='total-timeline-container'>
+				<div className="list-container" >
+					{listOfPRs}
+				</div>
 			</div>
 		);
 	}
