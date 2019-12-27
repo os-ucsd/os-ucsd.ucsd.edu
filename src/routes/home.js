@@ -15,7 +15,6 @@ class Home extends React.Component {
   }
 
   componentWillMount() {
-    localStorage.clear();
     const data = JSON.parse(localStorage.getItem('prs'));
     // if haven't gotten data before or if data is old, then retrieve the data again
     if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
@@ -100,7 +99,11 @@ class Home extends React.Component {
               </ul>
             </div>
           </section>
+
+          {/* timeline */}
+          <h2>Timeline</h2>
           <Timeline prs={this.state.prs} />
+
           {/*One*/}
           <section id="one" className="wrapper style1 split">
             <div className="inner">
