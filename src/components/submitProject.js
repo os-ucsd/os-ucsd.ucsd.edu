@@ -107,6 +107,10 @@ class SubmitProject extends React.Component {
   }
 
   render() {
+    const style = {
+      fontSize: "20px",
+      fontWeight: "bold"
+    };
     return (
       <div>
         <MenuBar />
@@ -124,17 +128,19 @@ class SubmitProject extends React.Component {
             </div>
           </section>
 
+          <h4>Fill out this form and click the button</h4>
+
           {/* Form to fill in */}
           <div className="form">
-            <Form style={{ paddingTop: "50px" }} onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit}>
               <Form.Group as={Row} controlId="name">
-                <Form.Label column sm="2">
+                <Form.Label column sm="2" style={style}>
                   Name
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
                     type="name"
-                    placeholder="Name"
+                    placeholder="Your name"
                     value={this.state.name}
                     onChange={this.handleName}
                   />
@@ -142,7 +148,7 @@ class SubmitProject extends React.Component {
               </Form.Group>
 
               <Form.Group as={Row} controlId="project">
-                <Form.Label column sm="2">
+                <Form.Label column sm="2" style={style}>
                   Project's Name
                 </Form.Label>
                 <Col sm="10">
@@ -156,13 +162,13 @@ class SubmitProject extends React.Component {
               </Form.Group>
 
               <Form.Group as={Row} controlId="repo">
-                <Form.Label column sm="2">
+                <Form.Label column sm="2" style={style}>
                   Repositories Link
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
                     type="link"
-                    placeholder="Link to the repo"
+                    placeholder="Link to the project's repository"
                     value={this.state.link}
                     onChange={this.handleLink}
                   />
@@ -170,13 +176,13 @@ class SubmitProject extends React.Component {
               </Form.Group>
 
               <Form.Group as={Row} controlId="description">
-                <Form.Label column sm="2">
+                <Form.Label column sm="2" style={style}>
                   Project Description
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
                     type="description"
-                    placeholder="description of the project"
+                    placeholder="Short description of the project"
                     value={this.state.description}
                     onChange={this.handleDes}
                   />
@@ -184,13 +190,13 @@ class SubmitProject extends React.Component {
               </Form.Group>
 
               <Form.Group as={Row} controlId="framework">
-                <Form.Label column sm="2">
+                <Form.Label column sm="2" style={style}>
                   Languages or Frameworks
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
                     type="technology"
-                    placeholder="What Languages or Frameworks does the project use"
+                    placeholder="What languages or frameworks does the project use?"
                     value={this.state.technology}
                     onChange={this.handleTech}
                   />
@@ -198,13 +204,13 @@ class SubmitProject extends React.Component {
               </Form.Group>
 
               <Form.Group as={Row} controlId="Database">
-                <Form.Label column sm="2">
+                <Form.Label column sm="2" style={style}>
                   Datebase used
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
                     type="database"
-                    placeholder="what kind of database this project used"
+                    placeholder="What kind of database does the project use?"
                     value={this.state.database}
                     onChange={this.handleDatabase}
                   />
