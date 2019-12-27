@@ -25,7 +25,13 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: [],
+      name: "",
+      projectName: "",
+      link: "",
+      description: "",
+      technology: "",
+      database: ""
     };
   }
 
@@ -49,21 +55,25 @@ class Project extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const token = "bad472b9b4c4913b670b04e41b7363d316c6368a";
+
+    const token = `${process.env.REACT_APP_MY_KEY}`;
     const Info = {
-      title: "New Project",
-      body: "This is a test",
-      //assignees: ["bghoang"]
-      milestone: null
-      //labels: ["project"]*/
+      title: "New Project 6",
+      body:
+        "Name: Bao Hoang \n \
+        Project description: Bla bla bla \n \
+        Project repo: something something \n \
+        Languages or Frameworks the project use: ... \n \
+        Database: N/A",
+      assignees: ["bghoang"],
+      labels: ["new project"]
     };
 
-    console.log(typeof Info);
     axios
       .post("https://api.github.com/repos/bghoang/git_tutorial/issues", Info, {
         headers: { Authorization: "Bearer " + token }
       })
-      .then(() => console.log("Issue created"))
+      .then(res => console.log(res))
       .catch(err => console.log(err));
   }
 
