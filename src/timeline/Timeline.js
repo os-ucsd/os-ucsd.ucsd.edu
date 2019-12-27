@@ -12,11 +12,11 @@ class Timeline extends React.Component{
 							<div className="pr-list-content">	
 								<h5 className="date-text">{date}</h5>
 								<div className="pr-info">
-								{prs[date].map((pr) => {
-									return(
-										<PullRequestItem prData={pr} />
-									);
-								})}
+                                    {prs[date].map((pr) => {
+                                        return(
+                                            <PullRequestItem prData={pr} />
+                                        );
+                                    })}
 								</div>
 							</div>
 						</div>	
