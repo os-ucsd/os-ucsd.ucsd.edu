@@ -10,3 +10,11 @@
     font-size:40px;
     color: white;
 }
+
+.tutorialBox:not(:hover){
+    background-color:#fafafa;
+}
+
+.tutorialBox:hover{
+    background-color:#d4d4d4;
+}
