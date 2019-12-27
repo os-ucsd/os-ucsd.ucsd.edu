@@ -1,9 +1,14 @@
 import React from "react";
 import MenuBar from "../components/navbar";
+import "../assets/css/main.css";
+import "../assets/css/tutorial-style.css";
+import "../css/home.css";
+import Background from "../images/spac.jpg";
 import "../css/project.css";
 import axios from "axios";
 import { Form, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "../components/footer";
 
 const EachProject = props => {
   return (
@@ -58,13 +63,13 @@ class Project extends React.Component {
 
     const token = `${process.env.REACT_APP_MY_KEY}`;
     const Info = {
-      title: "New Project 6",
+      title: "New Project 7",
       body:
-        "Name: Bao Hoang \n \
-        Project description: Bla bla bla \n \
-        Project repo: something something \n \
-        Languages or Frameworks the project use: ... \n \
-        Database: N/A",
+        "Name: Bao Hoang \n" +
+        "Project description: Bla bla bla \n" +
+        "Project repo: something something \n" +
+        "Languages or Frameworks the project use: ... \n" +
+        "Database: N/A",
       assignees: ["bghoang"],
       labels: ["new project"]
     };
@@ -79,81 +84,97 @@ class Project extends React.Component {
 
   render() {
     return (
-      <div id="projectpage">
+      <div>
         <MenuBar />
-        <div className="projectList">{this.showProject()}</div>
-        <br />
-        <Form>
-          <Form.Group as={Row} controlId="name">
-            <Form.Label column sm="2">
-              Name
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control type="name" placeholder="Name" />
-            </Col>
-          </Form.Group>
 
-          <Form.Group as={Row} controlId="project">
-            <Form.Label column sm="2">
-              Project's Name
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control
-                type="projectName"
-                placeholder="Name of the project"
-              />
-            </Col>
-          </Form.Group>
+        <div className="is-preload">
+          {/*Banner*/}
+          <section
+            id="banner"
+            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+          >
+            <div className="inner">
+              <div className="content">
+                <h2>Open Sources Projects</h2>
+              </div>
+            </div>
+          </section>
 
-          <Form.Group as={Row} controlId="repo">
-            <Form.Label column sm="2">
-              Repositories Link
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control type="link" placeholder="Link to the repo" />
-            </Col>
-          </Form.Group>
+          <div className="projectList">{this.showProject()}</div>
+          <br />
+          <Form>
+            <Form.Group as={Row} controlId="name">
+              <Form.Label column sm="2">
+                Name
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control type="name" placeholder="Name" />
+              </Col>
+            </Form.Group>
 
-          <Form.Group as={Row} controlId="description">
-            <Form.Label column sm="2">
-              Project Description
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control
-                type="description"
-                placeholder="description of the project"
-              />
-            </Col>
-          </Form.Group>
+            <Form.Group as={Row} controlId="project">
+              <Form.Label column sm="2">
+                Project's Name
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="projectName"
+                  placeholder="Name of the project"
+                />
+              </Col>
+            </Form.Group>
 
-          <Form.Group as={Row} controlId="framework">
-            <Form.Label column sm="2">
-              Languages or Frameworks the project use
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control
-                type="technology"
-                placeholder="What Languages or Frameworks does the project use"
-              />
-            </Col>
-          </Form.Group>
+            <Form.Group as={Row} controlId="repo">
+              <Form.Label column sm="2">
+                Repositories Link
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control type="link" placeholder="Link to the repo" />
+              </Col>
+            </Form.Group>
 
-          <Form.Group as={Row} controlId="Database">
-            <Form.Label column sm="2">
-              Datebase used
-            </Form.Label>
-            <Col sm="10">
-              <Form.Control
-                type="database"
-                placeholder="what kind of database this project used"
-              />
-            </Col>
-          </Form.Group>
-        </Form>
+            <Form.Group as={Row} controlId="description">
+              <Form.Label column sm="2">
+                Project Description
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="description"
+                  placeholder="description of the project"
+                />
+              </Col>
+            </Form.Group>
 
-        <Button variant="primary" onClick={this.handleSubmit}>
-          Create Pull request
-        </Button>
+            <Form.Group as={Row} controlId="framework">
+              <Form.Label column sm="2">
+                Languages or Frameworks the project use
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="technology"
+                  placeholder="What Languages or Frameworks does the project use"
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} controlId="Database">
+              <Form.Label column sm="2">
+                Datebase used
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control
+                  type="database"
+                  placeholder="what kind of database this project used"
+                />
+              </Col>
+            </Form.Group>
+          </Form>
+
+          <Button variant="primary" onClick={this.handleSubmit}>
+            Create Pull request
+          </Button>
+        </div>
+        <Footer />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 .projectList {
-  padding-top: 150px;
+  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -8,5 +8,5 @@
   margin: 10px;
 }
 #projectpage {
-  background-image: url("../images/spac.jpg");
+  /*background-image: url("../images/spac.jpg");*/
 }
