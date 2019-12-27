@@ -16,7 +16,7 @@ class Home extends React.Component {
 
   componentWillMount() {
     const data = JSON.parse(localStorage.getItem('prs'));
-    // if haven't gotten data before or if data is old, then retrieve the data again
+    // if haven't gotten data before or if data is old, then retrieve the data again (every 10 min)
     if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
       // get the PR's to add to the timeline
       console.log('retrieving new data...');
@@ -38,9 +38,7 @@ class Home extends React.Component {
     else{
       // didn't need to call api, so just set state to stored data
       console.log('no new data');
-      const noRepeats = this.combineRepeats(data.data);
-      console.log(noRepeats);
-      this.setState({prs: noRepeats});
+      this.setState({prs: data.data});
     }
   }
 
