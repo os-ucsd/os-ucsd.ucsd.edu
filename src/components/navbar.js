@@ -39,7 +39,7 @@ class MenuBar extends React.Component {
       <div>
         <header id="header" className="alt">
           <h1>
-            <a href="/">
+            <a href="/" id="logo">
               <img
                 src="https://i.ibb.co/1sNPYWn/os-logo.png"
                 alt="some text"
@@ -77,15 +77,6 @@ class MenuBar extends React.Component {
               <a id="contact" className="menu-item" href="/contact">
               <i class="fas fa-envelope-square"></i>
               <span> Contact</span>
-              </a>
-
-              <a
-                onClick={this.showSettings}
-                className="menu-item--small"
-                href=""
-              >
-              <i class="fas fa-cogs"></i>
-              <span> Settings</span>
               </a>
             </Menu>
           </h1>
