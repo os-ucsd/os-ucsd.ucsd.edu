@@ -63,6 +63,10 @@ class Home extends React.Component {
       // skip the repeats
       i = j - 1;
     }
+   /* let yourContribution = noRepeatPRs[noRepeatPRs.length - 1];
+    yourContribution.user = "I";
+    yourContribution.repoName = "some repository";
+    noRepeatPRs.unshift(yourContribution);*/
     return noRepeatPRs;
   }
   
@@ -100,7 +104,7 @@ class Home extends React.Component {
 
           {/* timeline */}
           <br/>
-          <h2>Contribution Timeline</h2>
+          <h2>Our Github Contribution Timeline</h2>
           <Timeline prs={this.state.prs} />
 
           {/*One*/}
