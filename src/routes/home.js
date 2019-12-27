@@ -3,12 +3,46 @@ import MenuBar from "../components/navbar";
 import "../assets/css/main.css";
 import Footer from "../components/footer";
 import "../css/home.css";
+import getAllPRs from '../timeline/getTimelineData';
+import Timeline from '../timeline/Timeline';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      prs:{}
+    };
   }
+
+  componentWillMount() {
+    const data = JSON.parse(localStorage.getItem('prs'));
+    // if haven't gotten data before or if data is old, then retrieve the data again
+    if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
+      // get the PR's to add to the timeline
+      console.log('retrieving new data...');
+      getAllPRs()
+      .then(res => {
+        // only get the first 16 PRs
+        res = res.slice(0, 16);
+        // group each pr with other prs that were made on the same day
+        let orderedPRs = this.groupByDate(res);
+        this.setState({prs: orderedPRs});
+
+        // store in local storage
+        const dataToStore = {
+          data: orderedPRs,
+          lastRetrieved: new Date(),
+        }
+        localStorage.setItem('prs', JSON.stringify(dataToStore));
+      });
+    }
+    else{
+      // didn't need to call api, so just set state to stored data
+      console.log('no new data');
+      this.setState({prs: data.data});
+    }
+  }
+
   componentDidMount() {
     this._isMounted = true;
     /*function() {
@@ -52,9 +86,40 @@ class Home extends React.Component {
 		}
 */
   }
+
+  /*
+	 * groups prs in a given list of prs with other prs that were made 
+	 * in the same day
+	 */
+	groupByDate(listOfPRs){
+		// group by date
+		let groupedPRs = {}
+		for (let i = 0; i < listOfPRs.length; i++){
+			// get date to set as key (need to convert into a readable string first)
+			let dateStr = new Date(listOfPRs[i].merged_time).toDateString();
+			if (dateStr in groupedPRs){
+				groupedPRs[dateStr].push(listOfPRs[i]);
+			}
+			else{
+				groupedPRs[dateStr] = [listOfPRs[i]];
+			}
+		}
+
+		// sort the object by date
+		let sortedGroup = {}
+		Object.keys(groupedPRs).sort((date1, date2) => {
+			let first = new Date(date1);
+			let sec = new Date(date2);
+			return sec - first;
+		}).forEach(function(key){
+			sortedGroup[key] = groupedPRs[key];
+		});
+		return sortedGroup;
+  }
+  
   render() {
     // Menu.
-
+    console.log(this.state.prs);
     return (
       <div>
         <MenuBar />
@@ -83,7 +148,7 @@ class Home extends React.Component {
               </ul>
             </div>
           </section>
-
+          <Timeline prs={this.state.prs} />
           {/*One*/}
           <section id="one" className="wrapper style1 split">
             <div className="inner">
