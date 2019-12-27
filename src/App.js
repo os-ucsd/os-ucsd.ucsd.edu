@@ -6,7 +6,8 @@ import Project from "./routes/projects";
 import Contact from "./routes/contact";
 import Event from "./routes/event";
 import WorkShop from "./routes/workshop";
-//import { slide as Menu } from 'react-burger-menu'
+import Tutorials from "./routes/tutorials";
+import TutorialPage from "./routes/tutorial-page";
 import "./css/menuBarAnimation.css";
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/event" component={Event} />
         <Route exact path="/workshop" component={WorkShop} />
+        <Route exact path="/tutorials" component={Tutorials} />
+        <Route path="/tutorials/:tutorialID" component={TutorialPage} />
       </main>
     </Router>
   );

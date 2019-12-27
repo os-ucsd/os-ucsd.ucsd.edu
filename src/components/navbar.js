@@ -69,6 +69,11 @@ class MenuBar extends React.Component {
               <span> Projects</span>
               </a>
 
+              <a id="tutorial" className="menu-item" href="/tutorials">
+                <i className="fas fa-book-open"></i>
+                <span> Tutorials</span>
+              </a>
+
               <a id="contact" className="menu-item" href="/contact">
               <i class="fas fa-envelope-square"></i>
               <span> Contact</span>
