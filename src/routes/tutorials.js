@@ -41,7 +41,7 @@ class Tutorials extends React.Component {
         tutorialCards = Object.keys(this.state.tutorialMeta).map(key =>{
             let tutorial = this.state.tutorialMeta[key];
             return(
-                    <section key={tutorial.url} onClick={() => {this.openTutorial(tutorial)}} style={{backgroundColor: "#fafafa"}}>
+                    <section className={"tutorialBox"} key={tutorial.url} onClick={() => {this.openTutorial(tutorial)}} >
                         <span className="icon solid major fa-cube"></span>
                         <h3 style={{minHeight: "10rem", paddingTop:"0.5rem"}}>{tutorial["title"]}</h3>
                         <p className={"mb-0"}>By: {tutorial["authors"].name}</p>
