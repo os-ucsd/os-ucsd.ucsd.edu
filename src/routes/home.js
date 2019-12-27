@@ -99,7 +99,8 @@ class Home extends React.Component {
           </section>
 
           {/* timeline */}
-          <h2>Timeline</h2>
+          <br/>
+          <h2>Contribution Timeline</h2>
           <Timeline prs={this.state.prs} />
 
           {/*One*/}
