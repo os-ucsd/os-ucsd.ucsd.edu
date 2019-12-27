@@ -1,10 +1,14 @@
 import React from "react";
 import MenuBar from "../components/navbar";
-//import "../assets/css/main"
+import "../assets/css/main.css";
+import "../assets/css/tutorial-style.css";
+import "../css/home.css";
+import Background from "../images/spac.jpg";
 import "../css/project.css";
 import axios from "axios";
 import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "../components/footer";
 
 const EachProject = props => {
   return (
@@ -50,9 +54,30 @@ class Project extends React.Component {
 
   render() {
     return (
-      <div id="projectpage">
+      <div>
         <MenuBar />
-        <div className="projectList">{this.showProject()}</div>
+
+        <div className="is-preload">
+          {/*Banner*/}
+          <section
+            id="banner"
+            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+          >
+            <div className="inner">
+              <div className="content">
+                <h2>Open Sources Projects</h2>
+              </div>
+            </div>
+          </section>
+
+          <div className="projectList">{this.showProject()}</div>
+          <br />
+
+          <Button variant="primary" size="lg" href="/project">
+            Large button
+          </Button>
+        </div>
+        <Footer />
       </div>
     );
   }

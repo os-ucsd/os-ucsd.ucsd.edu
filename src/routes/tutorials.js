@@ -4,11 +4,11 @@ import "../assets/css/main.css";
 import "../assets/css/tutorial-style.css";
 import "../css/home.css";
 import tutorialMeta from "./tutorials-meta.js";
-import Container from "react-bootstrap/Container"
-import Background from "../images/space5.jpg"
+import Container from "react-bootstrap/Container";
+import Background from "../images/space5.jpg";
+import Footer from "../components/footer";
 
-var moment = require('moment');
-
+var moment = require("moment");
 
 class Tutorials extends React.Component {
     constructor(props) {
@@ -79,8 +79,12 @@ class Tutorials extends React.Component {
                     </section>
                 </div>
             </div>
-        );
-    }
+          </section>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default Tutorials;
