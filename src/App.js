@@ -10,6 +10,7 @@ import Tutorials from "./routes/tutorials";
 import TutorialPage from "./routes/tutorial-page";
 import "./css/menuBarAnimation.css";
 function App() {
+  console.log(`${process.env.REACT_APP_MY_KEY}`);
   return (
     <Router>
       <main id="page-wrap" className="App">
