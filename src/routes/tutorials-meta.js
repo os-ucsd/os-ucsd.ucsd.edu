@@ -14,7 +14,7 @@ let tutorialMeta =
     {
         "ACS-Website":   {
                             title: "How to create a Github-synced website as a UCSD Student",
-                            publish: new Date("2019-10-31T12:00:00Z"),
+                            publish: new Date("2019-12-25T12:00:00Z"),
                             authors: {name: "Alex Garcia", github: "asg017"},
                             url: "ACS-Website",
                             content: require("../tutorials/ACSAWebsite.md")
@@ -22,10 +22,17 @@ let tutorialMeta =
 
         "Graffiti-Wall":   {
                                 title: "GIT GUD: Graffiti Wall Tutorial!",
-                                publish: new Date("2019-10-31T12:00:00Z"),
+                                publish: new Date("2019-12-26T12:00:00Z"),
                                 authors: {name: "Alex Garcia, Chau Vu, Victor Miranda", github: "os-ucsd"},
                                 url: "Graffiti-Wall",
                                 content: require("../tutorials/graffitiwall.md")
+                            },
+        "Bitmoji":          {
+                                title: "Create a Bitmoji Workshop",
+                                publish: new Date("2019-12-27T12:00:00Z"),
+                                authors: {name: "OS-UCSD", github: "os-ucsd"},
+                                url: "Bitmoji",
+                                content: require("../tutorials/bitmoji.md")
                             }
     }
 

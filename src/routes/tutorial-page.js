@@ -53,7 +53,7 @@ class TutorialPage extends React.Component {
                 {tutorialData["authors"].github})
               </h3>
               <h3>
-                Published: {moment(tutorialData["publish"]).format("lll")}
+                Published: {moment(tutorialData["publish"]).format("ll")}
               </h3>
             </div>
           </div>
