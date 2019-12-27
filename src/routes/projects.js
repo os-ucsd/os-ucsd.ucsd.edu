@@ -4,7 +4,6 @@ import "../css/project.css";
 import axios from "axios";
 import { Form, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 const EachProject = props => {
   return (
     <Card style={{ className: "card", width: "18rem" }}>
