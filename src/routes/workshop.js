@@ -11,7 +11,7 @@ class WorkShop extends React.Component {
     return (
       <div>
         <MenuBar />
-        This is workshop page
+
       </div>
     );
   }
