@@ -130,7 +130,7 @@ class Home extends React.Component {
             <div className="inner">
               <div className="content">
                 <h2>Open Source @ UCSD</h2>
-                <p>Welcome!</p>
+                  <p>Welcome!</p>
               </div>
               <ul className="actions stacked">
                 <li>
@@ -148,6 +148,8 @@ class Home extends React.Component {
               </ul>
             </div>
           </section>
+
+          
           <Timeline prs={this.state.prs} />
           {/*One*/}
           <section id="one" className="wrapper style1 split">
