@@ -28,8 +28,8 @@ class PullRequestItem extends React.Component{
 			<div className="item-container">
 				<div className="item-content">
 					{
-                        allPRTimes.map(prTime => 
-                            <p>{prTime}</p>
+                        allPRTimes.map((prTime, i) => 
+                            <p key={i}>{prTime}</p>
                         )
                     }
 					<a href={prData.repoURL} className="pr-link">
