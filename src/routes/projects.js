@@ -3,21 +3,22 @@ import MenuBar from "../components/navbar";
 import "../assets/css/main.css";
 import "../assets/css/tutorial-style.css";
 import "../css/home.css";
-import Background from "../images/spac.jpg";
+import Background from "../images/project.jpg";
 import "../css/project.css";
 import axios from "axios";
 import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/footer";
 
+// Show all the projects that we can contribute
 const EachProject = props => {
   return (
-    <Card style={{ className: "card", width: "18rem" }}>
+    <Card style={{ className: "card", width: "20rem" }}>
       <Card.Img variant="top" src={props.project.owner.avatar_url} />
       <Card.Body>
-        <Card.Title>{props.project.name}</Card.Title>
-        <Card.Title>{props.project.owner.login}</Card.Title>
-        <Card.Text>{props.project.description}</Card.Text>
+        <Card.Title> Project's Name: {props.project.name}</Card.Title>
+        <Card.Title>Owner: {props.project.owner.login}</Card.Title>
+        <Card.Text> Description: {props.project.description}</Card.Text>
         <Button variant="primary" href={props.project.html_url}>
           Check Project
         </Button>
@@ -35,6 +36,7 @@ class Project extends React.Component {
   }
 
   componentDidMount() {
+    // Update project list
     axios
       .get(
         "https://api.github.com/search/repositories?q=topic%3Aos-ucsd-project+fork%3Atrue&type=Repositories"
@@ -46,6 +48,7 @@ class Project extends React.Component {
       .catch(err => console.log(err));
   }
 
+  // Method to show the EachProject component
   showProject() {
     return this.state.projects.map(project => {
       return <EachProject project={project} key={project.id} />;
@@ -70,12 +73,17 @@ class Project extends React.Component {
             </div>
           </section>
 
-          <div className="projectList">{this.showProject()}</div>
-          <br />
+          <h3 className="firstTitle">
+            All the projects that you can contribute to
+          </h3>
+
+          <h4>Want to share your project so other can contribute? </h4>
 
           <Button variant="primary" size="lg" href="/form">
-            Large button
+            Share Project
           </Button>
+
+          <div className="projectList">{this.showProject()}</div>
         </div>
         <Footer />
       </div>
