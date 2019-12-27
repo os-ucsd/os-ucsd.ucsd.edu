@@ -49,7 +49,6 @@ class Project extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const token = "bad472b9b4c4913b670b04e41b7363d316c6368a";
     const Info = {
       title: "New Project",
       body: "This is a test",
