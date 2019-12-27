@@ -1,15 +1,33 @@
+.firstTitle {
+  padding-top: 30px;
+  font-family: inherit;
+  font-size: 40px;
+}
+
 .projectList {
-  padding-top: 50px;
+  padding-top: 30px;
+  padding-left: 110px;
+  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
+}
+
+h4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font: inherit;
 }
 
 .card {
-  margin: 10px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .form {
-  margin: 40px;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .submitBut {
