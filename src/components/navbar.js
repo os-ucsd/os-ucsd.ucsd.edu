@@ -43,7 +43,7 @@ class MenuBar extends React.Component {
               <img
                 src="https://i.ibb.co/1sNPYWn/os-logo.png"
                 alt="some text"
-                height="150%"
+                height="170%"
               />
             </a>
             <Menu
@@ -93,87 +93,6 @@ class MenuBar extends React.Component {
       </div>
     );
   }
-  /*
-        <header id="header" className="alt">
-        <h1>
-          <a href="/">
-            <img
-              src="https://i.ibb.co/1sNPYWn/os-logo.png"
-              alt="some text"
-              height="150%"
-            />
-          </a>
-        </h1>
-        <a>
-          <Icon
-                className="nav__icon"
-                type="menu-fold"
-                onClick={() => this.handleClick()}
-              />
-      
-              <div className="nav__body">
-                Body
-              </div>
-          </a>
-      </header>
- */
-  /*
-   /*<div ref={this.wrapRef} className="alt wrap">
-        <header className="nav">
-            <Icon
-              className="nav__icon"
-              type="menu-fold"
-              onClick={() => this.handleClick()}
-            />
-            <div className="nav__body">
-              helloworld
-            </div>
-        </header>*/
-  /*
-       <header id="header" className="alt">
-          <h1>
-            <a href="/">
-              <img
-                src="https://i.ibb.co/1sNPYWn/os-logo.png"
-                alt="some text"
-                height="150%"
-              />
-            </a>
-          </h1>
-          <a href="#menu">Menu</a>
-        </header>
-
-
-
-        <nav id="menu">
-          <ul className="links">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="generic.html">Generic</a>
-            </li>
-            <li>
-              <a href="elements.html">Elements</a>
-            </li>
-          </ul>
-          <ul className="actions stacked">
-            <li>
-              <a href="#" className="button primary fit">
-                Sign Up
-              </a>
-            </li>
-            <li>
-              <a href="#" className="button fit">
-                Log In
-              </a>
-            </li>
-          </ul>
-        </nav>
-    */
-  /*
-     Routes the user to the home page.
-     */
 
   switch_view_home = () => {
     this.props.history.push("/home");

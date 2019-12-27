@@ -59,42 +59,25 @@ class Home extends React.Component {
       <div>
         <MenuBar />
         <div className="is-preload">
-          {/*Header
-			<header id="header" className="alt">
-				<h1><a href="/"><img src="https://i.ibb.co/1sNPYWn/os-logo.png" alt="some text" height="150%"/></a></h1>
-				<a href="#menu">Menu</a>
-			</header>
-
-		Menu
-			<nav id="menu">
-				<ul className="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
-				</ul>
-				<ul className="actions stacked">
-					<li><a href="#" className="button primary fit">Sign Up</a></li>
-					<li><a href="#" className="button fit">Log In</a></li>
-				</ul>
-			</nav>
-*/}
 
           {/*Banner*/}
           <section id="banner">
             <div className="inner">
               <div className="content">
-                <h2>Learn about Open Source Software!</h2>
-                <p>We welcome everybody</p>
+                <h2>Open Source @ UCSD</h2>
+                <p>Welcome!</p>
               </div>
               <ul className="actions stacked">
                 <li>
-                  <a href="#" className="button primary major">
-                    Get Started
+                  <a href="#" className="button major">
+                  <i class="fas fa-users"></i>
+              <span> Learn More!</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="button major">
-                    More Info
+                  <a href="https://github.com/os-ucsd" className="button major">
+                    <i class="fab fa-github"></i>
+              <span> Find Us on Github!</span>
                   </a>
                 </li>
               </ul>
