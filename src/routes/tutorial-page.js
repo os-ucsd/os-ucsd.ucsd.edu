@@ -4,7 +4,6 @@ import "../assets/css/main.css";
 import "../assets/css/tutorial-style.css";
 import tutorialMeta from "./tutorials-meta.js";
 import ReactMarkdown from "react-markdown";
-import Container from "react-bootstrap/Container";
 import Background from "../images/space5.jpg";
 
 var moment = require("moment");
