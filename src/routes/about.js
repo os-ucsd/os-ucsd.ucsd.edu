@@ -5,6 +5,7 @@ import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import Background from "../images/project.jpg";
 
 const officers = [
   {
@@ -64,7 +65,17 @@ class About extends React.Component {
         return (
             <div>
             <MenuBar></MenuBar>
-            <main style={{marginTop:"200px"}}>
+            {/*Banner*/}
+            <section
+              id="banner"
+              style={{ backgroundImage: `url(${Background})`, height: "20px" }}>
+              <div className="inner">
+                <div className="content">
+                  <h2>About Us</h2>
+                </div>
+              </div>
+            </section>
+            <main style={{marginTop:"20px"}}>
             <Typography variant="h2" component="h1"> 
               Meet the Board
             </Typography>
