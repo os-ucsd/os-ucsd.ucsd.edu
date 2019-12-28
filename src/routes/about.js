@@ -107,8 +107,7 @@ const Officer = (props) => {
     return (
       <div style={{boxSizing:"border-box", position:"relative", paddingLeft:"50px", paddingRight:"50px", paddingBottom:"5rem", flex:"0 0 33.3333%"}}>
         <a href={props.link} >
-          <Image src={props.image} width={300} height={300} style={{opacity: 0.9}} onMouseOver={over} onMouseOut={out}
-            style={{objectFit:'cover'}}/>
+          <Image src={props.image} width={300} height={300} style={{opacity: 0.9, objectFit:'cover'}} onMouseOver={over} onMouseOut={out}/>
         </a>
         <Typography variant="h4" component="h2">
           {props.name}
