@@ -33,7 +33,7 @@ let events = [
         endTime: '8:30pm',
         location: 'some room',
         imageUrl: null,
-        facebookUrl: '',
+        facebookUrl: 'https://www.facebook.com/events/527698611136531/',
     },
     {
         name: 'Winter 2020 GBM',
