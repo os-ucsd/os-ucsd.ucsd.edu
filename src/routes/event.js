@@ -2,7 +2,8 @@ import React from "react";
 import MenuBar from "../components/navbar";
 import UpcomingEvents from '../events/UpcomingEvents';
 import PastEvents from '../events/PastEvents';
-import Background from "../images/project.jpg";
+//import Background from "../images/project.jpg";
+import Background from "../images/material-space/material-space2.jpg";
 
 import "../css/event.css";
 
