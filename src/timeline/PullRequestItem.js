@@ -9,10 +9,10 @@ class PullRequestItem extends React.Component{
         for (let i = 0; i < prData.allMergedDates.length; i++){
             const mergedTime = new Date(prData.allMergedDates[i]);
             let monthStr = mergedTime.getUTCMonth() + 1;
-            let dateStr = mergedTime.getUTCDate();
+            let dateStr = mergedTime.getDate();
             let yearStr = mergedTime.getUTCFullYear();
             let timeStr = new Date(mergedTime.setSeconds(0,0)).toLocaleTimeString();
-            
+
             // get rid of seconds
             timeStr = timeStr.split(' ');
             const time = timeStr[0];

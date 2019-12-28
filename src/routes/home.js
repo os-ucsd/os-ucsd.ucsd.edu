@@ -6,6 +6,7 @@ import "../css/home.css";
 import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
+import UpcomingEvents from '../events/UpcomingEvents';
 
 // importing images
 import mozilla from '../assets/css/images/mozilla.jpg';
@@ -149,11 +150,11 @@ class Home extends React.Component {
             </div>
           </section>
 
-          {/* timeline */}
+          {/* TIMELINE & RESOURCES */}
           <br/>
           
           <Grid container spacing={2}>
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={8}>
               <h2>Open Source Resources</h2>
               <p className='resources'>
                 Here are some organizations that promote open source communities and provide resources to 
@@ -178,13 +179,20 @@ class Home extends React.Component {
                 </a>
               </div>
             </Grid>
-            <Grid item sm={12} md={6} className='timeline'>
+            <Grid item sm={12} md={4} className='timeline'>
               <h2>Our Github Contribution Timeline</h2>
               <p>Check out some of the most recent contributions to our GitHub!</p>
               <Timeline prs={this.state.prs} />
             </Grid>
           </Grid>
+          <br />
 
+          {/* EVENTS */}
+          <section className='events-container'>
+            <h2>Upcoming Events</h2>
+            <UpcomingEvents />
+          </section>
+          <br />
           <section id="two" className="wrapper style2">
             <div className="inner">
               <header className="major">
