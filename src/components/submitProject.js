@@ -6,7 +6,8 @@ import "../css/home.css";
 import "../css/project.css";
 import Background from "../images/spac.jpg";
 import axios from "axios";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import Button from "@material-ui/core/Button";
+import { Form, Row, Col } from "react-bootstrap";
 import Footer from "../components/footer";
 
 class SubmitProject extends React.Component {
@@ -66,6 +67,15 @@ class SubmitProject extends React.Component {
     });
   }
 
+  /*checkInfo() {
+    this.state.projectName;
+    this.state.name;
+    this.state.description;
+    this.state.link;
+    this.state.technology;
+    this.state.database;
+  }*/
+
   handleSubmit(e) {
     e.preventDefault();
 
@@ -88,10 +98,11 @@ class SubmitProject extends React.Component {
         "\n" +
         "Database: " +
         `${this.state.database}`,
-      assignees: ["blau0123"],
+      assignees: ["bghoang"],
       labels: ["New Project"]
     };
 
+    // Create issue with github api
     axios
       .post(
         "https://api.github.com/repos/os-ucsd/os-ucsd.ucsd.edu/issues",
@@ -139,6 +150,7 @@ class SubmitProject extends React.Component {
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
+                    required
                     type="name"
                     placeholder="Your name"
                     value={this.state.name}
@@ -153,6 +165,7 @@ class SubmitProject extends React.Component {
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
+                    required
                     type="projectName"
                     placeholder="Name of the project"
                     value={this.state.projectName}
@@ -167,6 +180,7 @@ class SubmitProject extends React.Component {
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
+                    required
                     type="link"
                     placeholder="Link to the project's repository"
                     value={this.state.link}
@@ -181,6 +195,7 @@ class SubmitProject extends React.Component {
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
+                    required
                     type="description"
                     placeholder="Short description of the project"
                     value={this.state.description}
@@ -195,6 +210,7 @@ class SubmitProject extends React.Component {
                 </Form.Label>
                 <Col sm="10">
                   <Form.Control
+                    required
                     type="technology"
                     placeholder="What languages or frameworks does the project use?"
                     value={this.state.technology}
@@ -210,7 +226,7 @@ class SubmitProject extends React.Component {
                 <Col sm="10">
                   <Form.Control
                     type="database"
-                    placeholder="What kind of database does the project use?"
+                    placeholder="What kind of database does the project use? Put N/A otherwise"
                     value={this.state.database}
                     onChange={this.handleDatabase}
                   />
@@ -219,9 +235,10 @@ class SubmitProject extends React.Component {
 
               <Button
                 className="submitBut"
-                variant="primary"
+                variant="outlined"
+                color="primary"
+                size="large"
                 type="submit"
-                size="lg"
               >
                 Submit Project
               </Button>
