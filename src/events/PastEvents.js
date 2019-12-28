@@ -3,9 +3,9 @@ import events from './events-data';
 import defaultImg from './events-imgs/default.jpg';
 import './UpcomingEvents.css';
 
-const UpcomingEvents = () => {
-    // create array of only UPCOMING events (end time > curr time)
-    let upcomingEvents = [];
+const PastEvents = () => {
+    // create array of only PAST events (end time < curr time)
+    let pastEvents = [];
     const currTime = new Date();
     
     for (let i = 0; i < events.length; i++){
@@ -27,22 +27,20 @@ const UpcomingEvents = () => {
         // set the mins of the end time
         endTime.setTime(endTime.getTime() + parsedEndMin * 1000 * 60);
         
-        // if end time is later than now, then is upcoming
-        if (currTime < endTime){
-            upcomingEvents.push(events[i])
+        // if now is later than end time, then is past event
+        if (currTime > endTime){
+            pastEvents.push(events[i])
         }
     }
 
     // make a card for every event in events
-    const eventCompon = upcomingEvents ? upcomingEvents.map((event, i) => 
+    const eventCompon = pastEvents ? pastEvents.map((event, i) => 
             <div key={i} className='event-inner-container'>
                 {
                     // if no image specified, will use the default image
                     event.imageUrl ? 
-                        <img className='event-img' alt={event.name} src={event.imageUrl} 
-                            width='380px' height='200px'/> :
-                        <img className='event-img' alt={event.name} src={defaultImg} 
-                            width='380px' height='200px'/>
+                        <img className='event-img' src={event.imageUrl} width='380px' height='200px'/> :
+                        <img className='event-img' src={defaultImg} width='380px' height='200px'/>
                 }
                 <h5 className='event-text'>{event.name}</h5>
                 <p className='event-text'>{event.date} {event.startTime}-{event.endTime} </p>
@@ -51,12 +49,10 @@ const UpcomingEvents = () => {
     ) : null
 
     return(
-        <div>
-            <div className='event-outer-container'>
-                {eventCompon}
-            </div>
-        </div>
+       <div className='event-outer-container'>
+           {eventCompon}
+       </div>
     )
 }
 
-export default UpcomingEvents;
+export default PastEvents;

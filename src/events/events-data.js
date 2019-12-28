@@ -4,10 +4,11 @@ events is an array of objects, with each object representing a single event
 
 HOW TO ADD AN EVENT
 1. Go to the bottom of the list and add a new object as the last element
-2. Add the following fields: name, date, startTime, endTime, location, imageUrl
+2. Add the following fields: name, date, startTime, endTime, location, imageUrl, facebookUrl
 2a. If you have an image you want to display, put the image into src/events/events-imgs
 and then import it from './events-imgs/your-image'
 2b. Add the name of the import (like mongoImage) as the value of imageUrl
+2c. If you DON'T have an image, put null as the value for imageUrl
 Note: all fields should be strings except imageUrl and consistent with previous formatting
 3. Yeah.
 
@@ -32,6 +33,7 @@ let events = [
         endTime: '8:30pm',
         location: 'some room',
         imageUrl: null,
+        facebookUrl: '',
     },
     {
         name: 'Winter 2020 GBM',
@@ -40,6 +42,7 @@ let events = [
         endTime: '8:30pm',
         location: 'some room',
         imageUrl: null,
+        facebookUrl: '',
     },
     {
         name: 'MERN Workshop 1: Express & Node',
@@ -48,6 +51,7 @@ let events = [
         endTime: '8:00pm',
         location: 'SSC 300',
         imageUrl: nodeImage,
+        facebookUrl: '',
     },
     {
         name: 'MERN Workshop 2: MongoDB',
@@ -56,6 +60,7 @@ let events = [
         endTime: '8:00pm',
         location: 'SSC 300',
         imageUrl: mongoImage,
+        facebookUrl: '',
     },
     {
         name: 'MERN Workshop 3: React',
@@ -64,6 +69,7 @@ let events = [
         endTime: '8:00pm',
         location: 'SSC 300',
         imageUrl: reactImage,
+        facebookUrl: '',
     },
     {
         name: 'MERN Workshop 4: All Together',
@@ -72,6 +78,16 @@ let events = [
         endTime: '8:00pm',
         location: 'SSC 300',
         imageUrl: mernImage,
+        facebookUrl: '',
+    },
+    {
+        name: 'Test',
+        date: '12/27/19',
+        startTime: '6:00pm',
+        endTime: '8:30pm',
+        location: 'SSC 300',
+        imageUrl: null,
+        facebookUrl: '',
     }
 ]
 
