@@ -1,122 +1,122 @@
 import React from "react";
-//import jquery from 'jquery';
-import MenuBar from "./navbar";
-//import Nav from "react-bootstrap/Nav";
-//import $ from 'jquery';
-//import "../../assets/js/jquery.min.js";
-//import "../../assets/js/jquery.scrollex.min.js";
-import "../../assets/js/browser.min.js";
-//import "../../assets/js/breakpoints.min.js";
-//import "../../assets/js/util.js";
-//import "../../assets/js/main.js";
-import "../../assets/css/main.css";
+import MenuBar from "../components/navbar";
+import "../assets/css/main.css";
+import Footer from "../components/footer";
+import "../css/home.css";
+import getAllPRs from '../timeline/getTimelineData';
+import Timeline from '../timeline/Timeline';
+import Grid from '@material-ui/core/Grid';
+import UpcomingEvents from '../events/UpcomingEvents';
+import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom';
+
+// importing images
+import mozilla from '../assets/css/images/mozilla.jpg';
+import google from '../assets/css/images/google.jpg';
+import facebook from '../assets/css/images/facebook.png';
+import redhat from '../assets/css/images/redhat.png';
+import twilio from '../assets/css/images/twilio.png';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      prs:[]
+    };
   }
+
+  componentWillMount() {
+    const data = JSON.parse(localStorage.getItem('prs'));
+    // if haven't gotten data before or if data is old, then retrieve the data again (every 10 min)
+    if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
+      // get the PR's to add to the timeline
+      console.log('retrieving new data...');
+      getAllPRs()
+      .then(res => {
+        // only get the first 16 PRs
+        res = res.slice(0, 10);
+        const noRepeats = this.combineRepeats(res);
+        this.setState({prs:noRepeats})
+        console.log(noRepeats);
+        // store in local storage
+        const dataToStore = {
+          data: noRepeats,
+          lastRetrieved: new Date(),
+        }
+        localStorage.setItem('prs', JSON.stringify(dataToStore));
+      });
+    }
+    else{
+      // didn't need to call api, so just set state to stored data
+      console.log('no new data');
+      this.setState({prs: data.data});
+    }
+  }
+
   componentDidMount() {
     this._isMounted = true;
-    /*function() {
-			$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo("#is-preload")
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right'
-			});
-		}
-		var	$window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$banner = $('#banner');
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Header.
-		if ($banner.length > 0
-		&&	$header.hasClass('alt')) {
-
-			$window.on('resize', function() { $window.trigger('scroll'); });
-
-			$banner.scrollex({
-				bottom:		$header.outerHeight(),
-				terminate:	function() { $header.removeClass('alt'); },
-				enter:		function() { $header.addClass('alt'); },
-				leave:		function() { $header.removeClass('alt'); $header.addClass('reveal'); }
-			});
-
-		}
-*/
   }
+
+  /*
+  When there are multiple PRs in a row by the same person to the same repo,
+  combine the PRs into a single element
+  */
+  combineRepeats(prs){
+    let noRepeatPRs = [];
+    for (let i = 0; i < prs.length; i++){
+      prs[i].allMergedDates = [prs[i].merged_time];
+      let j = i + 1;
+      while (j < prs.length && prs[j].user === prs[i].user && prs[j].repoName === prs[i].repoName){
+        prs[i].allMergedDates.push(prs[j].merged_time);
+        j++;
+      }
+      noRepeatPRs.push(prs[i]);
+      // skip the repeats
+      i = j - 1;
+    }
+    let yourContribution = noRepeatPRs[noRepeatPRs.length - 1];
+    yourContribution.user = "I";
+    yourContribution.repoName = "some repository";
+    noRepeatPRs.unshift(yourContribution);
+    return noRepeatPRs;
+  }
+  
   render() {
     // Menu.
-
+    console.log(this.state.prs);
     return (
-      <div>
+      <div className='home-container'>
         <MenuBar />
         <div className="is-preload">
-          {/*Header
-			<header id="header" className="alt">
-				<h1><a href="/"><img src="https://i.ibb.co/1sNPYWn/os-logo.png" alt="some text" height="150%"/></a></h1>
-				<a href="#menu">Menu</a>
-			</header>
-
-		Menu
-			<nav id="menu">
-				<ul className="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
-				</ul>
-				<ul className="actions stacked">
-					<li><a href="#" className="button primary fit">Sign Up</a></li>
-					<li><a href="#" className="button fit">Log In</a></li>
-				</ul>
-			</nav>
-*/}
 
           {/*Banner*/}
           <section id="banner">
             <div className="inner">
               <div className="content">
-                <h2>Learn about Open Source Software!</h2>
-                <p>Amet tincidunt arcu suspendisse consequat</p>
+                <h2>Open Source @ UCSD</h2>
+                  <p>Welcome!</p>
               </div>
               <ul className="actions stacked">
                 <li>
-                  <a href="#" className="button primary major">
-                    Get Started
+                  <a href="#" className="button major">
+                  <i class="fas fa-users"></i>
+              <span> Learn More!</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="button major">
-                    More Info
+                  <a href="https://github.com/os-ucsd" className="button major">
+                    <i class="fab fa-github"></i>
+              <span> Find Us on Github!</span>
                   </a>
                 </li>
               </ul>
             </div>
           </section>
-
           {/*One*/}
           <section id="one" className="wrapper style1 split">
             <div className="inner">
               <div className="content">
-                <h2>
-                  Lorem ipsum accumsan nisl feugiat
-                  <br />
-                  sed consequat adipiscing
-                </h2>
+                <h2 className="firstHeader">What is Open Source?</h2>
                 <p>
                   Amet lorem vivamus viverra, quis semper consequat, sem nibh
                   mattis arcu, dolore porttitor lorem justo in tellus. Aenean
@@ -151,6 +151,53 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
+
+          {/* TIMELINE & RESOURCES */}
+          <br/>
+          
+          <Grid container spacing={2}>
+            <Grid item sm={12} md={8}>
+              <h2>Open Source Resources</h2>
+              <p className='resources'>
+                Here are some organizations that promote open source communities and provide resources to 
+                learn more about open source and how to contribute! Some of these organizations also have 
+                projects available for you to contribute to!
+              </p>
+              <div className='orgs'>
+                <a href='https://ossn.club/'>
+                  <img className='org-img' src={mozilla} alt='mozilla' width='150px'/>
+                </a>                
+                <a href='https://opensource.google/'>
+                  <img className='org-img' src={google} alt='google' width='150px' />
+                </a>
+                <a href='https://opensource.facebook.com/'>
+                  <img className='org-img' src={facebook} alt='facebook' width='150px' />
+                </a>
+                <a href='https://community.redhat.com/software/'>
+                  <img className='org-img' src={redhat} alt='facebook' width='150px' />
+                </a>
+                <a href='https://www.twilio.com/open-source'>
+                  <img className='org-img' src={twilio} alt='twilio' width='150px' />
+                </a>
+              </div>
+            </Grid>
+            <Grid item sm={12} md={4} className='timeline'>
+              <h2>Our Github Contribution Timeline</h2>
+              <p>Check out some of the most recent contributions to our GitHub!</p>
+              <Timeline prs={this.state.prs} />
+            </Grid>
+          </Grid>
+          <br />
+
+          {/* EVENTS */}
+          <section className='events-container'>
+            <h2>Upcoming Events</h2>
+            <UpcomingEvents />
+            <div className='events-btn-container'>
+              <Link style={{textDecoration:'none'}} to='/event'><Button>View all events</Button></Link>
+            </div>
+          </section>
+          <br />
 
           <section id="two" className="wrapper style2">
             <div className="inner">
@@ -308,66 +355,8 @@ class Home extends React.Component {
               </ul>
             </div>
           </section>
-
-          <footer id="footer">
-            <div className="inner">
-              <ul className="icons">
-                <li>
-                  <a href="#" className="icon brands fa-twitter">
-                    <span className="label">Twitter</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="icon brands fa-facebook-f">
-                    <span className="label">Facebook</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="icon brands fa-instagram">
-                    <span className="label">Instagram</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="icon brands fa-github">
-                    <span className="label">GitHub</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="icon brands fa-linkedin-in">
-                    <span className="label">LinkedIn</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="icon solid fa-envelope">
-                    <span className="label">Envelope</span>
-                  </a>
-                </li>
-              </ul>
-              <ul className="contact">
-                <li>12345 Somewhere Road</li>
-                <li>Nashville, TN 00000</li>
-                <li>(000) 000-0000</li>
-              </ul>
-              <ul className="links">
-                <li>
-                  <a href="#">FAQ</a>
-                </li>
-                <li>
-                  <a href="#">Support</a>
-                </li>
-                <li>
-                  <a href="#">Terms</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-              <p className="copyright">
-                &copy; Untitled. All rights reserved. Lorem ipsum dolor.
-              </p>
-            </div>
-          </footer>
         </div>
+        <Footer />
       </div>
     );
   }

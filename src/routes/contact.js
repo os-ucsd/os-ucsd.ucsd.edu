@@ -1,130 +1,128 @@
 import React from "react";
-import MenuBar from "./navbar";
-import Typography from '@material-ui/core/Typography';
-import Image from 'react-bootstrap/Image'
-import Row from 'react-bootstrap/Row'
-import EmailIcon from '@material-ui/icons/Email';
-import GitHubIcon from '@material-ui/icons/GitHub';
-
-const officers = [
-  {
-    name: 'Vivian',
-    image:'https://content.fortune.com/wp-content/uploads/2019/01/boo.jpg',
-    position: 'President',
-    link: 'https://viviaann.github.io/',
-    fun_fact: '',
-    email: 'vyl003@ucsd.edu',
-    github: 'https://github.com/Viviaann'
-  },
-  {
-    name: 'Chau Vu',
-    image:'https://i.pinimg.com/originals/8a/7b/5e/8a7b5e0d1b237ca10e006f0c986b5fe6.jpg',
-    link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
-    position: 'VP',
-    fun_fact: '"I\'m a fun-sized, super nice guy"',
-    email: 'chv004@ucsd.edu',
-    github: 'https://github.com/cqvu'
-  },
-  {
-    name: 'Brendan Lau',
-    image:'https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/2560x1280/landscape-1500925839-golden-retriever-puppy.jpg?resize=480:*',
-    position: 'Project Chair',
-    link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
-    fun_fact: 'i luv jasmine',
-    email: 'bwlau@ucsd.edu',
-    github: 'https://github.com/blau0123'
-  },
-  {
-    name: 'Brandon',
-    image:'https://thespinoff.co.nz/wp-content/uploads/2019/03/GettyImages-139720130.jpg',
-    position: 'Workshop Chair',
-    link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
-    fun_fact: '',
-    email: 'test@ucsd.edu',
-    github: ''
-  },
-  {
-    name: 'Bao Hoang',
-    image:'https://cdn1-www.dogtime.com/assets/uploads/2019/04/DogSilly.jpg',
-    position: 'Event Chair',
-    link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
-    fun_fact: '',
-    email: 'bghoang@ucsd.edu',
-    github: 'https://github.com/bghoang'
-  }
-];
-
+import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
+import Container from "@material-ui/core/Container/Container";
+import Button from "@material-ui/core/Button";
+import axios from "axios";
+import "../css/contact.css";
+import MenuBar from "../components/navbar";
+import Background from "../images/spacebackground.jpg";
+import Footer from "../components/footer";
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state={};
+    this.state = {
+      name: "",
+      email: "",
+      message: ""
+    };
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+    axios({
+      method: "POST",
+      url: "http://localhost:3000/contact/send",
+      data: this.state
+    }).then(response => {
+      if (response.data.status === "success") {
+        alert("Message Sent.");
+        this.resetForm();
+      } else if (response.data.status === "fail") {
+        alert("Message failed to send.");
+      }
+    });
+  };
+
+  resetForm() {
+    this.setState({ name: "", email: "", message: "" });
   }
 
   render() {
     return (
-      <div>
+      <React.Fragment>
+        <CssBaseline />
+        {/*<Container maxWidth="lg">*/}
         <MenuBar />
-        <main style={{marginTop:"200px"}}>
-          <Typography variant="h2" component="h1"> 
-            Meet the Board
-          </Typography>
-          <div style={{display:"flex", flexWrap:"wrap", flexGrow:0, flexShrink:0, alignItems:"normal", justifyContent:"flex-start", marginTop:"20px", marginLeft:"100px", marginRight:"100px"}}>
-            <Row>
-              {officers.map(officer => (
-                  <Officer 
-                    name={officer.name}
-                    image={officer.image}
-                    position={officer.position}
-                    fun_fact={officer.fun_fact}
-                    link={officer.link}
-                    email={officer.email}
-                    github={officer.github}
-                  />
-              ))}
-            </Row>
+        <section
+          id="banner"
+          style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+        >
+          <div className="inner">
+            <div className="content">
+              <h2>Open Source at UCSD Contact</h2>
+            </div>
           </div>
-        </main>
-        
-      </div>
+        </section>
+        {/*</Container>*/}
+        <Container>{this.ContactMe()}</Container>
+        <br /> <br />
+        <Footer />
+      </React.Fragment>
     );
   }
-}
 
-const Officer = (props) => {
-  function over(e){
-    e.target.width=280
-    e.target.height=280
-    e.target.style.opacity=1.0;
+  onNameChange(event) {
+    this.setState({ name: event.target.value });
   }
-  function out(e){
-    e.target.width=300
-    e.target.height=300
-    e.target.style.opacity=0.9;
+  onEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+  onMessageChange(event) {
+    this.setState({ message: event.target.value });
   }
 
-  return (
-    <div style={{boxSizing:"border-box", position:"relative", paddingLeft:"50px", paddingRight:"50px", paddingBottom:"5rem", flex:"0 0 33.3333%"}}>
-      <a href={props.link} >
-        <Image src={props.image} width={300} height={300} style={{opacity: 0.9}} onMouseOver={over} onMouseOut={out}/>
-      </a>
-      <Typography variant="h4" component="h2">
-        {props.name}
-      </Typography>
-      <Typography color="textSecondary">
-        {props.position}
-      </Typography>
-      <Typography variant="body2" component="p">
-        {props.fun_fact}
-      </Typography>
-      <a href={"mailto:" + props.email}>
-        <EmailIcon></EmailIcon>
-      </a>
-      <a href={props.github}>
-        <GitHubIcon></GitHubIcon>
-      </a>
-    </div>
-  )
+  ContactMe = () => {
+    return (
+      <div className="Contact">
+        <br /> <br />
+        <h5 style={{ fontWeight: "bold" }}>
+          Leave us a message and we'll get back to you :)
+        </h5>
+        <form
+          id="contact-form"
+          onSubmit={this.handleSubmit.bind(this)}
+          method="POST"
+        >
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder={"Your name.."}
+              value={this.state.name}
+              onChange={this.onNameChange.bind(this)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              aria-describedby="emailHelp"
+              placeholder="Your email.."
+              value={this.state.email}
+              onChange={this.onEmailChange.bind(this)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              className="form-control"
+              rows="10"
+              placeholder="Write something.."
+              value={this.state.message}
+              onChange={this.onMessageChange.bind(this)}
+            />
+          </div>
+          <Button variant="outlined" type="submit" className="btn btn-primary">
+            Send
+          </Button>
+        </form>
+      </div>
+    );
+  };
 }
 
 export default Contact;

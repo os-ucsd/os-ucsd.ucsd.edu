@@ -1,5 +1,5 @@
 import React from "react";
-import MenuBar from "./navbar";
+import MenuBar from "../components/navbar";
 
 class WorkShop extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class WorkShop extends React.Component {
     return (
       <div>
         <MenuBar />
-        This is workshop page
+
       </div>
     );
   }

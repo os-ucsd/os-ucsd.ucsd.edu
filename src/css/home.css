@@ -1,0 +1,30 @@
+.firstHeader {
+  padding-left: 150px;
+}
+
+.resources {
+  padding: 0 50px;
+}
+
+.orgs{
+  padding-left: 50px;
+  float: left;
+  transition: all .3s ease-in-out;
+}
+
+.org-img{
+  margin: 5px 20px;
+}
+
+.org-img:hover{
+  transform: scale(1.1);
+}
+
+.events-btn-container{
+  margin-top: 30px;
+}
+
+.home-container{
+  overflow-x: hidden;
+}
+ 

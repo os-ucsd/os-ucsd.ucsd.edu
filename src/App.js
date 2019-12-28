@@ -6,18 +6,23 @@ import Project from "./routes/projects";
 import Contact from "./routes/contact";
 import Event from "./routes/event";
 import WorkShop from "./routes/workshop";
-import { slide as Menu } from 'react-burger-menu'
+import Tutorials from "./routes/tutorials";
+import TutorialPage from "./routes/tutorial-page";
+import SubmitProject from "./components/submitProject";
 import "./css/menuBarAnimation.css";
 function App() {
   return (
     <Router>
- 
       <main id="page-wrap" className="App">
         <Route exact path="/" component={Home} />
         <Route exact path="/project" component={Project} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/event" component={Event} />
         <Route exact path="/workshop" component={WorkShop} />
+        <Route exact path="/tutorials" component={Tutorials} />
+        <Route exact path="/form" component={SubmitProject} />
+        <Route path="/tutorials/:tutorialID" component={TutorialPage} />
       </main>
     </Router>
   );
