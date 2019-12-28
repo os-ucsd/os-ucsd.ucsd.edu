@@ -34,21 +34,35 @@ const UpcomingEvents = () => {
     }
 
     // make a card for every event in events
-    const eventCompon = upcomingEvents ? upcomingEvents.map((event, i) => 
-            <div key={i} className='event-inner-container'>
-                {
-                    // if no image specified, will use the default image
-                    event.imageUrl ? 
-                        <img className='event-img' alt={event.name} src={event.imageUrl} 
-                            width='380px' height='200px'/> :
-                        <img className='event-img' alt={event.name} src={defaultImg} 
-                            width='380px' height='200px'/>
-                }
-                <h5 className='event-text'>{event.name}</h5>
-                <p className='event-text'>{event.date} {event.startTime}-{event.endTime} </p>
-                <p className='event-text'>{event.location}</p>
-            </div>
-    ) : null
+    const eventCompon = upcomingEvents ? upcomingEvents.map((event, i) => {
+            const hasFacebook = event.facebookUrl !== '';
+
+            return(
+                <div key={i} className='event-inner-container'>
+                    {
+                        // if no image specified, will use the default image
+                        event.imageUrl ? 
+                            hasFacebook ?
+                                <a href={event.facebookUrl}>
+                                    <img className='event-img' alt={event.name} src={event.imageUrl} 
+                                        width='380px' height='200px'/>
+                                </a> :
+                                <img className='event-img' alt={event.name} src={event.imageUrl} 
+                                    width='380px' height='200px'/> 
+                        : hasFacebook ?
+                            <a href={event.facebookUrl}>
+                                <img className='event-img' alt={event.name} src={defaultImg} 
+                                    width='380px' height='200px'/> 
+                            </a> :
+                            <img className='event-img' alt={event.name} src={defaultImg} 
+                                width='380px' height='200px'/>    
+                    }
+                    <h5 className='event-text'>{event.name}</h5>
+                    <p className='event-text'>{event.date} {event.startTime}-{event.endTime} </p>
+                    <p className='event-text'>{event.location}</p>
+                </div>
+            );
+    }) : null
 
     return(
         <div>
