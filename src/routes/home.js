@@ -135,18 +135,18 @@ class Home extends React.Component {
               <div className="image-circles">
                 <div className="images">
                   <span className="image">
-                    <img src="images/pic01.jpg" alt="" />
+                    <img src="../images/pic01.jpg" alt="" />
                   </span>
                   <span className="image">
-                    <img src="images/pic02.jpg" alt="" />
+                    <img src="../images/pic02.jpg" alt="" />
                   </span>
                 </div>
                 <div className="images">
                   <span className="image">
-                    <img src="images/pic03.jpg" alt="" />
+                    <img src="../images/pic03.jpg" alt="" />
                   </span>
                   <span className="image">
-                    <img src="images/pic04.jpg" alt="" />
+                    <img src="../images/pic04.jpg" alt="" />
                   </span>
                 </div>
               </div>

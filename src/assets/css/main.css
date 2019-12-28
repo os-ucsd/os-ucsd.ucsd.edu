@@ -3359,7 +3359,7 @@ input, select, textarea {
 		background-attachment: fixed;
 		background-position: center;
 		background-size: cover;
-		height: 75vh;
+		height: 70vh;
 		min-height: 30em;
 		position: relative;
 	}
