@@ -7,6 +7,8 @@ import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
 import UpcomingEvents from '../events/UpcomingEvents';
+import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom';
 
 // importing images
 import mozilla from '../assets/css/images/mozilla.jpg';
@@ -191,8 +193,12 @@ class Home extends React.Component {
           <section className='events-container'>
             <h2>Upcoming Events</h2>
             <UpcomingEvents />
+            <div className='events-btn-container'>
+              <Link style={{textDecoration:'none'}} to='/event'><Button>View all events</Button></Link>
+            </div>
           </section>
           <br />
+
           <section id="two" className="wrapper style2">
             <div className="inner">
               <header className="major">
