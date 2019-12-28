@@ -1,5 +1,5 @@
 import React from "react";
-import MenuBar from "./navbar";
+import MenuBar from "../components/navbar"
 import Typography from '@material-ui/core/Typography';
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
@@ -30,7 +30,7 @@ const officers = [
     image:'https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/2560x1280/landscape-1500925839-golden-retriever-puppy.jpg?resize=480:*',
     position: 'Project Chair',
     link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
-    fun_fact: '"I\'m a fun-sized, super nice guy"',
+    fun_fact: '"I\'s everyday bro, do you give up at night? We 24/7 man, you picked the wrong fight c:"',
     email: 'bwlau@ucsd.edu',
     github: 'https://github.com/blau0123'
   },
@@ -107,7 +107,8 @@ const Officer = (props) => {
     return (
       <div style={{boxSizing:"border-box", position:"relative", paddingLeft:"50px", paddingRight:"50px", paddingBottom:"5rem", flex:"0 0 33.3333%"}}>
         <a href={props.link} >
-          <Image src={props.image} width={300} height={300} style={{opacity: 0.9}} onMouseOver={over} onMouseOut={out}/>
+          <Image src={props.image} width={300} height={300} style={{opacity: 0.9}} onMouseOver={over} onMouseOut={out}
+            style={{objectFit:'cover'}}/>
         </a>
         <Typography variant="h4" component="h2">
           {props.name}
