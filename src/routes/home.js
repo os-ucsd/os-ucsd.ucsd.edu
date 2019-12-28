@@ -63,10 +63,10 @@ class Home extends React.Component {
       // skip the repeats
       i = j - 1;
     }
-   /* let yourContribution = noRepeatPRs[noRepeatPRs.length - 1];
+    let yourContribution = noRepeatPRs[noRepeatPRs.length - 1];
     yourContribution.user = "I";
     yourContribution.repoName = "some repository";
-    noRepeatPRs.unshift(yourContribution);*/
+    noRepeatPRs.unshift(yourContribution);
     return noRepeatPRs;
   }
   
@@ -101,12 +101,6 @@ class Home extends React.Component {
               </ul>
             </div>
           </section>
-
-          {/* timeline */}
-          <br/>
-          <h2>Our Github Contribution Timeline</h2>
-          <Timeline prs={this.state.prs} />
-
           {/*One*/}
           <section id="one" className="wrapper style1 split">
             <div className="inner">
@@ -146,6 +140,12 @@ class Home extends React.Component {
               </div>
             </div>
           </section>
+
+          {/* timeline */}
+          <br/>
+          <h2>Our Github Contribution Timeline</h2>
+          <Timeline prs={this.state.prs} />
+
 
           <section id="two" className="wrapper style2">
             <div className="inner">
