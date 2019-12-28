@@ -13,6 +13,7 @@
     "glob": "^7.1.6",
     "jquery": "^3.4.1",
     "list-react-files": "^0.2.0",
+    "material-ui": "^1.0.0-beta.47",
     "moment": "^2.24.0",
     "node-fetch": "^2.6.0",
     "react": "^16.12.0",
