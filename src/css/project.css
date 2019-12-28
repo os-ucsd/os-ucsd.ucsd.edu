@@ -1,6 +1,6 @@
 .firstTitle {
   padding-top: 30px;
-  font-family: inherit;
+  font-family: europa, sans-serif;
   font-size: 40px;
 }
 
@@ -16,7 +16,7 @@
 h4 {
   padding-top: 20px;
   padding-bottom: 20px;
-  font: inherit;
+  font-family: europa, sans-serif;
 }
 
 .card {
