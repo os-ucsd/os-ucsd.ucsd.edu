@@ -21,7 +21,7 @@ const officers = [
     image:'https://i.pinimg.com/originals/8a/7b/5e/8a7b5e0d1b237ca10e006f0c986b5fe6.jpg',
     link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
     position: 'VP',
-    fun_fact: '"In economy still got leg room"',
+    fun_fact: '"I\'m a savage you are average uwu"',
     email: 'chv004@ucsd.edu',
     github: 'https://github.com/cqvu'
   },
