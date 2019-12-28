@@ -9,6 +9,7 @@ HOW TO ADD AN EVENT
 and then import it from './events-imgs/your-image'
 2b. Add the name of the import (like mongoImage) as the value of imageUrl
 2c. If you DON'T have an image, put null as the value for imageUrl
+2d. If you DON'T have a faceook url (no facebook event), then put '' as the value
 Note: all fields should be strings except imageUrl and consistent with previous formatting
 3. Yeah.
 
