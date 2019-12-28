@@ -144,6 +144,7 @@ class Home extends React.Component {
           {/* timeline */}
           <br/>
           <h2>Our Github Contribution Timeline</h2>
+          <p>Check out some of the most recent contributions to our GitHub!</p>
           <Timeline prs={this.state.prs} />
 
 
