@@ -5,6 +5,14 @@ import Footer from "../components/footer";
 import "../css/home.css";
 import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
+import Grid from '@material-ui/core/Grid';
+
+// importing images
+import mozilla from '../assets/css/images/mozilla.jpg';
+import google from '../assets/css/images/google.jpg';
+import facebook from '../assets/css/images/facebook.png';
+import redhat from '../assets/css/images/redhat.png';
+import twilio from '../assets/css/images/twilio.png';
 
 class Home extends React.Component {
   constructor(props) {
@@ -143,10 +151,39 @@ class Home extends React.Component {
 
           {/* timeline */}
           <br/>
-          <h2>Our Github Contribution Timeline</h2>
-          <p>Check out some of the most recent contributions to our GitHub!</p>
-          <Timeline prs={this.state.prs} />
-
+          
+          <Grid container spacing={2}>
+            <Grid item sm={12} md={6}>
+              <h2>Open Source Resources</h2>
+              <p className='resources'>
+                Here are some organizations that promote open source communities and provide resources to 
+                learn more about open source and how to contribute! Some of these organizations also have 
+                projects available for you to contribute to!
+              </p>
+              <div className='orgs'>
+                <a href='https://ossn.club/'>
+                  <img className='org-img' src={mozilla} alt='mozilla' width='150px'/>
+                </a>                
+                <a href='https://opensource.google/'>
+                  <img className='org-img' src={google} alt='google' width='150px' />
+                </a>
+                <a href='https://opensource.facebook.com/'>
+                  <img className='org-img' src={facebook} alt='facebook' width='150px' />
+                </a>
+                <a href='https://community.redhat.com/software/'>
+                  <img className='org-img' src={redhat} alt='facebook' width='150px' />
+                </a>
+                <a href='https://www.twilio.com/open-source'>
+                  <img className='org-img' src={twilio} alt='twilio' width='150px' />
+                </a>
+              </div>
+            </Grid>
+            <Grid item sm={12} md={6} className='timeline'>
+              <h2>Our Github Contribution Timeline</h2>
+              <p>Check out some of the most recent contributions to our GitHub!</p>
+              <Timeline prs={this.state.prs} />
+            </Grid>
+          </Grid>
 
           <section id="two" className="wrapper style2">
             <div className="inner">
