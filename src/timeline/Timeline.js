@@ -14,7 +14,6 @@ class Timeline extends React.Component{
 		this.setState({hover: !this.state.hover})
 		}
 	render(){
-		//<div onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} className={this.state.hover ? 'pulse animated' : ''}>
         let {prs} = this.props;
 		let listOfPRs = 
 				prs ? prs.map((pr, i) => {
