@@ -25,7 +25,7 @@ class Home extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const data = JSON.parse(localStorage.getItem('prs'));
     // if haven't gotten data before or if data is old, then retrieve the data again (every 10 min)
     if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
@@ -51,10 +51,6 @@ class Home extends React.Component {
       console.log('no new data');
       this.setState({prs: data.data});
     }
-  }
-
-  componentDidMount() {
-    this._isMounted = true;
   }
 
   /*
@@ -99,13 +95,13 @@ class Home extends React.Component {
               <ul className="actions stacked">
                 <li>
                   <a href="/" className="button major">
-                  <i class="fas fa-users"></i>
+                  <i className="fas fa-users"></i>
               <span> Learn More!</span>
                   </a>
                 </li>
                 <li>
                   <a href="https://github.com/os-ucsd" className="button major">
-                    <i class="fab fa-github"></i>
+                    <i className="fab fa-github"></i>
               <span> Find Us on Github!</span>
                   </a>
                 </li>
