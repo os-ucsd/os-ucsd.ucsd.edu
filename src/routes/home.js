@@ -112,6 +112,7 @@ class Home extends React.Component {
               </ul>
             </div>
           </section>
+
           {/*One*/}
           <section id="one" className="wrapper style1 split">
             <div className="inner">
@@ -148,6 +149,61 @@ class Home extends React.Component {
                     <img src="images/pic04.jpg" alt="" />
                   </span>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="three" className="wrapper style1">
+            <div className="inner">
+              <div className="spotlights">
+                <section>
+                  <span className="image">
+                    <img src="images/pic05.jpg" alt="" />
+                  </span>
+                  <div className="content">
+                    <h2>Convallis integer iaculis</h2>
+                    <p>
+                      Donec elementum odio ut suscipit congue. Fusce magna
+                      mattis vel fermentum, ultricies et velit. Suspendisse
+                      viverra, ante in eleifend vulputate, lacus lorem pretium
+                      ligula, tincidunt posuere sapien neque a augue.
+                      Pellentesque habitant morbi tristique senectus et netus et
+                      malesuada.
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <span className="image">
+                    <img src="images/pic06.jpg" alt="" />
+                  </span>
+                  <div className="content">
+                    <h2>Ultrices augue faucibus</h2>
+                    <p>
+                      Donec elementum odio ut suscipit congue. Fusce magna
+                      mattis vel fermentum, ultricies et velit. Suspendisse
+                      viverra, ante in eleifend vulputate, lacus lorem pretium
+                      ligula, tincidunt posuere sapien neque a augue.
+                      Pellentesque habitant morbi tristique senectus et netus et
+                      malesuada.
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <span className="image">
+                    <img src="images/pic07.jpg" alt="" />
+                  </span>
+                  <div className="content">
+                    <h2>Integer sed sodales</h2>
+                    <p>
+                      Donec elementum odio ut suscipit congue. Fusce magna
+                      mattis vel fermentum, ultricies et velit. Suspendisse
+                      viverra, ante in eleifend vulputate, lacus lorem pretium
+                      ligula, tincidunt posuere sapien neque a augue.
+                      Pellentesque habitant morbi tristique senectus et netus et
+                      malesuada.
+                    </p>
+                  </div>
+                </section>
               </div>
             </div>
           </section>
@@ -279,60 +335,6 @@ class Home extends React.Component {
             </div>
           </section>
 
-          <section id="three" className="wrapper style1">
-            <div className="inner">
-              <div className="spotlights">
-                <section>
-                  <span className="image">
-                    <img src="images/pic05.jpg" alt="" />
-                  </span>
-                  <div className="content">
-                    <h2>Convallis integer iaculis</h2>
-                    <p>
-                      Donec elementum odio ut suscipit congue. Fusce magna
-                      mattis vel fermentum, ultricies et velit. Suspendisse
-                      viverra, ante in eleifend vulputate, lacus lorem pretium
-                      ligula, tincidunt posuere sapien neque a augue.
-                      Pellentesque habitant morbi tristique senectus et netus et
-                      malesuada.
-                    </p>
-                  </div>
-                </section>
-                <section>
-                  <span className="image">
-                    <img src="images/pic06.jpg" alt="" />
-                  </span>
-                  <div className="content">
-                    <h2>Ultrices augue faucibus</h2>
-                    <p>
-                      Donec elementum odio ut suscipit congue. Fusce magna
-                      mattis vel fermentum, ultricies et velit. Suspendisse
-                      viverra, ante in eleifend vulputate, lacus lorem pretium
-                      ligula, tincidunt posuere sapien neque a augue.
-                      Pellentesque habitant morbi tristique senectus et netus et
-                      malesuada.
-                    </p>
-                  </div>
-                </section>
-                <section>
-                  <span className="image">
-                    <img src="images/pic07.jpg" alt="" />
-                  </span>
-                  <div className="content">
-                    <h2>Integer sed sodales</h2>
-                    <p>
-                      Donec elementum odio ut suscipit congue. Fusce magna
-                      mattis vel fermentum, ultricies et velit. Suspendisse
-                      viverra, ante in eleifend vulputate, lacus lorem pretium
-                      ligula, tincidunt posuere sapien neque a augue.
-                      Pellentesque habitant morbi tristique senectus et netus et
-                      malesuada.
-                    </p>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </section>
 
           <section id="four" className="wrapper style2 special">
             <div className="inner">

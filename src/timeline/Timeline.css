@@ -9,7 +9,8 @@
     flex-direction: column;
     position: relative;
     margin: 25px 0;
-    font: inherit;
+    font-family: europa, sans-serif;
+    /*font: inherit;*/
 }
 
 /*to push it right: right: calc(25% - 2px);*/
