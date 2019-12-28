@@ -8,7 +8,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const officers = [
   {
-    name: 'Vivian',
+    name: 'Vivian Lee',
     image:'https://content.fortune.com/wp-content/uploads/2019/01/boo.jpg',
     position: 'President',
     link: 'https://viviaann.github.io/',
@@ -21,7 +21,7 @@ const officers = [
     image:'https://i.pinimg.com/originals/8a/7b/5e/8a7b5e0d1b237ca10e006f0c986b5fe6.jpg',
     link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
     position: 'VP',
-    fun_fact: '"I\'m a fun-sized, super nice guy"',
+    fun_fact: '"In economy still got leg room"',
     email: 'chv004@ucsd.edu',
     github: 'https://github.com/cqvu'
   },
@@ -30,7 +30,7 @@ const officers = [
     image:'https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/2560x1280/landscape-1500925839-golden-retriever-puppy.jpg?resize=480:*',
     position: 'Project Chair',
     link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
-    fun_fact: 'i luv jasmine',
+    fun_fact: '"I\'m a fun-sized, super nice guy"',
     email: 'bwlau@ucsd.edu',
     github: 'https://github.com/blau0123'
   },
