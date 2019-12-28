@@ -2,42 +2,50 @@ import React from "react";
 import "../assets/css/main.css";
 
 class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <footer id="footer">
         <div className="inner">
           <ul className="icons">
             <li>
-              <a href="#" className="icon brands fa-twitter">
+              <a href="https://twitter.com/" className="icon brands fa-twitter">
                 <span className="label">Twitter</span>
               </a>
             </li>
             <li>
-              <a href="#" className="icon brands fa-facebook-f">
+              <a
+                href="https://www.facebook.com/groups/OpenSourceUCSD/"
+                className="icon brands fa-facebook-f"
+              >
                 <span className="label">Facebook</span>
               </a>
             </li>
             <li>
-              <a href="#" className="icon brands fa-instagram">
+              <a
+                href="https://www.instagram.com/"
+                className="icon brands fa-instagram"
+              >
                 <span className="label">Instagram</span>
               </a>
             </li>
             <li>
-              <a href="#" className="icon brands fa-github">
+              <a
+                href="https://github.com/os-ucsd"
+                className="icon brands fa-github"
+              >
                 <span className="label">GitHub</span>
               </a>
             </li>
             <li>
-              <a href="#" className="icon brands fa-linkedin-in">
+              <a
+                href="https://www.linkedin.com/"
+                className="icon brands fa-linkedin-in"
+              >
                 <span className="label">LinkedIn</span>
               </a>
             </li>
             <li>
-              <a href="#" className="icon solid fa-envelope">
+              <a href="/contact" className="icon solid fa-envelope">
                 <span className="label">Envelope</span>
               </a>
             </li>
@@ -48,19 +56,19 @@ class Footer extends React.Component {
           </ul>
           <ul className="links">
             <li>
-              <a href="#">FAQ</a>
+              <a href="/about">FAQ</a>
             </li>
             <li>
-              <a href="#">Support</a>
+              <a href="/project">Contribute</a>
             </li>
             <li>
-              <a href="#">Terms</a>
+              <a href="/about">Terms</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
-          <p className="copyright">&copy; OS UCSD. All rights reserved.</p>
+          <p className="copyright">&copy; OS at UCSD. All rights reserved.</p>
         </div>
       </footer>
     );
