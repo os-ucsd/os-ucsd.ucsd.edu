@@ -93,8 +93,8 @@ class Home extends React.Component {
           <section id="banner">
             <div className="inner">
               <div className="content">
-                <h2>Open Source @ UCSD</h2>
-                  <p>Welcome!</p>
+                <h2>Open Source at UCSD</h2>
+                  <p>Join our open source community!</p>
               </div>
               <ul className="actions stacked">
                 <li>
