@@ -31,7 +31,7 @@ class PullRequestItem extends React.Component{
                     (   <div className="item-content">
                         <p>NOW</p>
                         <a href="https://github.com/os-ucsd" className="pr-link">
-                            <p>Make this your contribution!</p>
+                            <p style={{fontSize: "0.9rem", color: "blue"}}>Make this your contribution!</p>
                         </a>
                         <span className="circle" />
                         </div>
