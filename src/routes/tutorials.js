@@ -49,7 +49,7 @@ class Tutorials extends React.Component {
             {tutorial["title"]}
           </h3>
           <p className={"mb-0"}>By: {tutorial["authors"].name}</p>
-          <p>Published: {moment(tutorial["publish"]).format("lll")}</p>
+          <p>Published: {moment(tutorial["publish"]).format("ll")}</p>
         </section>
       );
     });
