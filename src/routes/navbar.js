@@ -45,12 +45,12 @@ class MenuBar extends React.Component {
                 height="150%"
               />
             </a>
-            <Menu right isOpen={ false } width={ '20%' } customBurgerIcon={ <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" /> }>
-      <a id="home" className="menu-item" href="/">Home</a>
-      <a id="about" className="menu-item" href="/about">About</a>
-      <a id="contact" className="menu-item" href="/contact">Contact</a>
-      <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-    </Menu> 
+            <Menu right isOpen={ false } width={ '20%' } customBurgerIcon={ <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" alt=""/> }>
+              <a id="home" className="menu-item" href="/">Home</a>
+              <a id="about" className="menu-item" href="/about">About</a>
+              <a id="contact" className="menu-item" href="/contact">Contact</a>
+              <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+            </Menu> 
 
           </h1>
         </header>
