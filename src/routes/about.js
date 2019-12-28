@@ -8,7 +8,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const officers = [
   {
-    name: 'Vivian',
+    name: 'Vivian Lee',
     image:'https://content.fortune.com/wp-content/uploads/2019/01/boo.jpg',
     position: 'President',
     link: 'https://viviaann.github.io/',
