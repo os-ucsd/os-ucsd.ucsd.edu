@@ -5,6 +5,7 @@ import Home from "./routes/home";
 import Project from "./routes/projects";
 import Contact from "./routes/contact";
 import Event from "./routes/event";
+import About from "./routes/about";
 import WorkShop from "./routes/workshop";
 import Tutorials from "./routes/tutorials";
 import TutorialPage from "./routes/tutorial-page";
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/project" component={Project} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/event" component={Event} />
         <Route exact path="/workshop" component={WorkShop} />
         <Route exact path="/tutorials" component={Tutorials} />

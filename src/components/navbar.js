@@ -51,7 +51,7 @@ class MenuBar extends React.Component {
               isOpen={false}
       
               customBurgerIcon={
-                <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" />
+                <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" alt=""/>
               }
             >
               <a id="home" className="menu-item" href="/">
@@ -74,9 +74,14 @@ class MenuBar extends React.Component {
                 <span> Tutorials</span>
               </a>
 
+              <a id="event" className="menu-item" href="/event">
+                <i className="fas fa-calendar-day"></i>
+                <span> Events</span>
+              </a>
+
               <a id="contact" className="menu-item" href="/contact">
-              <i class="fas fa-envelope-square"></i>
-              <span> Contact</span>
+                <i class="fas fa-envelope-square"></i>
+                <span> Contact</span>
               </a>
             </Menu>
           </h1>

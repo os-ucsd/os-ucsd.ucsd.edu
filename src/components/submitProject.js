@@ -9,6 +9,7 @@ import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { Form, Row, Col } from "react-bootstrap";
 import Footer from "../components/footer";
+import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAlt";
 
 class SubmitProject extends React.Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class SubmitProject extends React.Component {
       link: "",
       description: "",
       technology: "",
-      database: ""
+      database: "",
+      submit: false
     };
 
     this.handleName = this.handleName.bind(this);
@@ -67,15 +69,6 @@ class SubmitProject extends React.Component {
     });
   }
 
-  /*checkInfo() {
-    this.state.projectName;
-    this.state.name;
-    this.state.description;
-    this.state.link;
-    this.state.technology;
-    this.state.database;
-  }*/
-
   handleSubmit(e) {
     e.preventDefault();
 
@@ -114,7 +107,10 @@ class SubmitProject extends React.Component {
       .then(res => console.log(res))
       .catch(err => console.log(err));
 
-    window.location = "/project";
+    // Set state to render the thank you message
+    this.setState({
+      submit: true
+    });
   }
 
   render() {
@@ -122,24 +118,12 @@ class SubmitProject extends React.Component {
       fontSize: "20px",
       fontWeight: "bold"
     };
-    return (
-      <div>
-        <MenuBar />
-
-        <div className="is-preload">
-          {/*Banner*/}
-          <section
-            id="banner"
-            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
-          >
-            <div className="inner">
-              <div className="content">
-                <h2>Open Sources Projects</h2>
-              </div>
-            </div>
-          </section>
-
-          <h4>Fill out this form and click the button</h4>
+    let pageComponent;
+    // Check if the form is submitted
+    if (this.state.submit === false) {
+      pageComponent = (
+        <div className="pageComponent">
+          <h4>Fill out this form to share your project</h4>
 
           {/* Form to fill in */}
           <div className="form">
@@ -244,7 +228,34 @@ class SubmitProject extends React.Component {
               </Button>
             </Form>
           </div>
-          <div className="submitBut"></div>
+        </div>
+      );
+    } else {
+      pageComponent = (
+        <div className="message">
+          Thank you for sharing your project, we will take a look at your
+          project submission and will contact you for further instruction &nbsp;
+          <SentimentSatisfiedAltIcon></SentimentSatisfiedAltIcon>
+        </div>
+      );
+    }
+    return (
+      <div>
+        <MenuBar />
+
+        <div className="is-preload">
+          {/*Banner*/}
+          <section
+            id="banner"
+            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+          >
+            <div className="inner">
+              <div className="content">
+                <h2>Open Sources Projects</h2>
+              </div>
+            </div>
+          </section>
+          {pageComponent}
         </div>
         <Footer />
       </div>
