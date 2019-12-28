@@ -51,7 +51,7 @@ class MenuBar extends React.Component {
               isOpen={false}
       
               customBurgerIcon={
-                <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" />
+                <img src="https://pngimage.net/wp-content/uploads/2018/06/white-menu-icon-png-8.png" alt=""/>
               }
             >
               <a id="home" className="menu-item" href="/">

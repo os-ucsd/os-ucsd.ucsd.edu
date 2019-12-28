@@ -98,7 +98,7 @@ class Home extends React.Component {
               </div>
               <ul className="actions stacked">
                 <li>
-                  <a href="#" className="button major">
+                  <a href="/" className="button major">
                   <i class="fas fa-users"></i>
               <span> Learn More!</span>
                   </a>
@@ -125,7 +125,7 @@ class Home extends React.Component {
                 </p>
                 <ul className="actions">
                   <li>
-                    <a href="#" className="button">
+                    <a href="/" className="button">
                       Our Story
                     </a>
                   </li>
@@ -270,7 +270,7 @@ class Home extends React.Component {
               <footer className="major">
                 <ul className="actions special">
                   <li>
-                    <a href="#" className="button major">
+                    <a href="/" className="button major">
                       More Features
                     </a>
                   </li>
@@ -348,7 +348,7 @@ class Home extends React.Component {
               </header>
               <ul className="actions special">
                 <li>
-                  <a href="#" className="button primary major">
+                  <a href="/" className="button primary major">
                     Get Started
                   </a>
                 </li>
