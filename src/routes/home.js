@@ -85,7 +85,7 @@ class Home extends React.Component {
     // Menu.
     console.log(this.state.prs);
     return (
-      <div>
+      <div className='home-container'>
         <MenuBar />
         <div className="is-preload">
 
