@@ -29,23 +29,21 @@ class PullRequestItem extends React.Component{
             {
                (prData.user === "I") ?
                     (   <div className="item-content">
-                        <p>NOW</p>
-                        <a href="https://github.com/os-ucsd" className="pr-link">
-                            <p style={{fontSize: "0.9rem", color: "blue"}}>Make this your contribution!</p>
-                        </a>
-                        <span className="circle" />
+                            <p>NOW</p>
+                            <a href="https://github.com/os-ucsd" className="pr-link">
+                                <p style={{fontSize: "0.9rem", color: "blue"}}>Make this your contribution!</p>
+                            </a>
                         </div>
                     ) 
                 :
                     (   <div className="item-content">
-                        {  allPRTimes.map((prTime, i) => 
-                            <p key={i}>{prTime}</p>
-                            )
-                        }
-                        <a href={prData.repoURL} className="pr-link">
-                            <p>{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
-                        </a>
-                        <span className="circle" />
+                            {  allPRTimes.map((prTime, i) => 
+                                <p key={i}>{prTime}</p>
+                                )
+                            }
+                            <a href={prData.repoURL} className="pr-link">
+                                <p>{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
+                            </a>
                         </div>
                     )
             }
