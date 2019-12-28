@@ -35,7 +35,7 @@ const officers = [
     github: 'https://github.com/blau0123'
   },
   {
-    name: 'Brandon',
+    name: 'Brandon Foey',
     image:'https://thespinoff.co.nz/wp-content/uploads/2019/03/GettyImages-139720130.jpg',
     position: 'Workshop Chair',
     link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
@@ -63,6 +63,7 @@ class About extends React.Component {
     render() {
         return (
             <div>
+            <MenuBar></MenuBar>
             <main style={{marginTop:"200px"}}>
             <Typography variant="h2" component="h1"> 
               Meet the Board

@@ -5,6 +5,7 @@ import Home from "./routes/home";
 import Project from "./routes/projects";
 import Contact from "./routes/contact";
 import Event from "./routes/event";
+import About from "./routes/about";
 import WorkShop from "./routes/workshop";
 import Tutorials from "./routes/tutorials";
 import TutorialPage from "./routes/tutorial-page";

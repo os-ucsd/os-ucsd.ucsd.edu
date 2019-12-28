@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 //import animated from "animate.css";
 import './Timeline.css';
 import PullRequestItem from './PullRequestItem';
