@@ -6,20 +6,25 @@ import "../css/home.css";
 import Background from "../images/project.jpg";
 import "../css/project.css";
 import axios from "axios";
-import { Card, Button, Pagination } from "react-bootstrap";
+import { Card, Pagination } from "react-bootstrap";
+import Button from "@material-ui/core/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/footer";
 
 // Show all the projects that we can contribute
 const EachProject = props => {
   return (
-    <Card style={{ className: "card", width: "20rem"}}>
+    <Card style={{ className: "card", width: "20rem" }}>
       <Card.Img variant="top" src={props.project.owner.avatar_url} />
       <Card.Body>
         <Card.Title> Project's Name: {props.project.name}</Card.Title>
         <Card.Title>Owner: {props.project.owner.login}</Card.Title>
         <Card.Text> Description: {props.project.description}</Card.Text>
-        <Button variant="primary" href={props.project.html_url}>
+        <Button
+          variant="outlined"
+          color="primary"
+          href={props.project.html_url}
+        >
           Check Project
         </Button>
       </Card.Body>
@@ -134,7 +139,7 @@ class Project extends React.Component {
           <h4>Want to share your project so other can contribute? </h4>
 
           {/* Submit Project */}
-          <Button variant="primary" size="lg" href="/form">
+          <Button variant="contained" color="primary" size="large" href="/form">
             Share Project
           </Button>
 
