@@ -170,7 +170,7 @@ class Home extends React.Component {
                     <img className='org-img' src={facebook} alt='facebook' width='150px' />
                   </a>
                   <a href='https://community.redhat.com/software/'>
-                    <img className='org-img' src={redhat} alt='facebook' width='150px' />
+                    <img className='org-img' src={redhat} alt='redhat' width='150px' />
                   </a>
                   <a href='https://www.twilio.com/open-source'>
                     <img className='org-img' src={twilio} alt='twilio' width='150px' />
@@ -207,7 +207,7 @@ class Home extends React.Component {
             </Grid>
             <Grid item sm={12} md={4} className='rightsection'>
               <section className="wrapper timeline">
-              <h2>Our Github Contribution Timeline</h2>
+              <h2>Our Live Github Contribution Timeline</h2>
               <p>Check out some of the most recent contributions to our GitHub!</p>
               <Timeline prs={this.state.prs} />
               </section>
