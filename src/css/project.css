@@ -5,11 +5,17 @@
 }
 
 .projectList {
-  padding-top: 30px;
-  padding-left: 140px;
-  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.projectWrapper {
+  display: block;
+  margin-left: 110px;
+  margin-right: auto;
+  width: fit-content;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 h4 {
