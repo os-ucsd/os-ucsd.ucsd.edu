@@ -1,5 +1,6 @@
 .firstHeader {
-  padding-left: 150px;
+  display: flex;
+  /*justify-content: center;*/
 }
 
 .resources {
@@ -27,4 +28,25 @@
 .home-container{
   overflow-x: hidden;
 }
- 
+
+.subsection {
+  padding-top: 1.5rem;
+  padding-left: 3rem;
+  /*background: #642c2c;*/
+}
+.rightsection {
+ /* background: rgb(135, 135, 190);*/
+
+ /* margin-left: 1.5rem;*/
+}
+.timeline {
+  padding-top: 1.5rem;
+  border: 2px solid rgb(166, 184, 223);
+  margin-top: 2rem;
+  margin-right: 2rem !important;
+  border-radius: 25px;
+  padding-right: 2.5rem !important;
+}
+.gridHeaders {
+  font-weight: 500;
+}

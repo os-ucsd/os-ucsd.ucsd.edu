@@ -1,5 +1,5 @@
 .total-timeline-container{
-    height:70vh;
+    height:53rem;
     overflow: auto;
     overflow-x: hidden;
 }
@@ -9,7 +9,8 @@
     flex-direction: column;
     position: relative;
     margin: 25px 0;
-    font: inherit;
+    font-family: europa, sans-serif;
+    /*font: inherit;*/
 }
 
 /*to push it right: right: calc(25% - 2px);*/
@@ -27,7 +28,7 @@
 }
 
 .pr-info{
-  font-size: 0.7rem;
+  font-size: 0.7em; 
 }
 
 .date-text{
