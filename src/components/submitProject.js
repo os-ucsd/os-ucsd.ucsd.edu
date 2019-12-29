@@ -253,7 +253,7 @@ class SubmitProject extends React.Component {
           >
             <div className="inner">
               <div className="content">
-                <h2>Open Sources Projects</h2>
+                <h2>Open Source Projects</h2>
               </div>
             </div>
           </section>
