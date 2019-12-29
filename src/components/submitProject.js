@@ -4,7 +4,7 @@ import "../assets/css/main.css";
 import "../assets/css/tutorial-style.css";
 import "../css/home.css";
 import "../css/project.css";
-import Background from "../images/spac.jpg";
+import Background from "../images/project.jpg";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { Form, Row, Col } from "react-bootstrap";
@@ -123,7 +123,9 @@ class SubmitProject extends React.Component {
     if (this.state.submit === false) {
       pageComponent = (
         <div className="pageComponent">
-          <h4>Fill out this form to share your project</h4>
+          <h4 className="instruction">
+            Fill out this form to share your project
+          </h4>
 
           {/* Form to fill in */}
           <div className="form">
@@ -251,7 +253,7 @@ class SubmitProject extends React.Component {
           >
             <div className="inner">
               <div className="content">
-                <h2>Open Sources Projects</h2>
+                <h2>Open Source Projects</h2>
               </div>
             </div>
           </section>
