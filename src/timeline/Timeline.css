@@ -1,5 +1,5 @@
 .total-timeline-container{
-    height:70vh;
+    height:53rem;
     overflow: auto;
     overflow-x: hidden;
 }
@@ -28,7 +28,7 @@
 }
 
 .pr-info{
-  font-size: 0.7rem;
+  font-size: 0.7em; 
 }
 
 .date-text{

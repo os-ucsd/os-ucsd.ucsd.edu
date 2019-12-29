@@ -82,6 +82,7 @@ class Home extends React.Component {
     console.log(this.state.prs);
     return (
       <div className='home-container'>
+
         <MenuBar />
         <div className="is-preload">
 
@@ -89,7 +90,7 @@ class Home extends React.Component {
           <section id="banner">
             <div className="inner">
               <div className="content">
-                <h2>Open Source at UCSD</h2>
+                <h1>Open Source at UCSD</h1>
                   <p>Join our open source community!</p>
               </div>
               <ul className="actions stacked">
@@ -109,147 +110,119 @@ class Home extends React.Component {
             </div>
           </section>
 
-          {/*One*/}
-          <section id="one" className="wrapper style1 split">
-            <div className="inner">
-              <div className="content">
-                <h2 className="firstHeader">What is Open Source?</h2>
-                <p>
-                  Amet lorem vivamus viverra, quis semper consequat, sem nibh
-                  mattis arcu, dolore porttitor lorem justo in tellus. Aenean
-                  lacinia felis et dui viverra, nec accumsan et quam ultricies.
-                  Phasellus sapien lorem, rhoncus ultricies.
-                </p>
-                <ul className="actions">
+
+           {/*   <div className="content image-circles">
+                <div className="images">
+                  <span>
+                    <img src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" />
+                  </span>>
+                </div>
+    </div>*/}
+
+
+               {/* <ul className="actions">
                   <li>
                     <a href="/" className="button">
                       Our Story
                     </a>
                   </li>
-                </ul>
-              </div>
-              <div className="image-circles">
-                <div className="images">
-                  <span className="image">
-                    <img src="../images/pic01.jpg" alt="" />
-                  </span>
-                  <span className="image">
-                    <img src="../images/pic02.jpg" alt="" />
-                  </span>
-                </div>
-                <div className="images">
-                  <span className="image">
-                    <img src="../images/pic03.jpg" alt="" />
-                  </span>
-                  <span className="image">
-                    <img src="../images/pic04.jpg" alt="" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="three" className="wrapper style1">
-            <div className="inner">
-              <div className="spotlights">
-                <section>
-                  <span className="image">
-                    <img src="images/pic05.jpg" alt="" />
-                  </span>
-                  <div className="content">
-                    <h2>Convallis integer iaculis</h2>
-                    <p>
-                      Donec elementum odio ut suscipit congue. Fusce magna
-                      mattis vel fermentum, ultricies et velit. Suspendisse
-                      viverra, ante in eleifend vulputate, lacus lorem pretium
-                      ligula, tincidunt posuere sapien neque a augue.
-                      Pellentesque habitant morbi tristique senectus et netus et
-                      malesuada.
-                    </p>
-                  </div>
-                </section>
-                <section>
-                  <span className="image">
-                    <img src="images/pic06.jpg" alt="" />
-                  </span>
-                  <div className="content">
-                    <h2>Ultrices augue faucibus</h2>
-                    <p>
-                      Donec elementum odio ut suscipit congue. Fusce magna
-                      mattis vel fermentum, ultricies et velit. Suspendisse
-                      viverra, ante in eleifend vulputate, lacus lorem pretium
-                      ligula, tincidunt posuere sapien neque a augue.
-                      Pellentesque habitant morbi tristique senectus et netus et
-                      malesuada.
-                    </p>
-                  </div>
-                </section>
-                <section>
-                  <span className="image">
-                    <img src="images/pic07.jpg" alt="" />
-                  </span>
-                  <div className="content">
-                    <h2>Integer sed sodales</h2>
-                    <p>
-                      Donec elementum odio ut suscipit congue. Fusce magna
-                      mattis vel fermentum, ultricies et velit. Suspendisse
-                      viverra, ante in eleifend vulputate, lacus lorem pretium
-                      ligula, tincidunt posuere sapien neque a augue.
-                      Pellentesque habitant morbi tristique senectus et netus et
-                      malesuada.
-                    </p>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </section>
+                  <li>
+                    <a href="/" className="button">
+                      Our Story
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="button">
+                      Our Story
+                    </a>
+                  </li>
+                </ul>*/}
+         
 
           {/* TIMELINE & RESOURCES */}
-          <br/>
           
-          <Grid container spacing={2}>
-            <Grid item sm={12} md={8}>
-              <h2>Open Source Resources</h2>
-              <p className='resources'>
-                Here are some organizations that promote open source communities and provide resources to 
-                learn more about open source and how to contribute! Some of these organizations also have 
-                projects available for you to contribute to!
-              </p>
-              <div className='orgs'>
-                <a href='https://ossn.club/'>
-                  <img className='org-img' src={mozilla} alt='mozilla' width='150px'/>
-                </a>                
-                <a href='https://opensource.google/'>
-                  <img className='org-img' src={google} alt='google' width='150px' />
-                </a>
-                <a href='https://opensource.facebook.com/'>
-                  <img className='org-img' src={facebook} alt='facebook' width='150px' />
-                </a>
-                <a href='https://community.redhat.com/software/'>
-                  <img className='org-img' src={redhat} alt='facebook' width='150px' />
-                </a>
-                <a href='https://www.twilio.com/open-source'>
-                  <img className='org-img' src={twilio} alt='twilio' width='150px' />
-                </a>
-              </div>
+          <Grid className="" container>
+            <Grid item sm={12} md={8} className="leftsection">
+            {/*Definition of Open Source*/}
+             <section className="wrapper style1 subsection">
+                <h2 className="gridHeaders">What is Open Source?</h2>
+                <p>
+                If a program is open-source, its source code is freely available to its users. Its users – and anyone else – have the ability to take this source code, modify it, and distribute their own versions of the program. The users also have the ability to distribute as many copies of the original program as they want. Anyone can use the program for any purpose; there are no licensing fees or other restrictions on the software.
+                </p>
+             </section>
+
+               {/*Open Source Resources*/}
+              <section className="wrapper style1 subsection">
+                <h2 className="gridHeaders">Open Source Resources</h2>
+                <p className='resources'>
+                  Here are some organizations that promote open source communities and provide resources to 
+                  learn more about open source and how to contribute! Some of these organizations also have 
+                  projects available for you to contribute to!
+                </p>
+                <div className='orgs content'>
+                  <a href='https://ossn.club/'>
+                    <img className='org-img' src={mozilla} alt='mozilla' width='150px'/>
+                  </a>                
+                  <a href='https://opensource.google/'>
+                    <img className='org-img' src={google} alt='google' width='150px' />
+                  </a>
+                  <a href='https://opensource.facebook.com/'>
+                    <img className='org-img' src={facebook} alt='facebook' width='150px' />
+                  </a>
+                  <a href='https://community.redhat.com/software/'>
+                    <img className='org-img' src={redhat} alt='facebook' width='150px' />
+                  </a>
+                  <a href='https://www.twilio.com/open-source'>
+                    <img className='org-img' src={twilio} alt='twilio' width='150px' />
+                  </a>
+                </div>
+              </section>
+
+               {/*Open Source Resources*/}
+               <section className="wrapper style1 subsection">
+                <h2 className="gridHeaders">How you can start contributing:</h2>
+                <p className='resources'>
+                  Here are some organizations that promote open source communities and provide resources to 
+                  learn more about open source and how to contribute! Some of these organizations also have 
+                  projects available for you to contribute to!
+                </p>
+                <div className='orgs content'>
+                  <a href='https://ossn.club/'>
+                    <img className='org-img' src={mozilla} alt='mozilla' width='150px'/>
+                  </a>                
+                  <a href='https://opensource.google/'>
+                    <img className='org-img' src={google} alt='google' width='150px' />
+                  </a>
+                  <a href='https://opensource.facebook.com/'>
+                    <img className='org-img' src={facebook} alt='facebook' width='150px' />
+                  </a>
+                  <a href='https://community.redhat.com/software/'>
+                    <img className='org-img' src={redhat} alt='facebook' width='150px' />
+                  </a>
+                  <a href='https://www.twilio.com/open-source'>
+                    <img className='org-img' src={twilio} alt='twilio' width='150px' />
+                  </a>
+                </div>
+              </section>
             </Grid>
-            <Grid item sm={12} md={4} className='timeline'>
+            <Grid item sm={12} md={4} className='rightsection'>
+              <section className="wrapper timeline">
               <h2>Our Github Contribution Timeline</h2>
               <p>Check out some of the most recent contributions to our GitHub!</p>
               <Timeline prs={this.state.prs} />
+              </section>
             </Grid>
           </Grid>
-          <br />
 
-          {/* EVENTS */}
-          <section className='events-container'>
+
+          {/* EVENTS */} {/*
+          <section className='wrapper events-container'>
             <h2>Upcoming Events</h2>
             <UpcomingEvents />
             <div className='events-btn-container'>
               <Link style={{textDecoration:'none'}} to='/event'><Button>View all events</Button></Link>
             </div>
           </section>
-          <br />
 
           <section id="two" className="wrapper style2">
             <div className="inner">
@@ -331,7 +304,7 @@ class Home extends React.Component {
             </div>
           </section>
 
-
+  
           <section id="four" className="wrapper style2 special">
             <div className="inner">
               <header>
@@ -353,6 +326,8 @@ class Home extends React.Component {
               </ul>
             </div>
           </section>
+
+                  */}
         </div>
         <Footer />
       </div>
