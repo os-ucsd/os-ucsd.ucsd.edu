@@ -1,20 +1,17 @@
 import React from "react";
 import MenuBar from "../components/navbar";
-import "../assets/css/main.css";
-import "../assets/css/tutorial-style.css";
-import "../css/home.css";
 import Background from "../images/project.jpg";
 import "../css/project.css";
 import axios from "axios";
 import { Card } from "react-bootstrap";
-import { Button, ButtonGroup, IconButton } from "@material-ui/core/";
+import { Button, ButtonGroup } from "@material-ui/core/";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/footer";
 
 // Show all the projects that we can contribute
 const EachProject = props => {
   return (
-    <Card style={{ className: "card", width: "15rem" }}>
+    <Card style={{ className: "card", width: "20rem" }}>
       <Card.Img variant="top" src={props.project.owner.avatar_url} />
       <Card.Body>
         <Card.Title> Project's Name: {props.project.name}</Card.Title>
@@ -39,7 +36,7 @@ class Project extends React.Component {
     this.state = {
       projects: [],
       currentPage: 1,
-      projectPerPage: 12
+      projectPerPage: 10
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -116,30 +113,30 @@ class Project extends React.Component {
       <div>
         <MenuBar />
 
-        <div className="is-preload">
-          {/*Banner*/}
-          <section
-            id="banner"
-            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
-          >
-            <div className="inner">
-              <div className="content">
-                <h2>Open Source Projects</h2>
-              </div>
+        {/*Banner*/}
+        <section
+          id="banner"
+          style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+        >
+          <div className="inner">
+            <div className="content">
+              <h2>Open Source Projects</h2>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <h3 className="firstTitle">
-            All the projects that you can contribute to
-          </h3>
-          <h4>Want to share your project so other can contribute? </h4>
+        <h3 className="firstTitle">
+          All the projects that you can contribute to
+        </h3>
+        <h4>Want to share your project so other can contribute? </h4>
 
-          {/* Submit Project */}
-          <Button variant="contained" color="primary" size="large" href="/form">
-            Share Project
-          </Button>
+        {/* Submit Project */}
+        <Button variant="contained" color="primary" size="large" href="/form">
+          Share Project
+        </Button>
 
-          {/* Show the list of all the projects */}
+        {/* Show the list of all the projects */}
+        <div className="projectWrapper">
           <div className="projectList">{this.showProject(shownProjects)}</div>
         </div>
 
@@ -149,8 +146,11 @@ class Project extends React.Component {
           color="primary"
           aria-label="large outlined primary button group"
         >
+          <Button onClick={this.handleClickFirst}> {"<<"}</Button>
           {this.renderPageNumber(pages)}
+          <Button onClick={this.handleClickLast}> {">>"}</Button>
         </ButtonGroup>
+
         <br />
         <br />
         <br />
