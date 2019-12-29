@@ -14,7 +14,7 @@ import Footer from "../components/footer";
 // Show all the projects that we can contribute
 const EachProject = props => {
   return (
-    <Card style={{ className: "card", width: "20rem" }}>
+    <Card style={{ className: "card", width: "18rem" }}>
       <Card.Img variant="top" src={props.project.owner.avatar_url} />
       <Card.Body>
         <Card.Title> Project's Name: {props.project.name}</Card.Title>
