@@ -6,15 +6,15 @@ import "../css/home.css";
 import Background from "../images/project.jpg";
 import "../css/project.css";
 import axios from "axios";
-import { Card, Pagination } from "react-bootstrap";
-import Button from "@material-ui/core/Button";
+import { Card } from "react-bootstrap";
+import { Button, ButtonGroup, IconButton } from "@material-ui/core/";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/footer";
 
 // Show all the projects that we can contribute
 const EachProject = props => {
   return (
-    <Card style={{ className: "card", width: "18rem" }}>
+    <Card style={{ className: "card", width: "15rem" }}>
       <Card.Img variant="top" src={props.project.owner.avatar_url} />
       <Card.Body>
         <Card.Title> Project's Name: {props.project.name}</Card.Title>
@@ -61,9 +61,10 @@ class Project extends React.Component {
       .catch(err => console.log(err));
   }
 
-  handleClick(event) {
+  handleClick(pageNumber) {
+    //console.log(event);
     this.setState({
-      currentPage: Number(event.target.id)
+      currentPage: Number(pageNumber)
     });
   }
 
@@ -90,17 +91,12 @@ class Project extends React.Component {
   }
 
   // Method to render the pagination
-  renderPageNumber(totalPages, currentPage) {
+  renderPageNumber(totalPages) {
     return totalPages.map(number => {
       return (
-        <Pagination.Item
-          active={number === currentPage ? true : false}
-          key={number}
-          id={number}
-          onClick={this.handleClick}
-        >
+        <Button key={number} onClick={() => this.handleClick(number)}>
           {number}
-        </Pagination.Item>
+        </Button>
       );
     });
   }
@@ -148,13 +144,16 @@ class Project extends React.Component {
         </div>
 
         {/** Pagination section */}
-        <div className="pagination">
-          <Pagination>
-            <Pagination.First onClick={this.handleClickFirst} />
-            {this.renderPageNumber(pages, currentPage)}
-            <Pagination.Last onClick={this.handleClickLast} />
-          </Pagination>
-        </div>
+        <ButtonGroup
+          size="small"
+          color="primary"
+          aria-label="large outlined primary button group"
+        >
+          {this.renderPageNumber(pages)}
+        </ButtonGroup>
+        <br />
+        <br />
+        <br />
 
         <Footer />
       </div>
