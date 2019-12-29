@@ -8,9 +8,8 @@
 }
 
 .orgs{
-  padding-left: 50px;
-  float: left;
   transition: all .3s ease-in-out;
+  padding-bottom: 20px;
 }
 
 .org-img{
@@ -18,7 +17,7 @@
 }
 
 .org-img:hover{
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 .events-btn-container{
@@ -31,8 +30,10 @@
 
 .subsection {
   padding-top: 1.5rem;
-  padding-left: 3rem;
+  padding: 20px;
   /*background: #642c2c;*/
+  height: auto;
+  min-height: 380px;
 }
 .rightsection {
  /* background: rgb(135, 135, 190);*/
@@ -45,7 +46,7 @@
   margin-top: 2rem;
   margin-right: 2rem !important;
   border-radius: 25px;
-  padding-right: 2.5rem !important;
+  /*padding-right: 2.5rem !important;*/
 }
 .gridHeaders {
   font-weight: 500;
