@@ -36,7 +36,8 @@ class Project extends React.Component {
     this.state = {
       projects: [],
       currentPage: 1,
-      projectPerPage: 10
+      projectPerPage: 10,
+      message: ""
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -52,14 +53,22 @@ class Project extends React.Component {
         "https://api.github.com/search/repositories?q=topic%3Aos-ucsd-project+fork%3Atrue&type=Repositories"
       )
       .then(res => {
-        console.log(res.data.items[0]);
+        //console.log(res.data.items[0]);
         this.setState({ projects: res.data.items });
       })
       .catch(err => console.log(err));
+    /*
+    axios
+      .get("https://api.github.com/repos/os-ucsd/os-ucsd.ucsd.edu/issues")
+      .then(res => {
+        //console.log(res.data.items[0]);
+        this.setState({ message: res.data[0] });
+      })
+      .catch(err => console.log(err));
+      */
   }
 
   handleClick(pageNumber) {
-    //console.log(event);
     this.setState({
       currentPage: Number(pageNumber)
     });
@@ -109,10 +118,15 @@ class Project extends React.Component {
       pages.push(i);
     }
 
+    /*var lines = this.state.message.split("\n");
+    for (var i = 0; i < lines.length; i++) {
+      console.log(lines[i]);
+    }*/
+
     return (
       <div>
         <MenuBar />
-
+        {this.formatString}
         {/*Banner*/}
         <section
           id="banner"
@@ -124,7 +138,19 @@ class Project extends React.Component {
             </div>
           </div>
         </section>
+        {/** 
+        <Card style={{ className: "card", width: "20rem" }}>
+          <Card.Img
+            variant="top"
+            src="https://avatars0.githubusercontent.com/u/38933533?v=4"
+          />
+          <Card.Body>
+            <Card.Title> Project's Name: {this.state.message.title}</Card.Title>
 
+            <Card.Text> {this.state.message.body}</Card.Text>
+          </Card.Body>
+        </Card>
+*/}
         <h3 className="firstTitle">
           All the projects that you can contribute to
         </h3>

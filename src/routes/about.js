@@ -53,7 +53,7 @@ const officers = [
     image: "https://cdn1-www.dogtime.com/assets/uploads/2019/04/DogSilly.jpg",
     position: "Event Chair",
     link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
-    fun_fact: "",
+    fun_fact: '"I have good personality"',
     email: "bghoang@ucsd.edu",
     github: "https://github.com/bghoang"
   }
