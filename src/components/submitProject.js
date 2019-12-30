@@ -1,8 +1,5 @@
 import React from "react";
 import MenuBar from "../components/navbar";
-import "../assets/css/main.css";
-import "../assets/css/tutorial-style.css";
-import "../css/home.css";
 import "../css/project.css";
 import Background from "../images/project.jpg";
 import axios from "axios";
@@ -245,20 +242,19 @@ class SubmitProject extends React.Component {
       <div>
         <MenuBar />
 
-        <div className="is-preload">
-          {/*Banner*/}
-          <section
-            id="banner"
-            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
-          >
-            <div className="inner">
-              <div className="content">
-                <h2>Open Source Projects</h2>
-              </div>
+        {/*Banner*/}
+        <section
+          id="banner"
+          style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+        >
+          <div className="inner">
+            <div className="content">
+              <h2>Open Source Projects</h2>
             </div>
-          </section>
-          {pageComponent}
-        </div>
+          </div>
+        </section>
+        {pageComponent}
+
         <Footer />
       </div>
     );
