@@ -24,7 +24,7 @@ const officers = [
       "https://i.pinimg.com/originals/8a/7b/5e/8a7b5e0d1b237ca10e006f0c986b5fe6.jpg",
     link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
     position: "VP",
-    fun_fact: '"i\'m a savage you are average uwu"',
+    fun_fact: '"i\'m a fun-sized, super nice guy"',
     email: "chv004@ucsd.edu",
     github: "https://github.com/cqvu"
   },
