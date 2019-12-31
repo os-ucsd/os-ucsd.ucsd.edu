@@ -1,11 +1,10 @@
 import React from "react";
 import MenuBar from "../components/navbar";
-import "../assets/css/main.css";
 import "../assets/css/tutorial-style.css";
-import "../css/home.css";
 import tutorialMeta from "./tutorials-meta.js";
-import Background from "../images/space5.jpg";
+import Background from "../images/material-space/material-space7.jpg";
 import Footer from "../components/footer";
+import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
 
 var moment = require("moment");
 
@@ -44,7 +43,8 @@ class Tutorials extends React.Component {
             this.openTutorial(tutorial);
           }}
         >
-          <span className="icon solid major fa-cube"></span>
+          <LibraryBooksIcon fontSize="large" />
+
           <h3 style={{ minHeight: "10rem", paddingTop: "0.5rem" }}>
             {tutorial["title"]}
           </h3>
@@ -58,29 +58,27 @@ class Tutorials extends React.Component {
       <div>
         <MenuBar />
 
-        <div className="is-preload">
-          {/*Banner*/}
-          <section
-            id="banner"
-            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
-          >
-            <div className="inner">
-              <div className="content">
-                <h2>Open Source at UCSD Tutorials</h2>
-              </div>
+        {/*Banner*/}
+        <section
+          id="banner"
+          style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+        >
+          <div className="inner">
+            <div className="content">
+              <h2>Open Source at UCSD Tutorials</h2>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/*All Tutorials Section*/}
-          <section id="two" className="wrapper style2">
-            <div className="inner">
-              <header className="major">
-                <h2>All Tutorials</h2>
-              </header>
-              <div className="features">{tutorialCards}</div>
-            </div>
-          </section>
-        </div>
+        {/*All Tutorials Section*/}
+        <section id="two" className="wrapper style2">
+          <div className="inner">
+            <header className="major">
+              <h2 style={{ paddingTop: "18px" }}>All Tutorials</h2>
+            </header>
+            <div className="features">{tutorialCards}</div>
+          </div>
+        </section>
 
         <Footer />
       </div>

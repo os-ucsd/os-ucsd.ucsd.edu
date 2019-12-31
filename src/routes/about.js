@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import Background from "../images/project.jpg";
+import Background from "../images/material-space/material-space1.jpg";
 import Footer from "../components/footer";
 
 const officers = [

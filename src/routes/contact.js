@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 import axios from "axios";
 import "../css/contact.css";
 import MenuBar from "../components/navbar";
-import Background from "../images/spacebackground.jpg";
+import Background from "../images/material-space/material-space5.jpg";
 import Footer from "../components/footer";
 
 class Contact extends React.Component {
