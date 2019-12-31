@@ -1,6 +1,6 @@
 import React from "react";
 import MenuBar from "../components/navbar";
-import Background from "../images/project.jpg";
+import Background from "../images/material-space/material-space6.jpg";
 import "../css/project.css";
 import axios from "axios";
 import { Card } from "react-bootstrap";

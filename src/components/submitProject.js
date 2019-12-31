@@ -1,7 +1,7 @@
 import React from "react";
 import MenuBar from "../components/navbar";
 import "../css/project.css";
-import Background from "../images/project.jpg";
+import Background from "../images/material-space/material-space6.jpg";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { Form, Row, Col } from "react-bootstrap";
