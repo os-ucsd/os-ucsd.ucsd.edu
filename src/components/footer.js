@@ -1,5 +1,10 @@
 import React from "react";
-import "../assets/css/main.css";
+import FacebookIcon from "@material-ui/icons/Facebook";
+//import TwitterIcon from "@material-ui/icons/Twitter";
+//import InstagramIcon from "@material-ui/icons/Instagram";
+import GitHubIcon from "@material-ui/icons/GitHub";
+//import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import MailIcon from "@material-ui/icons/Mail";
 
 class Footer extends React.Component {
   render() {
@@ -8,45 +13,28 @@ class Footer extends React.Component {
         <div className="inner">
           <ul className="icons">
             <li>
-              <a href="https://twitter.com/" className="icon brands fa-twitter">
-                <span className="label">Twitter</span>
+              <a href="https://www.facebook.com/groups/OpenSourceUCSD/">
+                <FacebookIcon />
               </a>
             </li>
+            {/*<li>
+              <a href="https://www.instagram.com/">
+                <InstagramIcon />
+              </a>
+            </li>*/}
             <li>
-              <a
-                href="https://www.facebook.com/groups/OpenSourceUCSD/"
-                className="icon brands fa-facebook-f"
-              >
-                <span className="label">Facebook</span>
+              <a href="https://github.com/os-ucsd">
+                <GitHubIcon />
               </a>
             </li>
-            <li>
-              <a
-                href="https://www.instagram.com/"
-                className="icon brands fa-instagram"
-              >
-                <span className="label">Instagram</span>
+            {/*<li>
+              <a href="https://www.linkedin.com/">
+                <LinkedInIcon />
               </a>
-            </li>
+            </li>*/}
             <li>
-              <a
-                href="https://github.com/os-ucsd"
-                className="icon brands fa-github"
-              >
-                <span className="label">GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/"
-                className="icon brands fa-linkedin-in"
-              >
-                <span className="label">LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="icon solid fa-envelope">
-                <span className="label">Envelope</span>
+              <a href="/contact">
+                <MailIcon />
               </a>
             </li>
           </ul>

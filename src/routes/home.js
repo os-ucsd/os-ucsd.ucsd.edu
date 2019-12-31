@@ -6,6 +6,7 @@ import "../css/home.css";
 import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
+import Background from "../images/material-space/material-space4.jpeg";
 import UpcomingEvents from '../events/UpcomingEvents';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
@@ -87,7 +88,7 @@ class Home extends React.Component {
         <div className="is-preload">
 
           {/*Banner*/}
-          <section id="banner">
+          <section id="banner" style={{ backgroundImage: `url(${Background})`, height: "20px" }}>
             <div className="inner">
               <div className="content">
                 <h1>Open Source at UCSD</h1>
@@ -170,7 +171,7 @@ class Home extends React.Component {
                     <img className='org-img' src={facebook} alt='facebook' width='150px' />
                   </a>
                   <a href='https://community.redhat.com/software/'>
-                    <img className='org-img' src={redhat} alt='facebook' width='150px' />
+                    <img className='org-img' src={redhat} alt='redhat' width='150px' />
                   </a>
                   <a href='https://www.twilio.com/open-source'>
                     <img className='org-img' src={twilio} alt='twilio' width='150px' />
@@ -207,7 +208,7 @@ class Home extends React.Component {
             </Grid>
             <Grid item sm={12} md={4} className='rightsection'>
               <section className="wrapper timeline">
-              <h2>Our Github Contribution Timeline</h2>
+              <h2>Our Live Github Contribution Timeline</h2>
               <p>Check out some of the most recent contributions to our GitHub!</p>
               <Timeline prs={this.state.prs} />
               </section>

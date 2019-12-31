@@ -1,25 +1,27 @@
 import React from "react";
 import MenuBar from "../components/navbar";
-import "../assets/css/main.css";
-import "../assets/css/tutorial-style.css";
-import "../css/home.css";
-import Background from "../images/project.jpg";
+import Background from "../images/material-space/material-space6.jpg";
 import "../css/project.css";
 import axios from "axios";
-import { Card, Button, Pagination } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { Button, ButtonGroup } from "@material-ui/core/";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/footer";
 
 // Show all the projects that we can contribute
 const EachProject = props => {
   return (
-    <Card style={{ className: "card", width: "20rem"}}>
+    <Card style={{ className: "card", width: "20rem" }}>
       <Card.Img variant="top" src={props.project.owner.avatar_url} />
       <Card.Body>
         <Card.Title> Project's Name: {props.project.name}</Card.Title>
         <Card.Title>Owner: {props.project.owner.login}</Card.Title>
         <Card.Text> Description: {props.project.description}</Card.Text>
-        <Button variant="primary" href={props.project.html_url}>
+        <Button
+          variant="outlined"
+          color="primary"
+          href={props.project.html_url}
+        >
           Check Project
         </Button>
       </Card.Body>
@@ -34,7 +36,8 @@ class Project extends React.Component {
     this.state = {
       projects: [],
       currentPage: 1,
-      projectPerPage: 12
+      projectPerPage: 10,
+      message: ""
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -50,15 +53,24 @@ class Project extends React.Component {
         "https://api.github.com/search/repositories?q=topic%3Aos-ucsd-project+fork%3Atrue&type=Repositories"
       )
       .then(res => {
-        console.log(res.data.items[0]);
+        //console.log(res.data.items[0]);
         this.setState({ projects: res.data.items });
       })
       .catch(err => console.log(err));
+    /*
+    axios
+      .get("https://api.github.com/repos/os-ucsd/os-ucsd.ucsd.edu/issues")
+      .then(res => {
+        //console.log(res.data.items[0]);
+        this.setState({ message: res.data[0] });
+      })
+      .catch(err => console.log(err));
+      */
   }
 
-  handleClick(event) {
+  handleClick(pageNumber) {
     this.setState({
-      currentPage: Number(event.target.id)
+      currentPage: Number(pageNumber)
     });
   }
 
@@ -85,17 +97,12 @@ class Project extends React.Component {
   }
 
   // Method to render the pagination
-  renderPageNumber(totalPages, currentPage) {
+  renderPageNumber(totalPages) {
     return totalPages.map(number => {
       return (
-        <Pagination.Item
-          active={number === currentPage ? true : false}
-          key={number}
-          id={number}
-          onClick={this.handleClick}
-        >
+        <Button key={number} onClick={() => this.handleClick(number)}>
           {number}
-        </Pagination.Item>
+        </Button>
       );
     });
   }
@@ -111,45 +118,68 @@ class Project extends React.Component {
       pages.push(i);
     }
 
+    /*var lines = this.state.message.split("\n");
+    for (var i = 0; i < lines.length; i++) {
+      console.log(lines[i]);
+    }*/
+
     return (
       <div>
         <MenuBar />
-
-        <div className="is-preload">
-          {/*Banner*/}
-          <section
-            id="banner"
-            style={{ backgroundImage: `url(${Background})`, height: "20px" }}
-          >
-            <div className="inner">
-              <div className="content">
-                <h2>Open Source Projects</h2>
-              </div>
+        {this.formatString}
+        {/*Banner*/}
+        <section
+          id="banner"
+          style={{ backgroundImage: `url(${Background})`, height: "20px" }}
+        >
+          <div className="inner">
+            <div className="content">
+              <h2>Open Source Projects</h2>
             </div>
-          </section>
+          </div>
+        </section>
+        {/** 
+        <Card style={{ className: "card", width: "20rem" }}>
+          <Card.Img
+            variant="top"
+            src="https://avatars0.githubusercontent.com/u/38933533?v=4"
+          />
+          <Card.Body>
+            <Card.Title> Project's Name: {this.state.message.title}</Card.Title>
 
-          <h3 className="firstTitle">
-            All the projects that you can contribute to
-          </h3>
-          <h4>Want to share your project so other can contribute? </h4>
+            <Card.Text> {this.state.message.body}</Card.Text>
+          </Card.Body>
+        </Card>
+*/}
+        <h3 className="firstTitle">
+          All the projects that you can contribute to
+        </h3>
+        <h4>Want to share your project so other can contribute? </h4>
 
-          {/* Submit Project */}
-          <Button variant="primary" size="lg" href="/form">
-            Share Project
-          </Button>
+        {/* Submit Project */}
+        <Button variant="contained" color="primary" size="large" href="/form">
+          Share Project
+        </Button>
 
-          {/* Show the list of all the projects */}
+        {/* Show the list of all the projects */}
+        <div className="projectWrapper">
           <div className="projectList">{this.showProject(shownProjects)}</div>
         </div>
 
         {/** Pagination section */}
-        <div className="pagination">
-          <Pagination>
-            <Pagination.First onClick={this.handleClickFirst} />
-            {this.renderPageNumber(pages, currentPage)}
-            <Pagination.Last onClick={this.handleClickLast} />
-          </Pagination>
-        </div>
+        <ButtonGroup
+          size="small"
+          color="primary"
+          aria-label="large outlined primary button group"
+        >
+          <Button onClick={this.handleClickFirst}> {"<<"}</Button>
+          {this.renderPageNumber(pages)}
+          <Button onClick={this.handleClickLast}> {">>"}</Button>
+        </ButtonGroup>
+
+        <br />
+        <br />
+        <br />
 
         <Footer />
       </div>
