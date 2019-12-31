@@ -5,6 +5,7 @@ import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import Background from "../images/project.jpg";
 
 const officers = [
   {
@@ -21,7 +22,7 @@ const officers = [
     image:'https://i.pinimg.com/originals/8a/7b/5e/8a7b5e0d1b237ca10e006f0c986b5fe6.jpg',
     link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
     position: 'VP',
-    fun_fact: '"I\'m a savage you are average uwu"',
+    fun_fact: '"i\'m a savage you are average uwu"',
     email: 'chv004@ucsd.edu',
     github: 'https://github.com/cqvu'
   },
@@ -30,7 +31,7 @@ const officers = [
     image:'https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/2560x1280/landscape-1500925839-golden-retriever-puppy.jpg?resize=480:*',
     position: 'Project Chair',
     link: 'https://github.com/cqvu/os-ucsd.ucsd.edu',
-    fun_fact: '"I\'s everyday bro, do you give up at night? We 24/7 man, you picked the wrong fight c:"',
+    fun_fact: '"it\'s everyday bro, do you give up at night?"',
     email: 'bwlau@ucsd.edu',
     github: 'https://github.com/blau0123'
   },
@@ -64,7 +65,17 @@ class About extends React.Component {
         return (
             <div>
             <MenuBar></MenuBar>
-            <main style={{marginTop:"200px"}}>
+            {/*Banner*/}
+            <section
+              id="banner"
+              style={{ backgroundImage: `url(${Background})`, height: "20px" }}>
+              <div className="inner">
+                <div className="content">
+                  <h2>About Us</h2>
+                </div>
+              </div>
+            </section>
+            <main style={{marginTop:"20px"}}>
             <Typography variant="h2" component="h1"> 
               Meet the Board
             </Typography>
@@ -107,8 +118,7 @@ const Officer = (props) => {
     return (
       <div style={{boxSizing:"border-box", position:"relative", paddingLeft:"50px", paddingRight:"50px", paddingBottom:"5rem", flex:"0 0 33.3333%"}}>
         <a href={props.link} >
-          <Image src={props.image} width={300} height={300} style={{opacity: 0.9}} onMouseOver={over} onMouseOut={out}
-            style={{objectFit:'cover'}}/>
+          <Image src={props.image} width={300} height={300} style={{opacity: 0.9, objectFit:'cover'}} onMouseOver={over} onMouseOut={out}/>
         </a>
         <Typography variant="h4" component="h2">
           {props.name}

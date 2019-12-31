@@ -55,17 +55,17 @@ class MenuBar extends React.Component {
               }
             >
               <a id="home" className="menu-item" href="/">
-              <i class="fas fa-home"></i>
+              <i className="fas fa-home"></i>
               <span> Home</span>
               </a>
 
               <a id="about" className="menu-item" href="/about">
-              <i class="fas fa-users"></i>
+              <i className="fas fa-users"></i>
               <span> About</span>
               </a>
 
               <a id="project" className="menu-item" href="/project">
-              <i class="fas fa-laptop-code"></i>
+              <i className="fas fa-laptop-code"></i>
               <span> Projects</span>
               </a>
 
@@ -80,7 +80,7 @@ class MenuBar extends React.Component {
               </a>
 
               <a id="contact" className="menu-item" href="/contact">
-                <i class="fas fa-envelope-square"></i>
+                <i className="fas fa-envelope-square"></i>
                 <span> Contact</span>
               </a>
             </Menu>
