@@ -1,3 +1,4 @@
+
 .firstHeader {
   display: flex;
   /*justify-content: center;*/
@@ -37,11 +38,10 @@
 }
 .rightsection {
  /* background: rgb(135, 135, 190);*/
-
  /* margin-left: 1.5rem;*/
 }
 .timeline {
-  padding-top: 1.5rem;
+  padding: 1.5rem;
   border: 2px solid rgb(166, 184, 223);
   margin-top: 2rem;
   margin-right: 2rem !important;

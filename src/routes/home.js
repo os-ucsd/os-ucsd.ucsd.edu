@@ -22,11 +22,43 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      prs:[]
+      prs:[],
+      borgColor: 'white',
     };
+
+    this.checkIfBottom = this.checkIfBottom.bind(this);
+  }
+
+  isBottom(elt1, elt2){
+    // if the user scrolls to 60px above the banner (when the borg passes the banner)
+    return elt1.getBoundingClientRect().bottom <= elt2.getBoundingClientRect().top + 60;
+  }
+
+  checkIfBottom(){
+    // add event listener for scroll to change borg color
+    const borg = document.querySelector('.borg');
+    const banner = document.querySelector('#banner');
+    // if the user reaches bottom of banner, change to grey if not already
+    if (this.isBottom(banner, borg)){
+      if (this.state.borgColor !== 'grey'){
+        this.setState({borgColor: 'grey'})
+      }
+    }
+    else{
+      // set borg to white if not at bottom of banner
+      if (this.state.borgColor !== 'white'){
+        this.setState({borgColor: 'white'})
+      }
+    }
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener('scroll', this.checkIfBottom);
   }
 
   componentDidMount() {
+    window.addEventListener('scroll', this.checkIfBottom)
+
     //localStorage.clear();
     const data = JSON.parse(localStorage.getItem('prs'));
     // if haven't gotten data before or if data is old, then retrieve the data again (every 10 min)
@@ -40,7 +72,6 @@ class Home extends React.Component {
         console.log(res);
         const noRepeats = this.combineRepeats(res);
         this.setState({prs:noRepeats})
-        console.log(noRepeats);
         // store in local storage
         const dataToStore = {
           data: noRepeats,
@@ -97,11 +128,14 @@ class Home extends React.Component {
   
   render() {
     // Menu.
-    console.log(this.state.prs);
     return (
       <div className='home-container'>
+        <div className='menu-items'>
 
-        <MenuBar />
+        </div>
+        <div className='menu-bar'>
+          <MenuBar borgColor={this.state.borgColor}/>
+        </div>
         <div className="is-preload">
 
           {/*Banner*/}
