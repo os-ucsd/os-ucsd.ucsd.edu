@@ -27,6 +27,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    //localStorage.clear();
     const data = JSON.parse(localStorage.getItem('prs'));
     // if haven't gotten data before or if data is old, then retrieve the data again (every 10 min)
     if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
@@ -35,7 +36,8 @@ class Home extends React.Component {
       getAllPRs()
       .then(res => {
         // only get the first 16 PRs
-        res = res.slice(0, 10);
+        res = res.slice(0, 18);
+        console.log(res);
         const noRepeats = this.combineRepeats(res);
         this.setState({prs:noRepeats})
         console.log(noRepeats);
@@ -71,11 +73,26 @@ class Home extends React.Component {
       // skip the repeats
       i = j - 1;
     }
+
+    // make new array with only your contribution
+    const yourContribution = [{
+      user: "I",
+      repoURL: 'https://github.com/os-ucsd',
+      repoName: "some repo",
+      merged_time: '',
+    }]
+
+    // concat norepeatPRs with this array so that this comes first
+    const prsAndYours = yourContribution.concat(noRepeatPRs);
+    return prsAndYours;
+
+    /*
     let yourContribution = noRepeatPRs[noRepeatPRs.length - 1];
     yourContribution.user = "I";
     yourContribution.repoName = "some repository";
     noRepeatPRs.unshift(yourContribution);
     return noRepeatPRs;
+    */
   }
   
   render() {
@@ -96,7 +113,7 @@ class Home extends React.Component {
               </div>
               <ul className="actions stacked">
                 <li>
-                  <a href="/" className="button major">
+                  <a href="/about" className="button major">
                   <i className="fas fa-users"></i>
               <span> Learn More!</span>
                   </a>
