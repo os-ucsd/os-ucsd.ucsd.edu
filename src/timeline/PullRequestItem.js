@@ -10,11 +10,10 @@ class PullRequestItem extends React.Component{
             // get all PR times if there are multiple in a row
             for (let i = 0; i < prData.allMergedDates.length; i++){
                 const mergedTime = new Date(prData.allMergedDates[i]);
-                let monthStr = mergedTime.getUTCMonth() + 1;
+                let monthStr = mergedTime.getMonth() + 1;
                 let dateStr = mergedTime.getDate();
-                let yearStr = mergedTime.getUTCFullYear();
+                let yearStr = mergedTime.getFullYear();
                 let timeStr = new Date(mergedTime.setSeconds(0,0)).toLocaleTimeString();
-    
                 // get rid of seconds
                 timeStr = timeStr.split(' ');
                 const time = timeStr[0];
@@ -40,8 +39,9 @@ class PullRequestItem extends React.Component{
                     ) 
                 :
                     (   <div className="item-content">
-                            {  allPRTimes.map((prTime, i) => 
-                                <p key={i}>{prTime}</p>
+                            {  
+                                allPRTimes.map((prTime, i) => 
+                                    <p key={i}>{prTime}</p>
                                 )
                             }
                             <a href={prData.repoURL} className="pr-link">
