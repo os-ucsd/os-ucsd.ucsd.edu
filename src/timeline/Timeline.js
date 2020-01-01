@@ -15,7 +15,6 @@ class Timeline extends React.Component{
 		}
 	render(){
 		let {prs} = this.props;
-		console.log(prs);
 		let listOfPRs = 
 				prs ? prs.map((pr, i) => {
 					return(
