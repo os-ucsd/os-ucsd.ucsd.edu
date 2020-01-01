@@ -14,7 +14,8 @@ class Timeline extends React.Component{
 		this.setState({hover: !this.state.hover})
 		}
 	render(){
-        let {prs} = this.props;
+		let {prs} = this.props;
+		console.log(prs);
 		let listOfPRs = 
 				prs ? prs.map((pr, i) => {
 					return(
