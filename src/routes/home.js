@@ -6,7 +6,7 @@ import "../css/home.css";
 import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
-import Background from "../images/material-space/material-space4.jpeg";
+import Background from "../images/material-space/material-space7.jpg"; 
 import UpcomingEvents from '../events/UpcomingEvents';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
@@ -88,7 +88,7 @@ class Home extends React.Component {
         <div className="is-preload">
 
           {/*Banner*/}
-          <section id="banner" style={{ backgroundImage: `url(${Background})`, height: "20px" }}>
+          <section id="banner" style={{ backgroundImage: `url(${Background})`, height: "40em" }}>
             <div className="inner">
               <div className="content">
                 <h1>Open Source at UCSD</h1>
