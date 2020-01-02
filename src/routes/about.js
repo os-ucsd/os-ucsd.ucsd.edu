@@ -80,8 +80,32 @@ class About extends React.Component {
             </div>
           </div>
         </section>
-        <main style={{ marginTop: "20px" }}>
-          <Typography variant="h2" component="h1">
+        <div style={{ marginTop: "20px" }}>
+          <Typography variant="h4" component="h1">
+            Our Mission Statement
+          </Typography>
+          Open Source @ UCSD aims to build an all-inclusive open source community at UC San Diego. We strive to promote open source by engaging students through hosting education workshops,
+          collaborative projects, and many other open source related events.
+        </div>
+        <div style={{ marginTop: "20px" }}>
+          <Typography variant="h4" component="h1">
+            What We Do
+          </Typography>
+          
+          Workshops
+
+          Projects
+
+          Events
+        </div>
+        <div style={{ marginTop: "20px" }}>
+          <Typography variant="h4" component="h1">
+            How Do I Get Involved?
+          </Typography>
+          Open Source @ UCSD aims to build an all-inclusive open source community at UC San Diego. We strive to educate and spread awareness 
+        </div>
+        <div style={{ marginTop: "20px" }}>
+          <Typography variant="h4" component="h1">
             Meet the Board
           </Typography>
           <div
@@ -111,7 +135,7 @@ class About extends React.Component {
               ))}
             </Row>
           </div>
-        </main>
+        </div>
         <Footer />
       </div>
     );
