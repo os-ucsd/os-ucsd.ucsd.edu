@@ -44,13 +44,10 @@ class Footer extends React.Component {
           </ul>
           <ul className="links">
             <li>
-              <a href="/about">FAQ</a>
+              <a href="/about">About</a>
             </li>
             <li>
               <a href="/project">Contribute</a>
-            </li>
-            <li>
-              <a href="/about">Terms</a>
             </li>
             <li>
               <a href="/contact">Contact</a>
