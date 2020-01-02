@@ -7,9 +7,9 @@ import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
 import Background from "../images/material-space/material-space7.jpg"; 
-import UpcomingEvents from '../events/UpcomingEvents';
-import Button from '@material-ui/core/Button';
-import {Link} from 'react-router-dom';
+// import UpcomingEvents from '../events/UpcomingEvents';
+// import Button from '@material-ui/core/Button';
+// import {Link} from 'react-router-dom';
 
 // importing images
 import mozilla from '../assets/css/images/mozilla.jpg';
