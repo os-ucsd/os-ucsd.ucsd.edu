@@ -2,7 +2,7 @@ import React from "react";
 import MenuBar from "../components/navbar";
 import "../assets/css/tutorial-style.css";
 import tutorialMeta from "./tutorials-meta.js";
-import Background from "../images/material-space/material-space7.jpg";
+import Background from "../images/material-space/material-space3.jpeg";
 import Footer from "../components/footer";
 import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
 

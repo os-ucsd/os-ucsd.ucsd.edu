@@ -5,22 +5,24 @@ class PullRequestItem extends React.Component{
 	render(){
         const {prData} = this.props;
         let allPRTimes = []
-        // get all PR times if there are multiple in a row
-        for (let i = 0; i < prData.allMergedDates.length; i++){
-            const mergedTime = new Date(prData.allMergedDates[i]);
-            let monthStr = mergedTime.getUTCMonth() + 1;
-            let dateStr = mergedTime.getDate();
-            let yearStr = mergedTime.getUTCFullYear();
-            let timeStr = new Date(mergedTime.setSeconds(0,0)).toLocaleTimeString();
-
-            // get rid of seconds
-            timeStr = timeStr.split(' ');
-            const time = timeStr[0];
-            const ampm = timeStr[1];
-            let removeSecs = time.split(':');
-            removeSecs = removeSecs[0] + ':' + removeSecs[1] + ' ' + ampm;
-            var fullDate = monthStr + '/' + dateStr + '/' + yearStr + ' ' + removeSecs;
-            allPRTimes.push(fullDate);
+        // if the pr is 'your contribution', don't do this part
+        if (prData.user !== "I"){
+            // get all PR times if there are multiple in a row
+            for (let i = 0; i < prData.allMergedDates.length; i++){
+                const mergedTime = new Date(prData.allMergedDates[i]);
+                let monthStr = mergedTime.getMonth() + 1;
+                let dateStr = mergedTime.getDate();
+                let yearStr = mergedTime.getFullYear();
+                let timeStr = new Date(mergedTime.setSeconds(0,0)).toLocaleTimeString();
+                // get rid of seconds
+                timeStr = timeStr.split(' ');
+                const time = timeStr[0];
+                const ampm = timeStr[1];
+                let removeSecs = time.split(':');
+                removeSecs = removeSecs[0] + ':' + removeSecs[1] + ' ' + ampm;
+                var fullDate = monthStr + '/' + dateStr + '/' + yearStr + ' ' + removeSecs;
+                allPRTimes.push(fullDate);
+            }
         }
 
 		return(
@@ -37,8 +39,9 @@ class PullRequestItem extends React.Component{
                     ) 
                 :
                     (   <div className="item-content">
-                            {  allPRTimes.map((prTime, i) => 
-                                <p key={i}>{prTime}</p>
+                            {  
+                                allPRTimes.map((prTime, i) => 
+                                    <p key={i}>{prTime}</p>
                                 )
                             }
                             <a href={prData.repoURL} className="pr-link">

@@ -6,7 +6,7 @@ import "../css/home.css";
 import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
-import Background from "../images/material-space/material-space4.jpeg";
+import Background from "../images/material-space/material-space7.jpg"; 
 import UpcomingEvents from '../events/UpcomingEvents';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
@@ -22,11 +22,44 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      prs:[]
+      prs:[],
+      borgColor: 'white',
     };
+
+    this.checkIfBottom = this.checkIfBottom.bind(this);
+  }
+
+  isBottom(elt1, elt2){
+    // if the user scrolls to 60px above the banner (when the borg passes the banner)
+    return elt1.getBoundingClientRect().bottom <= elt2.getBoundingClientRect().top + 60;
+  }
+
+  checkIfBottom(){
+    // add event listener for scroll to change borg color
+    const borg = document.querySelector('.borg');
+    const banner = document.querySelector('#banner');
+    // if the user reaches bottom of banner, change to grey if not already
+    if (this.isBottom(banner, borg)){
+      if (this.state.borgColor !== 'grey'){
+        this.setState({borgColor: 'grey'})
+      }
+    }
+    else{
+      // set borg to white if not at bottom of banner
+      if (this.state.borgColor !== 'white'){
+        this.setState({borgColor: 'white'})
+      }
+    }
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener('scroll', this.checkIfBottom);
   }
 
   componentDidMount() {
+    window.addEventListener('scroll', this.checkIfBottom)
+
+    //localStorage.clear();
     const data = JSON.parse(localStorage.getItem('prs'));
     // if haven't gotten data before or if data is old, then retrieve the data again (every 10 min)
     if (!data || (data && (new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000))){
@@ -35,10 +68,10 @@ class Home extends React.Component {
       getAllPRs()
       .then(res => {
         // only get the first 16 PRs
-        res = res.slice(0, 10);
+        res = res.slice(0, 18);
+        console.log(res);
         const noRepeats = this.combineRepeats(res);
         this.setState({prs:noRepeats})
-        console.log(noRepeats);
         // store in local storage
         const dataToStore = {
           data: noRepeats,
@@ -71,24 +104,42 @@ class Home extends React.Component {
       // skip the repeats
       i = j - 1;
     }
+
+    // make new array with only your contribution
+    const yourContribution = [{
+      user: "I",
+      repoURL: 'https://github.com/os-ucsd',
+      repoName: "some repo",
+      merged_time: '',
+    }]
+
+    // concat norepeatPRs with this array so that this comes first
+    const prsAndYours = yourContribution.concat(noRepeatPRs);
+    return prsAndYours;
+
+    /*
     let yourContribution = noRepeatPRs[noRepeatPRs.length - 1];
     yourContribution.user = "I";
     yourContribution.repoName = "some repository";
     noRepeatPRs.unshift(yourContribution);
     return noRepeatPRs;
+    */
   }
   
   render() {
     // Menu.
-    console.log(this.state.prs);
     return (
       <div className='home-container'>
+        <div className='menu-items'>
 
-        <MenuBar />
+        </div>
+        <div className='menu-bar'>
+          <MenuBar borgColor={this.state.borgColor}/>
+        </div>
         <div className="is-preload">
 
           {/*Banner*/}
-          <section id="banner" style={{ backgroundImage: `url(${Background})`, height: "20px" }}>
+          <section id="banner" style={{ backgroundImage: `url(${Background})`, height: "40em" }}>
             <div className="inner">
               <div className="content">
                 <h1>Open Source at UCSD</h1>
@@ -96,7 +147,7 @@ class Home extends React.Component {
               </div>
               <ul className="actions stacked">
                 <li>
-                  <a href="/" className="button major">
+                  <a href="/about" className="button major">
                   <i className="fas fa-users"></i>
               <span> Learn More!</span>
                   </a>
