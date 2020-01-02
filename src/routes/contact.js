@@ -3,6 +3,7 @@ import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
 import Container from "@material-ui/core/Container/Container";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
+import Typography from "@material-ui/core/Typography";
 import "../css/contact.css";
 import MenuBar from "../components/navbar";
 import Background from "../images/material-space/material-space5.jpg";
@@ -51,7 +52,7 @@ class Contact extends React.Component {
         >
           <div className="inner">
             <div className="content">
-              <h2>Open Source at UCSD Contact</h2>
+              <h2>Contact</h2>
             </div>
           </div>
         </section>
@@ -77,9 +78,10 @@ class Contact extends React.Component {
     return (
       <div className="Contact">
         <br /> <br />
-        <h5 style={{ fontWeight: "bold" }}>
+        <Typography variant="h5" component="h1">
           Leave us a message and we'll get back to you :)
-        </h5>
+        </Typography>
+        <br />
         <form
           id="contact-form"
           onSubmit={this.handleSubmit.bind(this)}
