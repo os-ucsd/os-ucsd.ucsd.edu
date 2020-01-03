@@ -22,13 +22,13 @@ Before we begin the workshop, make sure you:
 2. Have a [Glitch](https://glitch.com/) account (can sign up with your GitHub account login info)
 3. (optional) If you are unfamiliar with Linux commands, check out this tutorial first: https://beta.observablehq.com/@kaustubhlall/introduction-to-linux
 
-**Step 1: “Fork” the** **R****epository**
+**Step 1: “Fork” the Repository**
 
-The **“repository”** ****you will be contributing to can be found here: 
+The **“repository”** you will be contributing to can be found here: 
 https://github.com/os-ucsd/graffiti-wall
 
 What is a repository?
-You can think of a **repository (repo** **for short****)** as a folder where all the code exists for a certain project. All of the code for our graffiti wall project can be found inside this repository, and you will make your contributions to this repository!
+You can think of a **repository (repo for short)** as a folder where all the code exists for a certain project. All of the code for our graffiti wall project can be found inside this repository, and you will make your contributions to this repository!
 
 You are going to **“fork” this repo**. “Forking” means you’ll be duplicating this repo into your own GitHub account.
 
@@ -42,7 +42,7 @@ Do this by navigating to the graffiti wall repo (link above) and clicking on the
 
 Awesome! now, whatever changes you make to <username>/graffiti-wall will *only* effect your repo - they will have no effect on the original os-ucsd/graffiti-wall repo (until you make a pull request in Step 6!).
 
-**Step 2: Open the** **C****ode in** **G****litch**
+**Step 2: Open the Code in Glitch**
 
 Okay, now you have your own repo - how can you run this code, and add your own changes?
 
@@ -69,20 +69,20 @@ Now, you should see a terminal-like environment like such:
 ![Glitch console interface](https://paper-attachments.dropbox.com/s_9E5CF1A9EF15F156D86BAF4AC970B697E951B5DDBE01C223E398D160AC804672_1540064749070_2018-10-20.png)
 
 
-**Step 3: Your** **O****wn** **L****ocal Graffiti** **W****all**
+**Step 3: Your Own Local Graffiti Wall**
 
 Now, we need to “download” the files from your GitHub repo that you forked, and we do so by **cloning** the GitHub url on the console.
 
-First, go to your graffiti-wall repo on your GitHub account (make sure your’re on the **<your_username>/graffiti-wall** one and not the **os-ucsd****/graffiti-wall** one) and click the **“****Clone or** **d****ownload****”** button to copy the link.
+First, go to your graffiti-wall repo on your GitHub account (make sure your’re on the **<your_username>/graffiti-wall** one and not the **os-ucsd/graffiti-wall** one) and click the **“Clone or download”** button to copy the link.
 
 ![clone/download button in GitHub](https://paper-attachments.dropbox.com/s_6CBBBBB17C75A61362D761A51418CAC644BC7DF3374BD3705B17481195DE7E50_1539995960305_image.png)
 
 
   On the console, enter the command `git clone <your-repo-url>` and replace <your-repo-url> with the url you just copied (note: don’t include the <> brackets).
   
-  Now, if you type the **‘ls’** **command**, the graffiti-wall repo should appear as one of the directories.
+  Now, if you type the **‘ls’ command**, the graffiti-wall repo should appear as one of the directories.
   
-**Step 4: Add** **Y****our** **T****ag**
+**Step 4: Add Your Tag**
 
 Okay, now you have your own local wall running - how can you add your own tag?
 
@@ -161,7 +161,7 @@ This is because you need to make a **pull request** to have your contributions r
 ![](https://paper-attachments.dropbox.com/s_316A2131CC31DC081E0DED8B0A9AA3DA49E09EFE7DF246B3D6917E29DF8D6A79_1539558706093_image.png)
 
 
-**Step 7: Wait for** **A****pproval**
+**Step 7: Wait for Approval**
 Now that you’ve sent in your pull request, you’re good to go! We (Open Source @ UCSD) will review your code and merge your contribution to our repo 😁
 
 **Step 8: Done!!**
