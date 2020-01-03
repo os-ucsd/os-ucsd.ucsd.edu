@@ -87,7 +87,7 @@ class About extends React.Component {
           </Typography>
           <p style={{ marginTop: "20px", wordWrap: "break-word", width: "80rem"}}>
           Open Source @ UCSD aims to build an all-inclusive open source community at UC San Diego.
-          We strive to promote open source by engaging students through hosting educational workshops,
+          We strive to promote open source by engaging students through educational workshops,
           collaborative projects, and many other open source related events.
           </p>
         </div>
