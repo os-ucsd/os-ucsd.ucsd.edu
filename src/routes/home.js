@@ -6,6 +6,7 @@ import "../css/home.css";
 import getAllPRs from '../timeline/getTimelineData';
 import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
+import Typography from "@material-ui/core/Typography";
 import Background from "../images/material-space/material-space7.jpg"; 
 // import UpcomingEvents from '../events/UpcomingEvents';
 // import Button from '@material-ui/core/Button';
@@ -233,28 +234,56 @@ class Home extends React.Component {
                {/*Open Source Resources*/}
                <section className="wrapper style1 subsection">
                 <h2 className="gridHeaders">How you can start contributing:</h2>
-                <p className='resources'>
-                  Here are some organizations that promote open source communities and provide resources to 
-                  learn more about open source and how to contribute! Some of these organizations also have 
-                  projects available for you to contribute to!
-                </p>
-                <div className='orgs content'>
-                  <a href='https://ossn.club/'>
-                    <img className='org-img' src={mozilla} alt='mozilla' width='150px'/>
-                  </a>                
-                  <a href='https://opensource.google/'>
-                    <img className='org-img' src={google} alt='google' width='150px' />
-                  </a>
-                  <a href='https://opensource.facebook.com/'>
-                    <img className='org-img' src={facebook} alt='facebook' width='150px' />
-                  </a>
-                  <a href='https://community.redhat.com/software/'>
-                    <img className='org-img' src={redhat} alt='facebook' width='150px' />
-                  </a>
-                  <a href='https://www.twilio.com/open-source'>
-                    <img className='org-img' src={twilio} alt='twilio' width='150px' />
-                  </a>
-                </div>
+                <div style={{ marginTop: "20px", textAlign:"center", display:"inline-block" }}>
+          <Typography variant="h4" component="h1">
+            How To Get Involved
+          </Typography>
+          <div style={{ wordWrap: "break-word", width: "40rem", textAlign:"center", }}>
+            
+            <div style={{ textAlign:"left", padding:"20px"}}>
+              <Typography variant="h5" component="h5">
+              👩‍💻 JOIN US AT OUR WEEKLY MEETINGS!
+              </Typography>
+              Weekly meetings for Winter 2020 are <strong>Tuesdays 5PM-7PM in Student Services Center 300 </strong> (check Facebook for location changes). Everyone is welcomed!
+            </div>
+            
+            <div style={{ textAlign:"left", padding:"20px"}}>
+              <Typography variant="h5" component="h5">
+              📬 STAY UP-TO-DATE WITH UPCOMING EVENTS
+              </Typography>
+              <a href="">Subscribe to our mailing list </a> to get notified of our upcoming events. Stay up-to-date with us by joining our <a href="">Facebook group</a> and <a href="">Discord channel</a>!
+            </div>
+
+            <div style={{ textAlign:"left", padding:"20px"}}>
+              <Typography variant="h5" component="h5">
+              📔 CHECK OUT OUR TUTORIALS
+              </Typography>
+              Get your feet wet with open source by <a href="/tutorials">doing one of our beginner-friendly tutorials</a>.
+            </div>
+
+            <div style={{ textAlign:"left", padding:"20px"}}>
+              <Typography variant="h5" component="h5">
+              ⚒ JOIN OUR PROJECTS TEAM
+              </Typography>
+              <a href="/project">Contribute to existing Open Source @ UCSD projects </a> or come talk to us if you're interested in leading a project for Open Source!
+            </div>
+            
+            <div style={{ textAlign:"left", padding:"20px"}}>
+              <Typography variant="h5" component="h5">
+              💻 JOIN OUR TECHNICAL TEAM
+              </Typography> 
+              Technical writing is an awesome way to share knowledge and strengthen your understanding of a topic. Whether it's writing a tutorial on a technical topic you're
+              passionate about, developing a workshop series on an open source technology, or giving a lightning talk, we would love to have your help!
+            </div>
+            
+            <div style={{ textAlign:"left", padding:"20px"}}>
+              <Typography variant="h5" component="h5" color="error">
+              📅 <a href="/event"> COME TO OUR NEXT EVENT! </a>
+              </Typography>
+            </div>
+
+          </div>
+        </div>
               </section>
             </Grid>
             <Grid item sm={12} md={4} className='rightsection'>
