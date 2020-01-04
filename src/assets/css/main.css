@@ -171,9 +171,6 @@ input, select, textarea {
 			color: inherit;
 			text-decoration: none;
 		}
-	h1 {
-			font-weight: 900 !important;
-		}
 	h2 {
 		font-size: 1.5em !important;
 		font-weight: 900 !important;
