@@ -142,7 +142,7 @@ class Home extends React.Component {
           <section id="banner" style={{ backgroundImage: `url(${Background})`, height: "40em" }}>
             <div className="inner">
               <div className="content">
-                <h1>Open Source at UCSD</h1>
+                <h1 style={{fontWeight: "900" }}>Open Source at UCSD</h1>
                   <p>Join our open source community!</p>
               </div>
               <ul className="actions stacked">
