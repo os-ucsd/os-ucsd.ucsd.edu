@@ -81,11 +81,10 @@ class About extends React.Component {
             </div>
           </div>
         </section>
-        <div style={{ marginTop: "20px", textAlign:"center", display:"inline-block"}}>
-          <Typography variant="h4" component="h1">
-            What We Do
-          </Typography>
-          <p style={{ marginTop: "20px", wordWrap: "break-word", width: "80rem"}}>
+
+        <div style={{ marginTop: "20px", textAlign:"center"}}>
+          <h3>What We Do</h3>
+          <p style={{ margin:"auto", marginTop: "20px", wordWrap: "break-word", maxWidth:"80rem"}}>
           Open Source @ UCSD aims to build an all-inclusive open source community at UC San Diego.
           We strive to promote open source by engaging students through educational workshops,
           collaborative projects, and many other open source related events.
@@ -139,60 +138,10 @@ class About extends React.Component {
             </Card.Body>
           </Card>
         </div>
-        <div style={{ marginTop: "20px", textAlign:"center", display:"inline-block" }}>
-          <Typography variant="h4" component="h1">
-            How To Get Involved
-          </Typography>
-          <div style={{ wordWrap: "break-word", width: "40rem", textAlign:"center", }}>
-            
-            <div style={{ textAlign:"left", padding:"20px"}}>
-              <Typography variant="h5" component="h5">
-              👩‍💻 JOIN US AT OUR WEEKLY MEETINGS!
-              </Typography>
-              Weekly meetings for Winter 2020 are <strong>Tuesdays 5PM-7PM in Student Services Center 300 </strong> (check Facebook for location changes). Everyone is welcomed!
-            </div>
-            
-            <div style={{ textAlign:"left", padding:"20px"}}>
-              <Typography variant="h5" component="h5">
-              📬 STAY UP-TO-DATE WITH UPCOMING EVENTS
-              </Typography>
-              <a href="">Subscribe to our mailing list </a> to get notified of our upcoming events. Stay up-to-date with us by joining our <a href="">Facebook group</a> and <a href="">Discord channel</a>!
-            </div>
-
-            <div style={{ textAlign:"left", padding:"20px"}}>
-              <Typography variant="h5" component="h5">
-              📔 CHECK OUT OUR TUTORIALS
-              </Typography>
-              Get your feet wet with open source by <a href="/tutorials">doing one of our beginner-friendly tutorials</a>.
-            </div>
-
-            <div style={{ textAlign:"left", padding:"20px"}}>
-              <Typography variant="h5" component="h5">
-              ⚒ JOIN OUR PROJECTS TEAM
-              </Typography>
-              <a href="/project">Contribute to existing Open Source @ UCSD projects </a> or come talk to us if you're interested in leading a project for Open Source!
-            </div>
-            
-            <div style={{ textAlign:"left", padding:"20px"}}>
-              <Typography variant="h5" component="h5">
-              💻 JOIN OUR TECHNICAL TEAM
-              </Typography> 
-              Technical writing is an awesome way to share knowledge and strengthen your understanding of a topic. Whether it's writing a tutorial on a technical topic you're
-              passionate about, developing a workshop series on an open source technology, or giving a lightning talk, we would love to have your help!
-            </div>
-            
-            <div style={{ textAlign:"left", padding:"20px"}}>
-              <Typography variant="h5" component="h5" color="error">
-              📅 <a href="/event"> COME TO OUR NEXT EVENT! </a>
-              </Typography>
-            </div>
-
-          </div>
-        </div>
         <div style={{ marginTop: "20px" }}>
-          <Typography variant="h4" component="h1">
+          <h3>
             Meet the Board
-          </Typography>
+          </h3>
           <div
             style={{
               display: "flex",
@@ -202,8 +151,8 @@ class About extends React.Component {
               alignItems: "normal",
               justifyContent: "flex-start",
               marginTop: "20px",
-              marginLeft: "100px",
-              marginRight: "100px"
+              marginLeft: "80px",
+              marginRight: "80px"
             }}
           >
             <Row>
