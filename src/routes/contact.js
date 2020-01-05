@@ -90,7 +90,7 @@ class Contact extends React.Component {
         <form
           id="contact-form"
           method="POST"
-          action="https://formspree.io/mknoabzy"
+          action="https://formspree.io/mvoznrwd"
         >
           <div className="form-group">
             <label htmlFor="name">Name</label>
