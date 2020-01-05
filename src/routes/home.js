@@ -215,7 +215,9 @@ class Home extends React.Component {
                     <Typography variant="h5" component="h5">
                     👩‍💻 JOIN US AT OUR WEEKLY MEETINGS!
                     </Typography>
+                    <p style={{textAlign:"left"}}>
                     Weekly meetings for Winter 2020 are <strong>Tuesdays 5PM-7PM in Student Services Center 300 </strong> (check our Events page for the most accurate time and location). Everyone is welcomed!
+                    </p>
                   </div>
                   
                   <div style={{ textAlign:"left", padding:"20px"}}>
@@ -223,7 +225,8 @@ class Home extends React.Component {
                     📬 STAY UP-TO-DATE WITH UPCOMING EVENTS
                     </Typography>
                     <a href="">Subscribe to our mailing list </a> to get notified of our upcoming events. Stay up-to-date with us by joining our 
-                    <a href="https://www.facebook.com/groups/OpenSourceUCSD/">Facebook group</a> and <a href="">Discord channel</a>!
+                    <a href="https://www.facebook.com/groups/OpenSourceUCSD/"> Facebook group</a> and 
+                    <a href="https://discord.gg/YpfppWs"> Discord channel</a>!
                   </div>
 
                   <div style={{ textAlign:"left", padding:"20px"}}>
