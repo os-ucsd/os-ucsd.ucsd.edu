@@ -8,7 +8,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import Background from "../images/material-space/material-space4.jpeg";
 import Footer from "../components/footer";
 import Card from "react-bootstrap/Card";
-
+import "../css/about.css";
 const officers = [
   {
     name: "Vivian Lee",
@@ -46,8 +46,8 @@ const officers = [
     position: "Workshop Chair",
     link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
     fun_fact: "",
-    email: "test@ucsd.edu",
-    github: ""
+    email: "bfoey@ucsd.edu",
+    github: "https://github.com/BrandonFoey"
   },
   {
     name: "Bao Hoang",
@@ -81,10 +81,13 @@ class About extends React.Component {
             </div>
           </div>
         </section>
-
-        <div style={{ marginTop: "20px", textAlign:"center"}}>
-          <h3>What We Do</h3>
-          <p style={{ margin:"auto", marginTop: "20px", wordWrap: "break-word", maxWidth:"80rem"}}>
+        {/* WHAT WE DO */}
+        <div id="section1">
+        <div style={{ textAlign:"center", display:"inline-block"}}>
+          <h2>
+            What We Do
+          </h2>
+          <p style={{ marginTop: "20px", wordWrap: "break-word"}}>
           Open Source @ UCSD aims to build an all-inclusive open source community at UC San Diego.
           We strive to promote open source by engaging students through educational workshops,
           collaborative projects, and many other open source related events.
@@ -138,10 +141,12 @@ class About extends React.Component {
             </Card.Body>
           </Card>
         </div>
+        </div>
+        {/* MEET THE BOARD */}
         <div style={{ marginTop: "20px" }}>
-          <h3>
+          <h2>
             Meet the Board
-          </h3>
+          </h2>
           <div
             style={{
               display: "flex",
