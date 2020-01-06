@@ -5,7 +5,7 @@ import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import Background from "../images/material-space/material-space4.jpeg";
+import Background from "../images/material-space/material-space4_1.jpeg";
 import Footer from "../components/footer";
 import Card from "react-bootstrap/Card";
 import "../css/about.css";
@@ -83,70 +83,80 @@ class About extends React.Component {
         </section>
         {/* WHAT WE DO */}
         <div id="section1">
-        <div style={{ textAlign:"center", display:"inline-block"}}>
-          <h2>
-            What We Do
-          </h2>
-          <p style={{ marginTop: "20px", wordWrap: "break-word"}}>
-          Open Source @ UCSD aims to build an all-inclusive open source community at UC San Diego.
-          We strive to promote open source by engaging students through educational workshops,
-          collaborative projects, and many other open source related events.
-          </p>
-        </div>
-        <div style={{ marginTop: "20px", display:"flex", justifyContent: "space-evenly"}}>
+          <div style={{ textAlign: "center", display: "inline-block" }}>
+            <h2>What We Do</h2>
+            <p style={{ marginTop: "20px", wordWrap: "break-word" }}>
+              Open Source @ UCSD aims to build an all-inclusive open source
+              community at UC San Diego. We strive to promote open source by
+              engaging students through educational workshops, collaborative
+              projects, and many other open source related events.
+            </p>
+          </div>
+          <div
+            style={{
+              marginTop: "20px",
+              display: "flex",
+              justifyContent: "space-evenly"
+            }}
+          >
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://cdn2.iconfinder.com/data/icons/web-set-2/50/73-512.png"
+              />
+              <Card.Body>
+                <Card.Title>Workshops</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+              <Card.Body>
+                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+              </Card.Body>
+            </Card>
 
-          
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://cdn2.iconfinder.com/data/icons/web-set-2/50/73-512.png" />
-            <Card.Body>
-              <Card.Title>Workshops</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-              </Card.Text>
-            </Card.Body>
-            <Card.Body>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-          </Card>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://c7.uihere.com/icons/814/431/621/project-def27d0e5986e95b9ffbaeec04f8984e.png"
+              />
+              <Card.Body>
+                <Card.Title>Projects</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+              <Card.Body>
+                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+              </Card.Body>
+            </Card>
 
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://c7.uihere.com/icons/814/431/621/project-def27d0e5986e95b9ffbaeec04f8984e.png" />
-            <Card.Body>
-              <Card.Title>Projects</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-              </Card.Text>
-            </Card.Body>
-            <Card.Body>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://i.pinimg.com/originals/5a/c7/d5/5ac7d5d80f89e1d5c3e30175e7f4d274.png" />
-            <Card.Body>
-              <Card.Title>Events</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-              </Card.Text>
-            </Card.Body>
-            <Card.Body>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-          </Card>
-        </div>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://i.pinimg.com/originals/5a/c7/d5/5ac7d5d80f89e1d5c3e30175e7f4d274.png"
+              />
+              <Card.Body>
+                <Card.Title>Events</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+              <Card.Body>
+                <Card.Link href="#">Card Link</Card.Link>
+                <Card.Link href="#">Another Link</Card.Link>
+              </Card.Body>
+            </Card>
+          </div>
         </div>
         {/* MEET THE BOARD */}
         <div style={{ marginTop: "20px" }}>
-          <h2>
-            Meet the Board
-          </h2>
+          <h2>Meet the Board</h2>
           <div
             style={{
               display: "flex",
