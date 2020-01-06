@@ -81,7 +81,6 @@ class About extends React.Component {
             </div>
           </div>
         </section>
-
         {/* WHAT WE DO */}
         <div id="section1">
         <div style={{ textAlign:"center", display:"inline-block"}}>
@@ -90,7 +89,7 @@ class About extends React.Component {
           </h2>
           <p style={{ marginTop: "20px", wordWrap: "break-word"}}>
           Open Source @ UCSD aims to build an all-inclusive open source community at UC San Diego.
-          We strive to promote open source by engaging students through hosting educational workshops,
+          We strive to promote open source by engaging students through educational workshops,
           collaborative projects, and many other open source related events.
           </p>
         </div>
@@ -157,8 +156,8 @@ class About extends React.Component {
               alignItems: "normal",
               justifyContent: "flex-start",
               marginTop: "20px",
-              marginLeft: "100px",
-              marginRight: "100px"
+              marginLeft: "80px",
+              marginRight: "80px"
             }}
           >
             <Row>

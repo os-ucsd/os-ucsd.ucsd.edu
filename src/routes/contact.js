@@ -1,8 +1,8 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
+//import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
 import Container from "@material-ui/core/Container/Container";
 import Button from "@material-ui/core/Button";
-import axios from "axios";
+//import axios from "axios";
 import Typography from "@material-ui/core/Typography";
 import "../css/contact.css";
 import MenuBar from "../components/navbar";
@@ -14,11 +14,12 @@ class Contact extends React.Component {
     super(props);
     this.state = {
       name: "",
-      email: "",
-      message: ""
+      emailSubject: "Message from OS website"
+      /*email: "",
+      message: ""*/
     };
   }
-
+  /*
   handleSubmit = e => {
     e.preventDefault();
     console.log(this.state);
@@ -39,12 +40,10 @@ class Contact extends React.Component {
   resetForm() {
     this.setState({ name: "", email: "", message: "" });
   }
-
+*/
   render() {
     return (
       <React.Fragment>
-        <CssBaseline />
-        {/*<Container maxWidth="lg">*/}
         <MenuBar />
         <section
           id="banner"
@@ -65,15 +64,21 @@ class Contact extends React.Component {
   }
 
   onNameChange(event) {
-    this.setState({ name: event.target.value });
+    let s1 = "Message from ".concat(event.target.value, " to OS at UCSD");
+    console.log(s1);
+    this.setState({
+      name: event.target.value,
+      emailSubject: s1
+    });
   }
+  /*
   onEmailChange(event) {
     this.setState({ email: event.target.value });
   }
   onMessageChange(event) {
     this.setState({ message: event.target.value });
   }
-
+*/
   ContactMe = () => {
     return (
       <div className="Contact">
@@ -84,38 +89,48 @@ class Contact extends React.Component {
         <br />
         <form
           id="contact-form"
-          onSubmit={this.handleSubmit.bind(this)}
           method="POST"
+          action="https://formspree.io/mvoznrwd"
         >
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
               type="text"
               className="form-control"
-              placeholder={"Your name.."}
+              placeholder="Your name"
+              required
               value={this.state.name}
               onChange={this.onNameChange.bind(this)}
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value={this.state.emailSubject}
             />
           </div>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email</label>
             <input
-              type="email"
               className="form-control"
               aria-describedby="emailHelp"
-              placeholder="Your email.."
-              value={this.state.email}
-              onChange={this.onEmailChange.bind(this)}
+              type="email"
+              name="_replyto"
+              placeholder="Your email"
+              required
+              //value={this.state.email}
+              //onChange={this.onEmailChange.bind(this)}
             />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
             <textarea
               className="form-control"
+              name="message"
               rows="10"
-              placeholder="Write something.."
-              value={this.state.message}
-              onChange={this.onMessageChange.bind(this)}
+              placeholder="Your message ..."
+              required
+              //value={this.state.message}
+              //onChange={this.onMessageChange.bind(this)}
             />
           </div>
           <Button variant="outlined" type="submit" className="btn btn-primary">

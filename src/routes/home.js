@@ -8,6 +8,7 @@ import Timeline from '../timeline/Timeline';
 import Grid from '@material-ui/core/Grid';
 import Typography from "@material-ui/core/Typography";
 import Background from "../images/material-space/material-space7.jpg"; 
+import Typography from "@material-ui/core/Typography"
 // import UpcomingEvents from '../events/UpcomingEvents';
 // import Button from '@material-ui/core/Button';
 // import {Link} from 'react-router-dom';
@@ -143,7 +144,7 @@ class Home extends React.Component {
           <section id="banner" style={{ backgroundImage: `url(${Background})`, height: "40em" }}>
             <div className="inner">
               <div className="content">
-                <h1 style={{fontWeight: "900" }}>Open Source at UCSD</h1>
+                <h1 style={{fontWeight: "900" }}>Open Source @ UCSD</h1>
                   <p>Join our open source community!</p>
               </div>
               <ul className="actions stacked">
@@ -200,9 +201,65 @@ class Home extends React.Component {
              <section className="wrapper style1 subsection">
                 <h2 className="gridHeaders">What is Open Source?</h2>
                 <p>
-                If a program is open-source, its source code is freely available to its users. Its users – and anyone else – have the ability to take this source code, modify it, and distribute their own versions of the program. The users also have the ability to distribute as many copies of the original program as they want. Anyone can use the program for any purpose; there are no licensing fees or other restrictions on the software.
+                If a program is open-source, its source code is freely available to its users. Its users – and anyone else – have the ability to take this source code, 
+                modify it, and distribute their own versions of the program. The users also have the ability to distribute as many copies of the original program as they want. 
+                Anyone can use the program for any purpose; there are no licensing fees or other restrictions on the software.
                 </p>
              </section>
+
+            {/*Get Involved*/}
+             <div style={{ marginTop: "20px", textAlign:"center", display:"inline-block" }}>
+                <h2>How To Get Involved</h2>
+                <div style={{ wordWrap: "break-word", width: "40rem", textAlign:"center", }}>
+                  
+                  <div style={{ textAlign:"left", padding:"20px"}}>
+                    <Typography variant="h5" component="h5">
+                    👩‍💻 JOIN US AT OUR WEEKLY MEETINGS!
+                    </Typography>
+                    <p style={{textAlign:"left"}}>
+                    Weekly meetings for Winter 2020 are <strong>Tuesdays 5PM-7PM in Student Services Center 300 </strong> (check our Events page for the most accurate time and location). Everyone is welcomed!
+                    </p>
+                  </div>
+                  
+                  <div style={{ textAlign:"left", padding:"20px"}}>
+                    <Typography variant="h5" component="h5">
+                    📬 STAY UP-TO-DATE WITH UPCOMING EVENTS
+                    </Typography>
+                    <a href="">Subscribe to our mailing list </a> to get notified of our upcoming events. Stay up-to-date with us by joining our 
+                    <a href="https://www.facebook.com/groups/OpenSourceUCSD/"> Facebook group</a> and 
+                    <a href="https://discord.gg/YpfppWs"> Discord channel</a>!
+                  </div>
+
+                  <div style={{ textAlign:"left", padding:"20px"}}>
+                    <Typography variant="h5" component="h5">
+                    📔 CHECK OUT OUR TUTORIALS
+                    </Typography>
+                    Get your feet wet with open source by <a href="/tutorials">doing one of our beginner-friendly tutorials</a>.
+                  </div>
+
+                  <div style={{ textAlign:"left", padding:"20px"}}>
+                    <Typography variant="h5" component="h5">
+                    ⚒ JOIN OUR PROJECTS TEAM
+                    </Typography>
+                    <a href="/project">Contribute to existing Open Source @ UCSD projects </a> or come talk to us if you're interested in leading a project for Open Source!
+                  </div>
+                  
+                  <div style={{ textAlign:"left", padding:"20px"}}>
+                    <Typography variant="h5" component="h5">
+                    💻 JOIN OUR TECHNICAL TEAM
+                    </Typography> 
+                    Technical writing is an awesome way to share knowledge and strengthen your understanding of a topic. Whether it's writing a tutorial on a technical topic you're
+                    passionate about, developing a workshop series on an open source technology, or giving a lightning talk, we would love to have your help!
+                  </div>
+                  
+                  <div style={{ textAlign:"left", padding:"20px"}}>
+                    <Typography variant="h5" component="h5" color="error">
+                    📅 <a href="/event"> COME TO OUR NEXT EVENT! </a>
+                    </Typography>
+                  </div>
+
+                </div>
+              </div>
 
                {/*Open Source Resources*/}
               <section className="wrapper style1 subsection">
