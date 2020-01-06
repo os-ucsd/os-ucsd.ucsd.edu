@@ -70,7 +70,7 @@ class SubmitProject extends React.Component {
     e.preventDefault();
 
     const token = `${process.env.REACT_APP_MY_KEY}`;
-
+    console.log(token);
     const Info = {
       title: `${this.state.projectName}`,
       body:
