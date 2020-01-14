@@ -41,9 +41,9 @@ let events = [
         date: '1/17/20',
         startTime: '7:00pm',
         endTime: '8:30pm',
-        location: 'some room',
+        location: 'Red Shoe Room (PC)',
         imageUrl: null,
-        facebookUrl: '',
+        facebookUrl: 'https://www.facebook.com/events/726085801248875/',
     },
     {
         name: 'MERN Workshop 1: Express & Node',
@@ -81,15 +81,6 @@ let events = [
         imageUrl: mernImage,
         facebookUrl: '',
     },
-    {
-        name: 'Test',
-        date: '12/27/19',
-        startTime: '6:00pm',
-        endTime: '8:30pm',
-        location: 'SSC 300',
-        imageUrl: null,
-        facebookUrl: '',
-    }
 ]
 
 export default events;
