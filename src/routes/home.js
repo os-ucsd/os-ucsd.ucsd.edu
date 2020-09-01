@@ -1,7 +1,8 @@
 import React from "react"
 import "../css/main.css"
-import image from '../images/octocat.png'
+import image from '../images/octocat-trans.png'
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 class Home extends React.Component {
     render() {
@@ -24,7 +25,7 @@ class Home extends React.Component {
                             <h1 id="header-title">Open Source @ UCSD</h1>
                             <h4 id="header-desc">Join our open source community.</h4>
                         </div>
-                        <img className="img" src={image} alt="octocat" width="45%" />
+                        <img className="img" src={image} alt="octocat" width="30%" />
                     </div>
                 </header>
 
@@ -49,6 +50,7 @@ class Home extends React.Component {
             technical topic you're passionate about, developing a workshop series on an open source technology, or giving a lightning talk, we would love to have your help!
                     </p>
                 </div>
+                <Footer />
             </div>
         )
     }
