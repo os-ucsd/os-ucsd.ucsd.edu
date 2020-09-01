@@ -1,96 +1,68 @@
-# How to Contribute to the OS Website 🚀
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Setup 💻 :
+## Available Scripts
 
-### Step 1: 
-- Make sure you have node and npm on your local machine
-- Do npm -v and node -v to see your current version (means that you have it installed)
-- If you don’t have it installed, follow here: https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/
+In the project directory, you can run:
 
-### Step 2:
-- Fork https://github.com/os-ucsd/os-ucsd.ucsd.edu
+### `npm start`
 
-### Step 3: 
-- Clone the forked repo to local machine git clone [forked-repo-url] 
-  
-### Step 4: 
-- cd into the cloned repo cd os-ucsd.ucsd.edu
-  
-### Step 5: 
-- Set up origin as your forked repo and upstream as original repo
-- git remote add origin [forked-repo-url] (same as clone url; if it says origin is already added then you’re all set for this step) 
-- git remote add upstream [original-repo-url] 
-- You’ll be doing git pull upstream to get updates from the original repo and git push origin master to push your changes to your forked repo
-- git push origin master (push your changes to your forked repo)
-  *this is for after you have made edits*
-- git pull upstream master (get updates from original repo)
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Step 6: 
-- Installing dependencies: npm install
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### Step 7: 
-- To see the current site: npm start
+### `npm test`
 
-### Step 8: 
-- you can start editing code now :)
-  
-  
-## How to push your edited code and merge with original repository 👩‍💻:
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Step 1: 
-- git add . 
-  
-### Step 2: 
-- git commit -m "some message"
-  
-### Step 3: 
-- git pull upstream master 
-  *important: make sure you have set the upstream in setup^*
-  
-### Step 4: 
-- Fix merge conflicts (if there is)
-  
-### Step 5: 
-- git add . (yep, again)
-  
-### Step 6:  
-- git commit -m "another message"
-  
-### Step 7: 
-- git push origin master (this should update the code in your forked repository; the original repo has not been changed yet)
-  
-### Step 8: 
-- go to your forked repository on Github 
-  *not the original one*
-  
-### Step 9: 
-- Click where it says Pull requests (next to Code)
-  
-### Step 10: 
-- Click New Pull Request
-  
-### Step 11: 
-- Make sure it looks like this
-  
-### Step 12: 
-- Complete the pull request - A collaborator will review/accept your pull request
-  
-### Step 13: 
-- The original repository now has your code
-  
-### Step 14: 
-- EYYY you have successfully contributed to our website☺️ 
+### `npm run build`
 
-## To find the components (code):
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Step 1: 
-- cd into the os-ucsd.ucsd.edu directory
-  
-### Step 2: 
-- cd to os_site/src/routes
-  
-## Helpful debugging resources:
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-Breakpoints: https://www.npmjs.com/package/react-breakpoints
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Website: http://os-ucsd.ucsd.edu/
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
