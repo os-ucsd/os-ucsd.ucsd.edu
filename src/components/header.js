@@ -4,16 +4,19 @@ import '../css/header.css'
 class Header extends React.Component {
     render() {
         return (
-            <nav id="nav-container">
-                <ul id="nav-list">
-                    <a class="nav-item" href="/">Home</a>
-                    <a class="nav-item" href="/about">About</a>
-                    <a class="nav-item" href="/projects">Projects</a>
-                    <a class="nav-item" href="/tutorials">Tutorials</a>
-                    <a class="nav-item" href="/events">Events</a>
-                    <a class="nav-item" href="/contact">Contact</a>
-                </ul>
-            </nav>
+            <div>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+                <nav id="nav-container">
+                    <ul id="nav-list">
+                        <a className="nav-item" href="/">Home</a>
+                        <a className="nav-item" href="/about">About</a>
+                        <a className="nav-item" href="/projects">Projects</a>
+                        <a className="nav-item" href="/tutorials">Tutorials</a>
+                        <a className="nav-item" href="/events">Events</a>
+                        <a className="nav-item" href="/contact">Contact</a>
+                    </ul>
+                </nav>
+            </div>
         )
     }
 }
