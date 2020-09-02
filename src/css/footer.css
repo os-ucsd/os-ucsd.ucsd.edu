@@ -8,6 +8,8 @@ footer{
     width: 100%;
     height: 8rem;
     background-color: #314858;
+    /*position:fixed;
+    bottom:0;*/
 }
 
 .icons{
