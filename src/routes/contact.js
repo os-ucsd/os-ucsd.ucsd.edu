@@ -15,16 +15,32 @@ class Contact extends React.Component {
             email: "",
             message: ""
         };
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+    onNameChange(e) {
+        this.setState({
+            name: e.target.value
+        });
+    }
+    onEmailChange(e) {
+        this.setState({
+            email: e.target.value
+        });
+    }
+    onMessageChange(e) {
+        this.setState({
+            message: e.target.value
+        });
     }
     handleSubmit(e) {
         e.preventDefault();
-        //console.log(e.target)
-        emailjs.sendForm('service_w2t5s7b', 'template_aiblrmi', e.target, 'user_tcCTJnUYsvoujhBxEX0w6')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
+        emailjs.send('service_w2t5s7b', 'template_aiblrmi', this.state, 'user_tcCTJnUYsvoujhBxEX0w6')
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
             });
+        this.setState({ name: "", email: "", message: "" });
     }
 
     render() {
@@ -46,7 +62,8 @@ class Contact extends React.Component {
                                 style: { fontSize: 15, marginTop: '10px' }
                             }}
                             style={{ width: '400px', marginBottom: '6px' }}
-                            type='text'
+                            value={this.state.name}
+                            onChange={this.onNameChange.bind(this)}
                         />
                         <br />
                         <TextField
@@ -59,7 +76,8 @@ class Contact extends React.Component {
                                 style: { fontSize: 15, marginTop: '10px' }
                             }}
                             style={{ width: '400px', marginBottom: '6px' }}
-                            type='text'
+                            value={this.state.email}
+                            onChange={this.onEmailChange.bind(this)}
                         />
                         <br />
                         <TextField
@@ -72,12 +90,13 @@ class Contact extends React.Component {
                             InputProps={{
                                 style: { fontSize: 20, marginTop: '10px' }
                             }}
-                            style={{ width: '400px', marginBottom: '6px' }}
-                            type='text'
+                            style={{ width: '400px', marginBottom: '10px' }}
+                            value={this.state.message}
+                            onChange={this.onMessageChange.bind(this)}
                         />
                         <br />
-                        <Button type="submit" variant="contained" endIcon={<SendIcon />} style={{ marginBottom: '6px', fontSize: '15px', backgroundColor: '#314858', color: 'white' }}>
-                            Primary
+                        <Button type="submit" variant="contained" endIcon={<SendIcon />} style={{ marginBottom: '45px', fontSize: '15px', backgroundColor: '#314858', color: 'white' }}>
+                            Send
                         </Button>
                     </form>
                 </div>
