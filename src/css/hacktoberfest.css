@@ -6,11 +6,9 @@
 
 .hacktoberfest-container {
     width: 100%;
-    padding: 20px;
-    margin-bottom: 30px;
 }
 
-.header-text {
+.hacktoberfest-header-text {
     padding: 0;
     width: 100%;
 }
@@ -19,10 +17,23 @@
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    width: 100%;
 }
 
 .events {
     width: 66%;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.event-card {
+    margin: 20px;
 }
 
 .resources {
