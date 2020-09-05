@@ -6,7 +6,18 @@
     transition: all .2s ease-in-out;
 }
 
-.card-container:hover {
+/* Force link for card-with-link to bottom of card */
+.container-with-link {
+    position: relative;
+}
+
+.link {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+}
+
+.card-container-hover:hover {
     transform: scale(0.95);
 }
 

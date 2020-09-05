@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/event-card.css';
+import '../css/card.css';
 import defaultImg from '../events/events-imgs/default.jpg';
 
 /**
@@ -17,10 +17,6 @@ import defaultImg from '../events/events-imgs/default.jpg';
  * />
  */
 class EventCard extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     stringIsNotEmpty = text => text !== null && text !== "";
 
     render() {
@@ -33,7 +29,7 @@ class EventCard extends React.Component {
         const cardImg = image ? image : defaultImg;
 
         return(
-            <div className="card-container">
+            <div className="card-container-hover">
                 <a href={facebookLink}>
                     <img className="event-img" src={cardImg} alt={title} width='240px' height='140px'/>
                 </a>

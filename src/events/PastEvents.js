@@ -1,5 +1,5 @@
 import React from 'react';
-import events from './events-data';
+import events from '../data/events-data';
 import EventCard from '../components/event-card';
 import defaultImg from './events-imgs/default.jpg';
 import './UpcomingEvents.css';
