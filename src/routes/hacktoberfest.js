@@ -75,7 +75,15 @@ class Hacktoberfest extends React.Component {
                         </div>
                     </div>
                     <div className="resources vert-centered">
-                        <h3>Resources for participating</h3>
+                        <h3 className="vert-centered">Frequently Asked Questions</h3>
+                        <div className="faq">
+                            <h4 className="faq-question">Getting Started</h4>
+                            <p>Go to our repo and do shit bruh</p>
+                            <h4 className="faq-question">Beginner Friendly Tutorials</h4>
+                            <p>We have sum tuts that you can follow to get started with contributing to open source projects brah. </p>
+                            <p>Graffiti Wall: link</p>
+                            <p>Bitmoji: link</p>
+                        </div>
                     </div>
                 </div>
             </div>

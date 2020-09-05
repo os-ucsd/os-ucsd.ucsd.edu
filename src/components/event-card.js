@@ -32,14 +32,16 @@ class EventCard extends React.Component {
         const cardImg = image ? image : defaultImg;
 
         return(
-            <div>
+            <div className="card-container">
                 <a href={facebookLink}>
-                    <img className="event-img" src={cardImg} alt={title} width='240px' height='120px'/>
+                    <img className="event-img" src={cardImg} alt={title} width='240px' height='140px'/>
                 </a>
-                <h4 className="event-text">{title}</h4>
-                <p className="event-text">{description}</p>
-                <div className="date-time-contaner">
-                    <p className="event-text">When: {date} {startTime} - {endTime}</p>
+                <div className="event-content">
+                    <h4 className="event-text event-title">{title}</h4>
+                    <p className="event-text event-desc">{description}</p>
+                    <div className="date-time-contaner event-desc">
+                        <p className="event-text">When: {date} {startTime} - {endTime}</p>
+                    </div>
                 </div>
             </div>
         )
