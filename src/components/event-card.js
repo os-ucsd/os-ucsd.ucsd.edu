@@ -30,17 +30,17 @@ class EventCard extends React.Component {
 
         return(
             <div className="card-container card-container-hover">
-                <a href={facebookLink}>
+                <a href={facebookLink} className="facebook-event-link">
                     <img className="event-img" src={cardImg} alt={title} width='240px' height='140px'/>
-                </a>
-                <div className="event-content">
-                    <h4 className="event-text event-title">{title}</h4>
-                    <p className="event-text event-desc">{description}</p>
-                    <div className="date-time-contaner event-desc">
-                        <p className="event-text">When: {date} {startTime} - {endTime}</p>
+                    <div className="event-content">
+                        <h4 className="event-text event-title">{title}</h4>
+                        <p className="event-text event-desc">{description}</p>
+                        <div className="date-time-contaner event-desc">
+                            <p className="event-text">When: {date} {startTime} - {endTime}</p>
+                        </div>
+                        <p className="event-text event-desc">Where: {location}</p>
                     </div>
-                    <p className="event-text event-desc">Where: {location}</p>
-                </div>
+                </a>
             </div>
         )
     }

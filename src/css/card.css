@@ -43,3 +43,12 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+.facebook-event-link {
+    color: black;
+}
+
+.facebook-event-link:hover {
+    color: black;
+    text-decoration: none;
+}
