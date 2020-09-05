@@ -1,3 +1,4 @@
+import bitmojiImg from "../images/bitmoji-wall-img.png"
 
 let projects_list = [
     {
@@ -27,7 +28,7 @@ let projects_list = [
     {
         title: 'Bitmoji',
         owner: 'OS @ UCSD',
-        image: '',
+        image: bitmojiImg,
         description: 'Adding your Bitmoji on our collection',
         link: 'https://github.com/os-ucsd/bitmoji',
         linkText: 'LEARN MORE'
