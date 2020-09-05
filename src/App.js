@@ -6,6 +6,7 @@ import Tutorial from "./routes/tutorial"
 import Project from "./routes/project"
 import Event from "./routes/event"
 import Contact from "./routes/contact"
+import Hacktoberfest from "./routes/hacktoberfest"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route exact path="/projects" component={Project} />
       <Route exact path="/events" component={Event} />
       <Route exact path="/contact" component={Contact} />
+      <Route exact path="/hacktoberfest" component={Hacktoberfest} />
     </Router>
   );
 }

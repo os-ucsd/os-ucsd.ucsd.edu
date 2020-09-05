@@ -1,0 +1,35 @@
+.officer-outer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.officer-container {
+    height: 460px;
+    position: relative;
+    margin: 20px;
+}
+
+.officer-img {
+    height: 300px;
+    width: 300px;
+    transition: all .2s ease-in-out;
+}
+
+.officer-img:hover {
+    transform: scale(0.95)
+}
+
+.officer-info {
+    width: 300px;
+}
+
+.officer-contact {
+    position: absolute;
+    bottom: 0;
+}
+
+.officer-link-icon {
+    margin: 5px;
+}

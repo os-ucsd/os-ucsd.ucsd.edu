@@ -1,0 +1,54 @@
+.card-container {
+    box-shadow: 0px 0px 3px #888888;
+    height: 300px;
+    width: 240px;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+}
+
+/* Force link for card-with-link to bottom of card */
+.container-with-link {
+    position: relative;
+}
+
+.link {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+}
+
+.card-container-hover:hover {
+    transform: scale(0.95);
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event-text {
+    width: 200px;
+    text-align: center;
+}
+
+.event-title {
+    margin-bottom: 15px;
+}
+
+.event-desc {
+    font-size: 12px;
+}
+
+.event-img {
+    /* Add curve to top of image to match curve of entire card */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.facebook-event-link {
+    color: black;
+}
+
+.facebook-event-link:hover {
+    color: black;
+    text-decoration: none;
+}
