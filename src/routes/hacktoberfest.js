@@ -5,6 +5,10 @@ import EventCard from "../components/event-card";
 
 import '../css/hacktoberfest.css';
 import image from '../images/hacktoberfest_logo.png';
+import gettingStartedIcon from '../images/getting_started_icon.svg';
+import tutorialIcon from '../images/tutorial_icon.svg';
+import otherProjectsIcon from '../images/other_projects_icon.svg'
+import helpIcon from '../images/help_icon.svg';
 
 class Hacktoberfest extends React.Component {
     render() {
@@ -78,23 +82,46 @@ class Hacktoberfest extends React.Component {
                     <div className="resources vert-centered">
                         <h3 className="title-text vert-centered">Frequently Asked Questions</h3>
                         <div className="faq">
-                            <h4 className="faq-question">Getting Started</h4>
-                            <p className="faq-answer">
-                                You can read more about the event at the official <a href="https://hacktoberfest.digitalocean.com/">HacktoberFest website</a>.
-                                You can also familiarize or freshen up on your git skills with our git cheatsheet.
-                            </p>
-                            <h4 className="faq-question">Beginner Friendly Tutorials</h4>
-                            <div className="faq-answer">
-                                <p>We have sum tuts that you can follow to get started with contributing to open source projects brah. </p>
-                                <p>Graffiti Wall: <a href="https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI">
-                                    https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI</a>
-                                </p>
-                                <p>Bitmoji: <a  href="https://bitmoji-tutorial.glitch.me/">https://bitmoji-tutorial.glitch.me/</a></p>
+                            <div className="icon-faq-container">
+                                <img src={gettingStartedIcon} className="icon"/>
+                                <div className="faq-content">
+                                    <h4 className="faq-question">Getting Started</h4>
+                                    <p className="faq-answer">
+                                        You can read more about the event at the official <a href="https://hacktoberfest.digitalocean.com/">HacktoberFest website</a>.
+                                        You can also familiarize or freshen up on your git skills with our git cheatsheet.
+                                    </p>
+                                </div>
                             </div>
-                            <h4 className="faq-question">Other Open Source Projects</h4>
-                            <p className="faq-answer">You can visit our GitHub repo to find some open source projects. </p>
-                            <h4 className="faq-question">Getting Help</h4>
-                            <p className="faq-answer">You can contact us through Discord (ay yo discord linku) or through our email (go to contact pg or email @ucsd.edu)</p>
+
+                            <div className="icon-faq-container">
+                                <img src={tutorialIcon} className="icon"/>
+                                <div className="faq-content">
+                                    <h4 className="faq-question">Beginner Friendly Tutorials</h4>
+                                    <div className="faq-answer">
+                                        <p>We have sum tuts that you can follow to get started with contributing to open source projects brah. </p>
+                                        <p>Graffiti Wall: <a href="https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI">
+                                            https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI</a>
+                                        </p>
+                                        <p>Bitmoji: <a  href="https://bitmoji-tutorial.glitch.me/">https://bitmoji-tutorial.glitch.me/</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="icon-faq-container">
+                                <img src={otherProjectsIcon} className="icon" />
+                                <div className="faq-content">
+                                    <h4 className="faq-question">Other Open Source Projects</h4>
+                                    <p className="faq-answer">You can visit our GitHub repo to find some open source projects. </p>
+                                </div>
+                            </div>
+
+                            <div className="icon-faq-container">
+                                <img src={helpIcon} className="icon" />
+                                <div className="faq-content">
+                                    <h4 className="faq-question">Getting Help</h4>
+                                    <p className="faq-answer">You can contact us through Discord (ay yo discord linku) or through our email (go to contact pg or email @ucsd.edu)</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -63,3 +63,15 @@
 .faq-answer {
     font-size: 16px;
 }
+
+.icon-faq-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+    margin-top: 40px;
+}
