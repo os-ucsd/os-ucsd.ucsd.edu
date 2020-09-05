@@ -12,6 +12,7 @@ import defaultImg from '../events/events-imgs/default.jpg';
  *      date="10/12/20"
  *      startTime="6:30pm"
  *      endTime="7:30pm"
+ *      location="zoom uni"
  *      facebookLink="facebook.com" //Optional
  * />
  */
@@ -25,7 +26,7 @@ class EventCard extends React.Component {
     render() {
         const {
             image, title, description, date, startTime, endTime,
-            facebookLink
+            facebookLink, location
         } = this.props;
 
         // Use default image if no image provided
@@ -42,6 +43,7 @@ class EventCard extends React.Component {
                     <div className="date-time-contaner event-desc">
                         <p className="event-text">When: {date} {startTime} - {endTime}</p>
                     </div>
+                    <p className="event-text event-desc">{location}</p>
                 </div>
             </div>
         )

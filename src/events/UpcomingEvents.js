@@ -1,13 +1,14 @@
 import React from 'react';
 import events from './events-data';
+import EventCard from '../components/event-card';
 import defaultImg from './events-imgs/default.jpg';
 import './UpcomingEvents.css';
 
-const UpcomingEvents = () => {
+const getUpcomingEvents = () => {
     // create array of only UPCOMING events (end time > curr time)
     let upcomingEvents = [];
     const currTime = new Date();
-    
+
     for (let i = 0; i < events.length; i++){
         // get date of end time for event
         const endTime = new Date(events[i].date);
@@ -33,41 +34,29 @@ const UpcomingEvents = () => {
         }
     }
 
-    // make a card for every event in events
-    const eventCompon = upcomingEvents ? upcomingEvents.map((event, i) => {
-            const hasFacebook = event.facebookUrl !== '';
+    return upcomingEvents;
+}
 
-            return(
-                <div key={i} className='event-inner-container'>
-                    {
-                        // if no image specified, will use the default image
-                        event.imageUrl ? 
-                            hasFacebook ?
-                                <a href={event.facebookUrl}>
-                                    <img className='event-img' alt={event.name} src={event.imageUrl} 
-                                        width='380px' height='200px'/>
-                                </a> :
-                                <img className='event-img' alt={event.name} src={event.imageUrl} 
-                                    width='380px' height='200px'/> 
-                        : hasFacebook ?
-                            <a href={event.facebookUrl}>
-                                <img className='event-img' alt={event.name} src={defaultImg} 
-                                    width='380px' height='200px'/> 
-                            </a> :
-                            <img className='event-img' alt={event.name} src={defaultImg} 
-                                width='380px' height='200px'/>    
-                    }
-                    <h5 className='event-text'>{event.name}</h5>
-                    <p className='event-text'>{event.date} {event.startTime}-{event.endTime} </p>
-                    <p className='event-text'>{event.location}</p>
-                </div>
-            );
-    }) : null
+const UpcomingEvents = () => {
+    const upcomingEvents = getUpcomingEvents();
+    const upcomingEventCompon = upcomingEvents && upcomingEvents.length > 0 ? upcomingEvents.map((event, i) => 
+        <div className="event-card-container">
+            <EventCard 
+                image={event.imageUrl ? event.imageUrl : defaultImg} 
+                title={event.name}
+                description=""
+                date={event.date}
+                startTime={event.startTime}
+                endTime={event.endTime}
+                location={event.location}
+                facebookLink={event.facebookUrl}/>
+        </div>
+    ) : null
 
     return(
         <div>
             <div className='event-outer-container'>
-                {eventCompon}
+                {upcomingEventCompon}
             </div>
         </div>
     )

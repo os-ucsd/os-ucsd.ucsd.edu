@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "../components/header";
+import Footer from "../components/footer";
 import EventCard from "../components/event-card";
 
 import '../css/hacktoberfest.css';
@@ -91,12 +92,13 @@ class Hacktoberfest extends React.Component {
                                 <p>Bitmoji: <a  href="https://bitmoji-tutorial.glitch.me/">https://bitmoji-tutorial.glitch.me/</a></p>
                             </div>
                             <h4 className="faq-question">Other Open Source Projects</h4>
-                            <p className="faq-answer">link</p>
+                            <p className="faq-answer">You can visit our GitHub repo to find some open source projects. </p>
                             <h4 className="faq-question">Getting Help</h4>
                             <p className="faq-answer">You can contact us through Discord (ay yo discord linku) or through our email (go to contact pg or email @ucsd.edu)</p>
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }
