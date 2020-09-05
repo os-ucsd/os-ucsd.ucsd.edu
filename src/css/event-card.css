@@ -1,0 +1,11 @@
+.event-text {
+    width: 280px;
+}
+
+.event-img {
+    transition: all .2s ease-in-out;
+}
+
+.event-img:hover {
+    transform: scale(1.05);
+}
