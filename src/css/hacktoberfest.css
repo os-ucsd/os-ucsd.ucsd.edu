@@ -25,6 +25,15 @@
     width: 100%;
 }
 
+.title-text {
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.desc-text {
+    font-size: 18px;
+}
+
 .events {
     width: /*75%*/ 100%;
 }
@@ -42,9 +51,15 @@
 }
 
 .faq {
+    width: 40%;
 }
 
 .faq-question {
     font-weight: bold;
     margin-top: 40px;
+    font-size: 20px;
+}
+
+.faq-answer {
+    font-size: 16px;
 }

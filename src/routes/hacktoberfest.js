@@ -42,12 +42,12 @@ class Hacktoberfest extends React.Component {
                 <Header />
                 <img className="header-img" src={image} alt="hacktoberfest" width="100%" />
                 <div className="hacktoberfest-header-text vert-centered">
-                    <h3>OS @ UCSD x HacktoberFest</h3>
-                    <p className="vert-centered-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h3 className="title-text">OS @ UCSD x HacktoberFest</h3>
+                    <p className="desc-text vert-centered-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div className="body-content">
                     <div className="events vert-centered">
-                        <h3>Guest Speakers and Workshops</h3>
+                        <h3 className="title-text">Guest Speakers and Workshops</h3>
                         <div className="events-list">
                             {
                                 events.map(event => 
@@ -60,7 +60,7 @@ class Hacktoberfest extends React.Component {
                                 )
                             }
                         </div>
-                        <h3>Contributhons</h3>
+                        <h3 className="title-text">Contributhons</h3>
                         <div className="events-list">
                             {
                                 events.map(event => 
@@ -75,14 +75,25 @@ class Hacktoberfest extends React.Component {
                         </div>
                     </div>
                     <div className="resources vert-centered">
-                        <h3 className="vert-centered">Frequently Asked Questions</h3>
+                        <h3 className="title-text vert-centered">Frequently Asked Questions</h3>
                         <div className="faq">
                             <h4 className="faq-question">Getting Started</h4>
-                            <p>Go to our repo and do shit bruh</p>
+                            <p className="faq-answer">
+                                You can read more about the event at the official <a href="https://hacktoberfest.digitalocean.com/">HacktoberFest website</a>.
+                                You can also familiarize or freshen up on your git skills with our git cheatsheet.
+                            </p>
                             <h4 className="faq-question">Beginner Friendly Tutorials</h4>
-                            <p>We have sum tuts that you can follow to get started with contributing to open source projects brah. </p>
-                            <p>Graffiti Wall: link</p>
-                            <p>Bitmoji: link</p>
+                            <div className="faq-answer">
+                                <p>We have sum tuts that you can follow to get started with contributing to open source projects brah. </p>
+                                <p>Graffiti Wall: <a href="https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI">
+                                    https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI</a>
+                                </p>
+                                <p>Bitmoji: <a  href="https://bitmoji-tutorial.glitch.me/">https://bitmoji-tutorial.glitch.me/</a></p>
+                            </div>
+                            <h4 className="faq-question">Other Open Source Projects</h4>
+                            <p className="faq-answer">link</p>
+                            <h4 className="faq-question">Getting Help</h4>
+                            <p className="faq-answer">You can contact us through Discord (ay yo discord linku) or through our email (go to contact pg or email @ucsd.edu)</p>
                         </div>
                     </div>
                 </div>
