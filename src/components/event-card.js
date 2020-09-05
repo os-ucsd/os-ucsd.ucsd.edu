@@ -34,9 +34,9 @@ class EventCard extends React.Component {
         return(
             <div>
                 <a href={facebookLink}>
-                    <img className="event-img" src={cardImg} alt={title} width='280px' height='180px'/>
+                    <img className="event-img" src={cardImg} alt={title} width='240px' height='120px'/>
                 </a>
-                <h3 className="event-text">{title}</h3>
+                <h4 className="event-text">{title}</h4>
                 <p className="event-text">{description}</p>
                 <div className="date-time-contaner">
                     <p className="event-text">When: {date} {startTime} - {endTime}</p>

@@ -4,24 +4,28 @@
     align-items: center;
 }
 
+.vert-centered-text {
+    text-align: center;
+}
+
 .hacktoberfest-container {
     width: 100%;
 }
 
 .hacktoberfest-header-text {
-    padding: 0;
+    padding: 20px 200px;
     width: 100%;
 }
 
 .body-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: /*row*/ column;
     margin-top: 20px;
     width: 100%;
 }
 
 .events {
-    width: 66%;
+    width: /*75%*/ 100%;
 }
 
 .events-list {
@@ -33,9 +37,8 @@
 }
 
 .event-card {
-    margin: 20px;
+    margin: 15px;
 }
 
 .resources {
-    width: auto;
 }

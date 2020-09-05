@@ -43,7 +43,7 @@ class Hacktoberfest extends React.Component {
                 <img className="header-img" src={image} alt="hacktoberfest" width="100%" />
                 <div className="hacktoberfest-header-text vert-centered">
                     <h3>OS @ UCSD x HacktoberFest</h3>
-                    <p>What is Hacktoberfest</p>
+                    <p className="vert-centered-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div className="body-content">
                     <div className="events vert-centered">
@@ -59,10 +59,23 @@ class Hacktoberfest extends React.Component {
                                     </div>
                                 )
                             }
-                            </div>
+                        </div>
+                        <h3>Contributhons</h3>
+                        <div className="events-list">
+                            {
+                                events.map(event => 
+                                    <div className="event-card">
+                                        <EventCard title={event.title}
+                                            description={event.description} date={event.date}
+                                            startTime={event.startTime} endTime={event.endTime} 
+                                            facebookLink={event.facebookLink} />
+                                    </div>
+                                )
+                            }
+                        </div>
                     </div>
                     <div className="resources vert-centered">
-                        <h3>hacktobefsdf resources yeah</h3>
+                        <h3>Resources for participating</h3>
                     </div>
                 </div>
             </div>
