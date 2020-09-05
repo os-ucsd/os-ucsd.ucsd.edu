@@ -4,63 +4,38 @@ import Footer from "../components/footer";
 import EventCard from "../components/event-card";
 
 import '../css/hacktoberfest.css';
-import image from '../images/hacktoberfest_logo.png';
-import gettingStartedIcon from '../images/getting_started_icon.svg';
-import tutorialIcon from '../images/tutorial_icon.svg';
-import otherProjectsIcon from '../images/other_projects_icon.svg'
-import helpIcon from '../images/help_icon.svg';
+import logo from '../images/hacktoberfest_logo.png';
+import gettingStartedIcon from '../images/icons/getting_started_icon.svg';
+import tutorialIcon from '../images/icons/tutorial_icon.svg';
+import otherProjectsIcon from '../images/icons/other_projects_icon.svg'
+import helpIcon from '../images/icons/help_icon.svg';
+
+import {guestSpeakers, contributhons} from "../data/hacktoberfest-data";
 
 class Hacktoberfest extends React.Component {
     render() {
-        const events = [{
-            title: "Open Source and Higher Education",
-            description: "Speaker: Erin Glass",
-            date: "10/12/20",
-            startTime: "6:30pm",
-            endTime: "7:30pm",
-            facebookLink: ""
-        }, {
-            title: "Open Source Project: Virtual Reef",
-            description: "Speaker: Owen Pierce",
-            date: "10/12/20",
-            startTime: "6:30pm",
-            endTime: "7:30pm",
-            facebookLink: ""
-        }, {
-            title: "Alex talking smack",
-            description: "Speaker: Alex Garcia",
-            date: "10/12/20",
-            startTime: "6:30pm",
-            endTime: "7:30pm",
-            facebookLink: ""
-        }, {
-            title: "Open Source and Higher Education",
-            description: "Speaker: Erin Glass",
-            date: "10/12/20",
-            startTime: "6:30pm",
-            endTime: "7:30pm",
-            facebookLink: ""
-        }]
-
         return(
             <div className="hacktoberfest-container">
                 <Header />
-                <img className="header-img" src={image} alt="hacktoberfest" width="100%" />
+                <img className="header-img" src={logo} alt="hacktoberfest" width="100%" />
                 <div className="hacktoberfest-header-text vert-centered">
                     <h3 className="title-text">OS @ UCSD x HacktoberFest</h3>
-                    <p className="desc-text vert-centered-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p className="desc-text vert-centered-text">
+                        Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2020 challenge and earn a limited edition T-shirt. Hacktoberfest is open to everyone in our global community. Whether you’re new to development, a student, long-time contributor, event host, or company of any size, you can help drive growth of open source and make positive contributions to an ever-growing community. All backgrounds and skills levels are encouraged to complete the challenge.
+                    </p>
                 </div>
                 <div className="body-content">
                     <div className="events vert-centered">
                         <h3 className="title-text">Guest Speakers and Workshops</h3>
                         <div className="events-list">
                             {
-                                events.map(event => 
+                                guestSpeakers.map(event => 
                                     <div className="event-card">
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime} 
-                                            facebookLink={event.facebookLink} />
+                                            facebookLink={event.facebookLink}
+                                            location={event.location} />
                                     </div>
                                 )
                             }
@@ -68,12 +43,13 @@ class Hacktoberfest extends React.Component {
                         <h3 className="title-text">Contributhons</h3>
                         <div className="events-list">
                             {
-                                events.map(event => 
+                                contributhons.map(event => 
                                     <div className="event-card">
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime} 
-                                            facebookLink={event.facebookLink} />
+                                            facebookLink={event.facebookLink}
+                                            location={event.location} />
                                     </div>
                                 )
                             }
@@ -88,7 +64,7 @@ class Hacktoberfest extends React.Component {
                                     <h4 className="faq-question">Getting Started</h4>
                                     <p className="faq-answer">
                                         You can read more about the event at the official <a href="https://hacktoberfest.digitalocean.com/">HacktoberFest website</a>.
-                                        You can also familiarize or freshen up on your git skills with our git cheatsheet.
+                                        You can also familiarize yourself with or freshen up on your git skills with our git cheatsheet.
                                     </p>
                                 </div>
                             </div>
@@ -98,7 +74,7 @@ class Hacktoberfest extends React.Component {
                                 <div className="faq-content">
                                     <h4 className="faq-question">Beginner Friendly Tutorials</h4>
                                     <div className="faq-answer">
-                                        <p>We have sum tuts that you can follow to get started with contributing to open source projects brah. </p>
+                                        <p>If you're new to contributing to open source projects, feel free to follow these tutorials to get started!</p>
                                         <p>Graffiti Wall: <a href="https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI">
                                             https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI</a>
                                         </p>
@@ -111,7 +87,9 @@ class Hacktoberfest extends React.Component {
                                 <img src={otherProjectsIcon} className="icon" />
                                 <div className="faq-content">
                                     <h4 className="faq-question">Other Open Source Projects</h4>
-                                    <p className="faq-answer">You can visit our GitHub repo to find some open source projects. </p>
+                                    <p className="faq-answer">
+                                        You can visit our <a href="https://github.com/os-ucsd">GitHub repo</a> to find some open source projects you can contribute to, such as Workshop Facilitator and OS Marketplace. Stay tuned for an extensive list of beginner friendly projects 😊!
+                                    </p>
                                 </div>
                             </div>
 
@@ -119,7 +97,9 @@ class Hacktoberfest extends React.Component {
                                 <img src={helpIcon} className="icon" />
                                 <div className="faq-content">
                                     <h4 className="faq-question">Getting Help</h4>
-                                    <p className="faq-answer">You can contact us through Discord (ay yo discord linku) or through our email (go to contact pg or email @ucsd.edu)</p>
+                                    <p className="faq-answer">
+                                        We're available on <a href="https://discord.gg/zccEYC">Discord</a> to answer any technical and non-technical questions you may have! You can also visit the <a href="/contact">Contact</a> page to send us an email.
+                                    </p>
                                 </div>
                             </div>
                         </div>

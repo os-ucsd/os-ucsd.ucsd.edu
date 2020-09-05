@@ -39,7 +39,7 @@ class EventCard extends React.Component {
                     <div className="date-time-contaner event-desc">
                         <p className="event-text">When: {date} {startTime} - {endTime}</p>
                     </div>
-                    <p className="event-text event-desc">{location}</p>
+                    <p className="event-text event-desc">Where: {location}</p>
                 </div>
             </div>
         )
