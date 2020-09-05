@@ -29,7 +29,7 @@ class EventCard extends React.Component {
         const cardImg = image ? image : defaultImg;
 
         return(
-            <div className="card-container-hover">
+            <div className="card-container card-container-hover">
                 <a href={facebookLink}>
                     <img className="event-img" src={cardImg} alt={title} width='240px' height='140px'/>
                 </a>
