@@ -2,7 +2,7 @@ import React from 'react';
 import events from '../data/events-data';
 import EventCard from '../components/event-card';
 import defaultImg from './events-imgs/default.jpg';
-import './UpcomingEvents.css';
+import '../css/UpcomingEvents.css';
 
 const getPastEvents = () => {
     // create array of only PAST events (end time < curr time)
