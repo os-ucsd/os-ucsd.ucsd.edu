@@ -1,8 +1,6 @@
 import React from "react"
 import "../css/main.css"
 import image from '../images/octocat_flip.png'
-import Header from '../components/header'
-import Footer from '../components/footer'
 
 class Home extends React.Component {
     render() {

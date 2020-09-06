@@ -1,6 +1,4 @@
 import React from "react"
-import Header from '../components/header'
-import Footer from '../components/footer'
 import tutorialData from "../data/tutorial-data.js";
 import Moment from 'react-moment';
 import "../css/tutorial.css";

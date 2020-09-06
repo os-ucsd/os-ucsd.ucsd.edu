@@ -1,6 +1,4 @@
 import React from "react"
-import Header from '../components/header'
-import Footer from '../components/footer'
 import CardWithLink from "../components/card-with-link";
 
 import projects_list from "../data/project-data";
