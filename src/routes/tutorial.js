@@ -17,7 +17,7 @@ class Tutorial extends React.Component {
     }
 
     openTutorial(tutorial) {
-        this.props.history.push("/tutorials/" + tutorial["url"]);
+        this.props.history.push("/tutorial/" + tutorial["url"]);
     }
 
     render() {
