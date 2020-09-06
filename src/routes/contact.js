@@ -35,10 +35,12 @@ class Contact extends React.Component {
         emailjs.send('service_w2t5s7b', 'template_aiblrmi', this.state, 'user_tcCTJnUYsvoujhBxEX0w6')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                window.location.href = "/formSubmitted"
+                this.setState({ name: "", email: "", message: "" });
             }, function (error) {
                 console.log('FAILED...', error);
             });
-        this.setState({ name: "", email: "", message: "" });
+        //this.setState({ name: "", email: "", message: "" });
     }
 
     render() {

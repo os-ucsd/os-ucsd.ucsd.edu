@@ -56,7 +56,6 @@ class Tutorial extends React.Component {
                 <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>All Tutorials</h2>
 
                 <div className="tutorialList">{tutorialCards}</div>
-
             </div>
         )
     }

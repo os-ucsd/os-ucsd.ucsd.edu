@@ -28,7 +28,8 @@ class About extends React.Component {
                         projects, and many other open source related events.
                     </p>
                 </div>
-                <hr style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', height: '1.5px', color: '#333', background: 'black' }}></hr>
+
+                <hr style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', marginTop: '35px', marginBottom: '50px', height: '1.5px', color: '#314858', background: '#314858' }}></hr>
 
                 {/* MEET THE BOARD */}
                 <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>Meet the Board</h2>
