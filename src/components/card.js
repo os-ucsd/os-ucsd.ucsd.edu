@@ -30,7 +30,7 @@ class Card extends React.Component {
             image, title, description, date, startTime, endTime,
             facebookLink, location, size, isLinkCard, link, linkText
         } = this.props;
-        console.log(isLinkCard || false)
+        console.log(linkText)
         // Use default image if no image provided
         const cardImg = image ? image : defaultImg;
 
@@ -51,40 +51,42 @@ class Card extends React.Component {
             size === "lg" ? 18 : 12;
 
         return(
-            <div className="card-container card-container-hover" style={{
+            <div className={
+                isLinkCard ? "card-container container-with-link" : "card-container card-container-hover"
+            } style={{
                 height: height + "px",
                 width: width + "px"
             }}>
                 <a href={facebookLink} className="facebook-event-link">
-                    <img className="event-img" src={cardImg} alt={title} width={width + "px"} height={imgHeight + "px"}/>
-                    <div className="event-content" style={{width: width}}>
-                        <h4 className="event-text event-title" style={{ fontSize: titleFontSize + "px" }}>
-                            {title}
-                        </h4>
-                        <p className="event-text event-desc" style={{ fontSize: descFontSize + "px" }}>
-                            {description}
-                        </p>
-                        {
-                            date && startTime && endTime ? 
-                                <div className="date-time-contaner event-desc" style={{ fontSize: descFontSize + "px" }}>
-                                    <p className="event-text">When: {date} {startTime} - {endTime}</p>
-                                </div> : null
-                        }
-                        {
-                            location ? 
-                                <p className="event-text event-desc" style={{ fontSize: descFontSize + "px" }}>
-                                    Where: {location}
-                                </p> : null
-                        }
-                        {
-                            // make isLinkCard false by default
-                            isLinkCard || false ? 
-                                <a className="link" href={link} style={{ fontSize: descFontSize + "px" }}>
-                                    {linkText}
-                                </a> : null
-                        }
-                    </div>
+                    <img className="event-img" src={cardImg} alt={title} width={width + "px"} height={imgHeight + "px"} />
                 </a>
+                <div className="event-content" style={{width: width}}>
+                    <h4 className="event-text event-title" style={{ fontSize: titleFontSize + "px" }}>
+                        {title}
+                    </h4>
+                    <p className="event-text event-desc" style={{ fontSize: descFontSize + "px" }}>
+                        {description}
+                    </p>
+                    {
+                        date && startTime && endTime ? 
+                            <div className="date-time-contaner event-desc" style={{ fontSize: descFontSize + "px" }}>
+                                <p className="event-text">When: {date} {startTime} - {endTime}</p>
+                            </div> : null
+                    }
+                    {
+                        location ? 
+                            <p className="event-text event-desc" style={{ fontSize: descFontSize + "px" }}>
+                                Where: {location}
+                            </p> : null
+                    }
+                    {
+                        // make isLinkCard false by default
+                        isLinkCard || false ? 
+                            <a className="link" href={link} style={{ fontSize: descFontSize + "px" }}>
+                                {linkText}
+                            </a> : null
+                    }
+                </div>
             </div>
         )
     }

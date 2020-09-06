@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "../components/card";
+import CardWithLink from "../components/card-with-link";
 import projects_list from "../data/project-data";
 
 import '../css/projects.css';
@@ -16,11 +17,10 @@ class Project extends React.Component {
                     {
                         projects_list && projects_list.length > 0 ? projects_list.map((project, indx) =>
                             <div key={indx} className="project">
-                                <Card
+                                <CardWithLink
                                     title={project.title}
                                     description={project.description}
                                     image={project.image}
-                                    isLinkCard={true}
                                     size="sm"
                                     link={project.link}
                                     linkText={project.linkText} />

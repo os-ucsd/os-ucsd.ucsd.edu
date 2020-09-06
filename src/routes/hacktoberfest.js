@@ -29,7 +29,7 @@ class Hacktoberfest extends React.Component {
                             {
                                 guestSpeakers.map(event =>
                                     <div className="event-card">
-                                        <Card title={event.title}
+                                        <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
@@ -44,7 +44,7 @@ class Hacktoberfest extends React.Component {
                             {
                                 contributhons.map(event =>
                                     <div className="event-card">
-                                        <Card title={event.title}
+                                        <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
