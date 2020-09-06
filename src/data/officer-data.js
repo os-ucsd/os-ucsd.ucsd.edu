@@ -1,7 +1,7 @@
 const officers = [
     {
         name: "Vivian Lee",
-        image: "https://content.fortune.com/wp-content/uploads/2019/01/boo.jpg",
+        image: "https://i.pinimg.com/originals/32/93/2a/32932abc2400f4f6a4e67eecd14e9b9e.jpg",
         position: "President",
         link: "https://viviaann.github.io/",
         fun_fact: "",
@@ -31,7 +31,7 @@ const officers = [
     {
         name: "Brandon Foey",
         image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ8rqkKNbpDl5IBaEyusyduVYkO1svjKie9Q&usqp=CAU",
+            "https://thespinoff.co.nz/wp-content/uploads/2019/03/GettyImages-139720130.jpg",
         position: "Workshop Chair",
         link: "",
         fun_fact: "",
