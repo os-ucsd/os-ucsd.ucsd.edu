@@ -46,7 +46,7 @@ class PullRequestItem extends React.Component{
                             }
                             <div className="user-container">
                                 {
-                                    // If the card is on the right, show profile picture on the left
+                                    // If the card is on the right, show profile picture on the leftg
                                     imgSide === 'l' ? 
                                         <img className="profile-pic"
                                             src={"https://github.com/" + prData.user + ".png"} 

@@ -27,9 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /*padding: 15px;*/
     position: relative;
-    /*width: 400px;*/
     width: wrap;
     padding: 10px 20px;
     /* Change max-width to change the width of the timeline cards*/
