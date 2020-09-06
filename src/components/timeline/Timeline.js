@@ -22,7 +22,7 @@ class Timeline extends React.Component{
 							<div className="pr-list-content-circle" >
 								<div className="pr-list-content">
 									<div className="pr-info" >
-										<PullRequestItem  prData={pr} />	
+										<PullRequestItem  prData={pr} imgSide={i % 2 === 0 ? 'l' : 'r'}/>	
 										<span className="circle" />	
 									</div>
 								</div>

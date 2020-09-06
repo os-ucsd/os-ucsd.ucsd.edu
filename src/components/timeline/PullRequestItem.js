@@ -3,7 +3,7 @@ import './PullRequestItem.css';
 
 class PullRequestItem extends React.Component{
 	render(){
-        const {prData} = this.props;
+        const {prData, imgSide} = this.props;
         let allPRTimes = []
         // if the pr is 'your contribution', don't do this part
         if (prData.user !== "I"){
@@ -44,9 +44,27 @@ class PullRequestItem extends React.Component{
                                     <p key={i}>{prTime}</p>
                                 )
                             }
-                            <a href={prData.repoURL} className="pr-link">
-                                <p>{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
-                            </a>
+                            <div className="user-container">
+                                {
+                                    // If the card is on the right, show profile picture on the left
+                                    imgSide === 'l' ? 
+                                        <img className="profile-pic"
+                                            src={"https://github.com/" + prData.user + ".png"} 
+                                            onError={evt => evt.target.src = "https://github.com/blau0123.png"}
+                                            width="30px" height="30px"/> : null
+                                }
+                                <a href={prData.repoURL} className="pr-link">
+                                    <p>{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
+                                </a>
+                                {
+                                    // If the card is on the left, show profile picture on the right
+                                    imgSide === 'r' ? 
+                                        <img className="profile-pic"
+                                            src={"https://github.com/" + prData.user + ".png"} 
+                                            onError={evt => evt.target.src = "https://github.com/blau0123.png"}
+                                            width="30px" height="30px"/> : null
+                                }
+                            </div>
                         </div>
                     )
             }

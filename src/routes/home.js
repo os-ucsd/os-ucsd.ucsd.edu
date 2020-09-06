@@ -44,7 +44,7 @@ class Home extends React.Component {
             });
         } else {
             // didn't need to call api, so just set state to stored data
-            console.log("no new data");
+            console.log("no new data", data.data);
             this.setState({ prs: data.data });
         }
     }
