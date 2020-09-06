@@ -8,6 +8,7 @@ import Event from "./routes/event"
 import Contact from "./routes/contact"
 import Hacktoberfest from "./routes/hacktoberfest"
 import TutorialComponent from "./components/tutorial-component";
+import FormSubmit from "./components/formSubmit"
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Route exact path="/events" component={Event} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/hacktoberfest" component={Hacktoberfest} />
-
+      <Route exact path="/formSubmitted" component={FormSubmit} />
     </Router>
   );
 }

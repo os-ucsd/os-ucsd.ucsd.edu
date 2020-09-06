@@ -30,7 +30,7 @@ class Hacktoberfest extends React.Component {
                         <div className="events-list">
                             {
                                 guestSpeakers.map(event =>
-                                    <div className="event-card">
+                                    <div className="event-card" key={event.title}>
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
@@ -44,7 +44,7 @@ class Hacktoberfest extends React.Component {
                         <div className="events-list">
                             {
                                 contributhons.map(event =>
-                                    <div className="event-card">
+                                    <div className="event-card" key={event.title}>
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
