@@ -12,14 +12,14 @@ class Footer extends React.Component {
                     <li>
                         <a href="https://www.facebook.com/groups/OpenSourceUCSD/"><FacebookIcon className="button"
                             style={{
-                                fill: "white", width: 60, height: 50
+                                fill: "white", width: 40, height: 40
                             }} /></a>
                     </li>
                     <li>
-                        <a href="https://github.com/os-ucsd"><GitHubIcon className="button" style={{ fill: "white", width: 50, height: 50 }} /></a>
+                        <a href="https://github.com/os-ucsd"><GitHubIcon className="button" style={{ fill: "white", width: 40, height: 40 }} /></a>
                     </li>
                     <li>
-                        <a href="/contact"><MailIcon className="button" style={{ fill: "white", width: 50, height: 50 }} /></a>
+                        <a href="/contact"><MailIcon className="button" style={{ fill: "white", width: 40, height: 40 }} /></a>
                     </li>
                 </ul>
 
