@@ -46,7 +46,6 @@ class Contact extends React.Component {
     render() {
         return (
             <div>
-                <Header />
                 <h2 className="firstTitle" style={{ marginTop: "100px", fontSize: "30px", textAlign: "center", padding: "10px" }}>
                     Leave us a message and we'll get back to you :)
                 </h2>
@@ -100,7 +99,6 @@ class Contact extends React.Component {
                         </Button>
                     </form>
                 </div>
-                <Footer />
             </div >
         )
     }

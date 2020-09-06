@@ -16,7 +16,6 @@ class Hacktoberfest extends React.Component {
     render() {
         return (
             <div className="hacktoberfest-container">
-                <Header />
                 <img className="header-img" src={logo} alt="hacktoberfest" width="100%" />
                 <div className="hacktoberfest-header-text vert-centered">
                     <h3 className="title-text">OS @ UCSD x HacktoberFest</h3>
@@ -105,7 +104,6 @@ class Hacktoberfest extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }

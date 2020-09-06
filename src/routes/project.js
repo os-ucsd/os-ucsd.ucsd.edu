@@ -11,7 +11,6 @@ class Project extends React.Component {
     render() {
         return (
             <div>
-                <Header />
                 <h2 className="firstTitle" style={{ marginTop: "100px", fontSize: "40px", textAlign: "center", padding: "10px" }}>
                     Projects
                 </h2>
@@ -31,9 +30,6 @@ class Project extends React.Component {
                     }
                 </div>
                 <h3 style={{ textAlign: "center" }}>Want to show off your projects? <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact us </a > !!</h3>
-                <div style={{ position: 'fixed', bottom: '0', width: '100%' }}>
-                    <Footer />
-                </div>
             </div >
         )
     }

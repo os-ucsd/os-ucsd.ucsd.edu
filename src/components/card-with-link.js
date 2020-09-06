@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/card.css';
-import defaultImg from '../events/events-imgs/default.jpg';
+import defaultImg from '../images/events-imgs/default.jpg';
 
 /**
  * Used when want cards that have a link at the bottom (such as "LEARN MORE")

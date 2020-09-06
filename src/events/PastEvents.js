@@ -1,7 +1,7 @@
 import React from 'react';
 import events from '../data/events-data';
 import EventCard from '../components/event-card';
-import defaultImg from './events-imgs/default.jpg';
+import defaultImg from '../images/events-imgs/default.jpg';
 import '../css/UpcomingEvents.css';
 
 const getPastEvents = () => {

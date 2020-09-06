@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/card.css';
-import defaultImg from '../events/events-imgs/default.jpg';
+import defaultImg from '../images/events-imgs/default.jpg';
 
 /**
  * A card to display events consistently throughout the website.

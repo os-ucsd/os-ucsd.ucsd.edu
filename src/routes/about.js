@@ -17,8 +17,6 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                <Header />
-
                 {/* WHAT WE DO */}
                 <div style={{ marginTop: "100px" }}>
                     <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>What We Do</h2>
@@ -50,7 +48,6 @@ class About extends React.Component {
                         />
                     ))}
                 </div>
-                <Footer />
             </div >
         )
     }

@@ -8,7 +8,6 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <Header />
                 <header id="header">
                     <div className="star" id="star-1"></div>
                     <div className="star" id="star-2"></div>
@@ -50,7 +49,6 @@ class Home extends React.Component {
             technical topic you're passionate about, developing a workshop series on an open source technology, or giving a lightning talk, we would love to have your help!
                     </p>
                 </div>
-                <Footer />
             </div>
         )
     }

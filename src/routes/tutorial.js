@@ -55,14 +55,10 @@ class Tutorial extends React.Component {
 
         return (
             <div>
-                <Header />
                 <h2 style={{ marginTop: "100px", fontSize: "40px", textAlign: "center", padding: "10px" }}>All Tutorials</h2>
 
                 <div className="tutorialList">{tutorialCards}</div>
 
-                <div style={{ position: 'fixed', bottom: '0', width: '100%' }}>
-                    <Footer />
-                </div>
             </div>
         )
     }

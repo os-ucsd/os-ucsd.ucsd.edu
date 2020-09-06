@@ -21,10 +21,10 @@ HOW TO REMOVE AN EVENT
 5. Yeah.
 */
 
-import mongoImage from '../events/events-imgs/mongo.jpeg';
-import nodeImage from '../events/events-imgs/nodejs.png';
-import reactImage from '../events/events-imgs/react.jpg';
-import mernImage from '../events/events-imgs/mern.jpeg';
+import mongoImage from '../images/events-imgs/mongo.jpeg';
+import nodeImage from '../images/events-imgs/nodejs.png';
+import reactImage from '../images/events-imgs/react.jpg';
+import mernImage from '../images/events-imgs/mern.jpeg';
 
 let events = [
     {
