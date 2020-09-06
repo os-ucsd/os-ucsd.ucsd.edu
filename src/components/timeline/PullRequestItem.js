@@ -3,7 +3,7 @@ import './PullRequestItem.css';
 
 class PullRequestItem extends React.Component{
 	render(){
-        const {prData, imgSide} = this.props;
+        const {prData, imgSide, cardSide} = this.props;
         let allPRTimes = []
         // if the pr is 'your contribution', don't do this part
         if (prData.user !== "I"){
@@ -38,7 +38,7 @@ class PullRequestItem extends React.Component{
                         </div>
                     ) 
                 :
-                    (   <div className="item-content">
+                    (   <div className={cardSide == "r" ? "item-content right-card" : "item-content left-card"}>
                             {  
                                 allPRTimes.map((prTime, i) => 
                                     <p key={i}>{prTime}</p>
@@ -48,7 +48,7 @@ class PullRequestItem extends React.Component{
                                 {
                                     // If the card is on the right, show profile picture on the leftg
                                     imgSide === 'l' ? 
-                                        <img className="profile-pic"
+                                        <img className="profile-pic left-pic"
                                             src={"https://github.com/" + prData.user + ".png"} 
                                             onError={evt => evt.target.src = "https://github.com/blau0123.png"}
                                             width="30px" height="30px"/> : null
@@ -59,7 +59,7 @@ class PullRequestItem extends React.Component{
                                 {
                                     // If the card is on the left, show profile picture on the right
                                     imgSide === 'r' ? 
-                                        <img className="profile-pic"
+                                        <img className="profile-pic right-pic"
                                             src={"https://github.com/" + prData.user + ".png"} 
                                             onError={evt => evt.target.src = "https://github.com/blau0123.png"}
                                             width="30px" height="30px"/> : null

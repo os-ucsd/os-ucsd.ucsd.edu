@@ -38,14 +38,14 @@
 
 .home-content-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 #home-timeline-container {
-    width: 33%;
-    margin: 5px 0;
-    padding: 20px 20px 80px 20px;
+    width: 75%;
+    padding: 0px 50px 50px 50px;
     text-align: center;
 }
 
@@ -73,10 +73,8 @@
 }
 
 #about{
-    width: 66%;
-    min-height: 90vh;
-    padding: 20px 100px;
-    margin: 10px 0;
+    width: 75%;
+    padding: 10px 100px 0px 100px;
 }
 
 .sub-text{
