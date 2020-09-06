@@ -1,5 +1,6 @@
 import React from 'react';
 import EventCard from "../components/event-card";
+import Card from "../components/card";
 
 import '../css/hacktoberfest.css';
 import logo from '../images/hacktoberfest_logo.png';
@@ -28,10 +29,11 @@ class Hacktoberfest extends React.Component {
                             {
                                 guestSpeakers.map(event =>
                                     <div className="event-card">
-                                        <EventCard title={event.title}
+                                        <Card title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
+                                            size="sm"
                                             location={event.location} />
                                     </div>
                                 )
@@ -42,10 +44,11 @@ class Hacktoberfest extends React.Component {
                             {
                                 contributhons.map(event =>
                                     <div className="event-card">
-                                        <EventCard title={event.title}
+                                        <Card title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
+                                            size="sm"
                                             location={event.location} />
                                     </div>
                                 )
