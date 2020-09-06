@@ -1,5 +1,6 @@
 .total-timeline-container{
-    height:53rem;
+    height:100vh;
+    /*width: 50%;*/
     overflow: auto;
     overflow-x: hidden;
 }

@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 
 /*
  * Gets the name of the user who made a given PR and the repo they made the PR to
@@ -81,7 +81,7 @@ async function getRepos(){
 	}
 }
 
-async function getAllPRs(){
+function getAllPRs(){
 	return getRepos();
 }
 
