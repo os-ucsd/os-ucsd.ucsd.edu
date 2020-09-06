@@ -32,6 +32,7 @@ class Contact extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
+        // Send email API
         emailjs.send('service_w2t5s7b', 'template_aiblrmi', this.state, 'user_tcCTJnUYsvoujhBxEX0w6')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
@@ -40,7 +41,7 @@ class Contact extends React.Component {
             }, function (error) {
                 console.log('FAILED...', error);
             });
-        //this.setState({ name: "", email: "", message: "" });
+
     }
 
     render() {
@@ -57,6 +58,7 @@ class Contact extends React.Component {
                             placeholder='Name'
                             rows={1}
                             variant="outlined"
+                            required
                             InputProps={{
                                 style: { fontSize: 15, marginTop: '10px' }
                             }}
@@ -71,6 +73,7 @@ class Contact extends React.Component {
                             placeholder='Email'
                             rows={1}
                             variant="outlined"
+                            required
                             InputProps={{
                                 style: { fontSize: 15, marginTop: '10px' }
                             }}
@@ -86,6 +89,7 @@ class Contact extends React.Component {
                             multiline
                             rows={10}
                             variant="outlined"
+                            required
                             InputProps={{
                                 style: { fontSize: 20, marginTop: '10px' }
                             }}
