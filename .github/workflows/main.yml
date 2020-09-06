@@ -1,0 +1,34 @@
+name: Deploy to os-ucsd.ucsd.edu
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - uses: actions/checkout@v1
+    
+    # Setup node (used to download the React app's dependencies and to build the app)
+    - uses: actions/setup-node@v1.1.0
+    
+    # Install the React app's dependencies
+    - run: npm install 
+    
+    # Build the React app itself
+    - run: npm run build
+    
+    # Deploy the compiled result to the eceusc acsweb account
+    - uses: os-ucsd/acsweb-deploy-action@0.1.1
+      with:
+        username: os-ucsd
+        password: "${{secrets.password}}"
+        
+        # `npm run build` above compiles the React app to normal `.html` and `.js` files inside of
+        # the `build` directory. So, let's just sync those files
+        local_dir: "./build/"
