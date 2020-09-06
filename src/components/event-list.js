@@ -20,6 +20,7 @@ const EventList = props => {
                 startTime={event.startTime}
                 endTime={event.endTime}
                 location={event.location}
+                size="md"
                 facebookLink={event.facebookLink}/>
         </div>
 ) : null
