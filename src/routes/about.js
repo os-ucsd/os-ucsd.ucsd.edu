@@ -1,8 +1,6 @@
 import React from "react"
-import Header from '../components/header'
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import Footer from '../components/footer'
 
 import officers from '../data/officer-data';
 
@@ -16,11 +14,9 @@ class About extends React.Component {
 
     render() {
         return (
-            <div>
-                <Header />
-
+            <div style={{ paddingTop: "100px" }}>
                 {/* WHAT WE DO */}
-                <div style={{ marginTop: "100px" }}>
+                <div>
                     <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>What We Do</h2>
                     <p style={{
                         marginTop: "10px", fontSize: "20px", display: 'block', overflow: 'auto',
@@ -51,7 +47,6 @@ class About extends React.Component {
                         />
                     ))}
                 </div>
-                <Footer />
             </div >
         )
     }

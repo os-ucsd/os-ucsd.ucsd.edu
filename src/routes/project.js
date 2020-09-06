@@ -1,8 +1,6 @@
 import React from "react"
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Card from "../components/card";
 import CardWithLink from "../components/card-with-link";
-
 import projects_list from "../data/project-data";
 
 import '../css/projects.css';
@@ -10,9 +8,8 @@ import '../css/projects.css';
 class Project extends React.Component {
     render() {
         return (
-            <div>
-                <Header />
-                <h2 className="firstTitle" style={{ marginTop: "100px", fontSize: "40px", textAlign: "center", padding: "10px" }}>
+            <div style={{ paddingTop: "100px", paddingBottom: "50px" }}>
+                <h2 className="firstTitle" style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>
                     Projects
                 </h2>
 
@@ -24,6 +21,7 @@ class Project extends React.Component {
                                     title={project.title}
                                     description={project.description}
                                     image={project.image}
+                                    size="sm"
                                     link={project.link}
                                     linkText={project.linkText} />
                             </div>
@@ -31,9 +29,6 @@ class Project extends React.Component {
                     }
                 </div>
                 <h3 style={{ textAlign: "center" }}>Want to show off your projects? <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact us </a > !!</h3>
-                <div style={{ position: 'fixed', bottom: '0', width: '100%' }}>
-                    <Footer />
-                </div>
             </div >
         )
     }

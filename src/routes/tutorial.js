@@ -1,6 +1,4 @@
 import React from "react"
-import Header from '../components/header'
-import Footer from '../components/footer'
 import tutorialData from "../data/tutorial-data.js";
 import Moment from 'react-moment';
 import "../css/tutorial.css";
@@ -54,18 +52,10 @@ class Tutorial extends React.Component {
         });
 
         return (
-            <div>
-                <Header />
-                <h2 style={{ marginTop: "100px", fontSize: "40px", textAlign: "center", padding: "10px" }}>All Tutorials</h2>
+            <div style={{ paddingTop: "100px" }}>
+                <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>All Tutorials</h2>
 
                 <div className="tutorialList">{tutorialCards}</div>
-                <h3 style={{ textAlign: "center", marginTop: '80px' }}>
-                    <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact us </a >
-                    if you want to feature your tutorial on our site!
-                </h3>
-                <div style={{ position: 'fixed', bottom: '0', width: '100%' }}>
-                    <Footer />
-                </div>
             </div>
         )
     }

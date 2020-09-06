@@ -1,6 +1,4 @@
 import React from "react"
-import Header from '../components/header'
-import Footer from '../components/footer'
 import TextField from '@material-ui/core/TextField';
 import Typography from "@material-ui/core/Typography";
 import Button from '@material-ui/core/Button';
@@ -47,9 +45,8 @@ class Contact extends React.Component {
 
     render() {
         return (
-            <div>
-                <Header />
-                <h2 className="firstTitle" style={{ marginTop: "100px", fontSize: "30px", textAlign: "center", padding: "10px" }}>
+            <div style={{ paddingTop: "100px" }}>
+                <h2 className="firstTitle" style={{ fontSize: "30px", textAlign: "center", padding: "10px" }}>
                     Leave us a message and we'll get back to you :)
                 </h2>
                 <div style={{ textAlign: 'center' }}>
@@ -102,7 +99,6 @@ class Contact extends React.Component {
                         </Button>
                     </form>
                 </div>
-                <Footer />
             </div >
         )
     }

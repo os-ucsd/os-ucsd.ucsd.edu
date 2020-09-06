@@ -1,7 +1,6 @@
 import React from 'react';
-import Header from "../components/header";
-import Footer from "../components/footer";
 import EventCard from "../components/event-card";
+import Card from "../components/card";
 
 import '../css/hacktoberfest.css';
 import logo from '../images/hacktoberfest_logo.png';
@@ -16,7 +15,6 @@ class Hacktoberfest extends React.Component {
     render() {
         return (
             <div className="hacktoberfest-container">
-                <Header />
                 <img className="header-img" src={logo} alt="hacktoberfest" width="100%" />
                 <div className="hacktoberfest-header-text vert-centered">
                     <h3 className="title-text">OS @ UCSD x HacktoberFest</h3>
@@ -30,11 +28,12 @@ class Hacktoberfest extends React.Component {
                         <div className="events-list">
                             {
                                 guestSpeakers.map(event =>
-                                    <div className="event-card" key={event.title}>
+                                    <div className="event-card">
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
+                                            size="sm"
                                             location={event.location} />
                                     </div>
                                 )
@@ -44,11 +43,12 @@ class Hacktoberfest extends React.Component {
                         <div className="events-list">
                             {
                                 contributhons.map(event =>
-                                    <div className="event-card" key={event.title}>
+                                    <div className="event-card">
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
+                                            size="sm"
                                             location={event.location} />
                                     </div>
                                 )
@@ -105,7 +105,6 @@ class Hacktoberfest extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }
