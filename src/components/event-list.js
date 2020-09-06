@@ -1,5 +1,5 @@
 import React from 'react';
-import EventCard from '../components/event-card';
+import Card from '../components/card';
 import defaultImg from '../images/events-imgs/default.jpg';
 import '../css/event.css';
 
@@ -12,7 +12,7 @@ const EventList = props => {
 
     const eventComponent = eventList && eventList.length > 0 ? eventList.map((event, i) => 
         <div className="event-card-container" key={i}>
-            <EventCard 
+            <Card 
                 image={event.imageUrl ? event.imageUrl : defaultImg} 
                 title={event.title}
                 description=""
