@@ -10,11 +10,11 @@ import tutorialIcon from '../images/icons/tutorial_icon.svg';
 import otherProjectsIcon from '../images/icons/other_projects_icon.svg'
 import helpIcon from '../images/icons/help_icon.svg';
 
-import {guestSpeakers, contributhons} from "../data/hacktoberfest-data";
+import { guestSpeakers, contributhons } from "../data/hacktoberfest-data";
 
 class Hacktoberfest extends React.Component {
     render() {
-        return(
+        return (
             <div className="hacktoberfest-container">
                 <Header />
                 <img className="header-img" src={logo} alt="hacktoberfest" width="100%" />
@@ -29,11 +29,11 @@ class Hacktoberfest extends React.Component {
                         <h3 className="title-text">Guest Speakers and Workshops</h3>
                         <div className="events-list">
                             {
-                                guestSpeakers.map(event => 
+                                guestSpeakers.map(event =>
                                     <div className="event-card">
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
-                                            startTime={event.startTime} endTime={event.endTime} 
+                                            startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
                                             location={event.location} />
                                     </div>
@@ -43,11 +43,11 @@ class Hacktoberfest extends React.Component {
                         <h3 className="title-text">Contributhons</h3>
                         <div className="events-list">
                             {
-                                contributhons.map(event => 
+                                contributhons.map(event =>
                                     <div className="event-card">
                                         <EventCard title={event.title}
                                             description={event.description} date={event.date}
-                                            startTime={event.startTime} endTime={event.endTime} 
+                                            startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
                                             location={event.location} />
                                     </div>
@@ -59,7 +59,7 @@ class Hacktoberfest extends React.Component {
                         <h3 className="title-text vert-centered">Frequently Asked Questions</h3>
                         <div className="faq">
                             <div className="icon-faq-container">
-                                <img src={gettingStartedIcon} className="icon"/>
+                                <img src={gettingStartedIcon} className="icon" alt="icon" />
                                 <div className="faq-content">
                                     <h4 className="faq-question">Getting Started</h4>
                                     <p className="faq-answer">
@@ -70,7 +70,7 @@ class Hacktoberfest extends React.Component {
                             </div>
 
                             <div className="icon-faq-container">
-                                <img src={tutorialIcon} className="icon"/>
+                                <img src={tutorialIcon} className="icon" alt="icon" />
                                 <div className="faq-content">
                                     <h4 className="faq-question">Beginner Friendly Tutorials</h4>
                                     <div className="faq-answer">
@@ -78,13 +78,13 @@ class Hacktoberfest extends React.Component {
                                         <p>Graffiti Wall: <a href="https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI">
                                             https://paper.dropbox.com/doc/GIT-GUD-Graffiti-Wall-Tutorial-O0IedwD2H2kAM7ZT8y5NI</a>
                                         </p>
-                                        <p>Bitmoji: <a  href="https://bitmoji-tutorial.glitch.me/">https://bitmoji-tutorial.glitch.me/</a></p>
+                                        <p>Bitmoji: <a href="https://bitmoji-tutorial.glitch.me/">https://bitmoji-tutorial.glitch.me/</a></p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="icon-faq-container">
-                                <img src={otherProjectsIcon} className="icon" />
+                                <img src={otherProjectsIcon} className="icon" alt="icon" />
                                 <div className="faq-content">
                                     <h4 className="faq-question">Other Open Source Projects</h4>
                                     <p className="faq-answer">
@@ -94,7 +94,7 @@ class Hacktoberfest extends React.Component {
                             </div>
 
                             <div className="icon-faq-container">
-                                <img src={helpIcon} className="icon" />
+                                <img src={helpIcon} className="icon" alt="icon" />
                                 <div className="faq-content">
                                     <h4 className="faq-question">Getting Help</h4>
                                     <p className="faq-answer">
@@ -109,6 +109,6 @@ class Hacktoberfest extends React.Component {
             </div>
         )
     }
-} 
+}
 
 export default Hacktoberfest;

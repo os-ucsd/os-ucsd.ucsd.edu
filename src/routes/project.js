@@ -15,21 +15,25 @@ class Project extends React.Component {
                 <h2 className="firstTitle" style={{ marginTop: "100px", fontSize: "40px", textAlign: "center", padding: "10px" }}>
                     Projects
                 </h2>
+
                 <div className="projects-container">
-                   {
-                       projects_list && projects_list.length > 0 ? projects_list.map((project, indx) =>
+                    {
+                        projects_list && projects_list.length > 0 ? projects_list.map((project, indx) =>
                             <div key={indx} className="project">
                                 <CardWithLink
                                     title={project.title}
                                     description={project.description}
                                     image={project.image}
                                     link={project.link}
-                                    linkText={project.linkText}/>
+                                    linkText={project.linkText} />
                             </div>
                         ) : null
-                   }
+                    }
                 </div>
-                <Footer />
+                <h3 style={{ textAlign: "center" }}>Want to show off your projects? <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact us </a > !!</h3>
+                <div style={{ position: 'fixed', bottom: '0', width: '100%' }}>
+                    <Footer />
+                </div>
             </div >
         )
     }

@@ -7,6 +7,7 @@ import Project from "./routes/project"
 import Event from "./routes/event"
 import Contact from "./routes/contact"
 import Hacktoberfest from "./routes/hacktoberfest"
+import TutorialComponent from "./components/tutorial-component";
 
 function App() {
   return (
@@ -14,10 +15,12 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/tutorials" component={Tutorial} />
+      <Route path="/tutorials/:tutorialID" component={TutorialComponent} />
       <Route exact path="/projects" component={Project} />
       <Route exact path="/events" component={Event} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/hacktoberfest" component={Hacktoberfest} />
+
     </Router>
   );
 }

@@ -1,8 +1,5 @@
 import React from "react"
 import Header from '../components/header'
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import CardMedia from '@material-ui/core/CardMedia';
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Footer from '../components/footer'
@@ -35,12 +32,14 @@ class About extends React.Component {
                         projects, and many other open source related events.
                     </p>
                 </div>
+                <hr style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', height: '1.5px', color: '#333', background: 'black' }}></hr>
 
                 {/* MEET THE BOARD */}
                 <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>Meet the Board</h2>
                 <div className="officer-outer-container">
                     {officers.map(officer => (
                         <Officer
+                            key={officer.name}
                             name={officer.name}
                             image={officer.image}
                             position={officer.position}
@@ -66,7 +65,7 @@ const Officer = props => {
     return (
         <div className="officer-container">
             <a href={link}>
-                <img src={image} className="officer-img"/>
+                <img src={image} className="officer-img" alt="officer" />
             </a>
             <div className="officer-info">
                 <h2>{name}</h2>
@@ -84,59 +83,4 @@ const Officer = props => {
         </div>
     )
 }
-
-/*
-const Officer = props => {
-    function over(e) {
-        e.target.width = 280;
-        e.target.height = 280;
-        e.target.style.opacity = 1.0;
-    }
-    function out(e) {
-        e.target.width = 300;
-        e.target.height = 300;
-        e.target.style.opacity = 0.9;
-    }
-
-    return (
-        <div
-            style={{
-                boxSizing: "border-box",
-                position: "relative",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-                paddingBottom: "5rem",
-                flex: "0 0 33.3333%"
-            }}
-        >
-            <a href={props.link}>
-                <CardMedia
-                    src={props.image}
-                    component="img"
-                    width={300}
-                    height={300}
-                    style={{ opacity: 0.9, objectFit: "cover" }}
-                    onMouseOver={over}
-                    onMouseOut={out}
-                    title="Members"
-                />
-            </a>
-            <Typography variant="h3" component="h2">
-                {props.name}
-            </Typography>
-            <Typography color="textSecondary" variant="h4">{props.position}</Typography>
-            <Typography variant="h5" component="p">
-                {props.fun_fact}
-            </Typography>
-            <a href={"mailto:" + props.email}>
-                <EmailIcon style={{ fill: "gray", width: 30, height: 30 }} />
-            </a>
-            <a href={props.github}>
-                <GitHubIcon style={{ fill: "gray", width: 30, height: 30 }} />
-            </a>
-        </div>
-    );
-};
-*/
-
 export default About
