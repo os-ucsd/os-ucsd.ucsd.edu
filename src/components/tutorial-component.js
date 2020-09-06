@@ -2,7 +2,6 @@ import React from "react";
 import "../css/tutorial.css";
 import tutorialData from "../data/tutorial-data.js";
 import Header from "./header"
-import Footer from "./footer"
 import ReactMarkdown from "react-markdown";
 import Moment from 'react-moment';
 
@@ -63,7 +62,6 @@ class TutorialComponent extends React.Component {
                         <ReactMarkdown source={this.state.terms} />
                     </div>
                 </div>
-                <Footer />
             </div>
         );
     }

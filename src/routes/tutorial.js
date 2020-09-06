@@ -56,6 +56,10 @@ class Tutorial extends React.Component {
                 <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>All Tutorials</h2>
 
                 <div className="tutorialList">{tutorialCards}</div>
+                <h3 style={{ textAlign: "center", marginTop: '80px' }}>
+                    <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact us </a >
+                    if you want to feature your tutorial on our site!
+                </h3>
             </div>
         )
     }

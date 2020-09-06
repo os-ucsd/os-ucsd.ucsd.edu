@@ -1,5 +1,4 @@
 import React from "react"
-import Card from "../components/card";
 import CardWithLink from "../components/card-with-link";
 import projects_list from "../data/project-data";
 

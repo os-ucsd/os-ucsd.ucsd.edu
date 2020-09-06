@@ -10,6 +10,7 @@ import Hacktoberfest from "./routes/hacktoberfest"
 import TutorialComponent from "./components/tutorial-component";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import FormSubmit from "./components/formSubmit"
 
 function App() {
   return (
@@ -24,10 +25,11 @@ function App() {
           <Route exact path="/projects" component={Project} />
           <Route exact path="/events" component={Event} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/formSubmitted" component={FormSubmit} />
           <Route exact path="/hacktoberfest" component={Hacktoberfest} />
         </Router>
       </div>
-      <div style={{position: 'absolute', bottom: 0, width: '100%'}}>
+      <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
         <Footer />
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import EventCard from "../components/event-card";
-import Card from "../components/card";
 
 import '../css/hacktoberfest.css';
 import logo from '../images/hacktoberfest_logo.png';
