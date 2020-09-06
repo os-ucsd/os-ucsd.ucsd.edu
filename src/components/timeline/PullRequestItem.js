@@ -1,5 +1,6 @@
 import React from 'react';
 import './PullRequestItem.css'; 
+import defaultProfilePicture from '../../images/default-profile-picture.png';
 
 class PullRequestItem extends React.Component{
 	render(){
@@ -27,7 +28,6 @@ class PullRequestItem extends React.Component{
 
 		return(
             <div className="item-container">
-            
             {
                (prData.user === "I") ?
                     (   <div className="item-content">
@@ -61,7 +61,7 @@ class PullRequestItem extends React.Component{
                                     imgSide === 'r' ? 
                                         <img className="profile-pic right-pic"
                                             src={"https://github.com/" + prData.user + ".png"} 
-                                            onError={evt => evt.target.src = "https://github.com/blau0123.png"}
+                                            onError={evt => evt.target.src = defaultProfilePicture}
                                             width="30px" height="30px"/> : null
                                 }
                             </div>

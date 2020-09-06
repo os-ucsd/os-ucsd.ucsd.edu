@@ -29,7 +29,7 @@
 /* to add box shadow: 0 0 5px rgba(0, 0, 0, 0.3) */
 .item-content{
     box-shadow: none;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #d4ebf2;
     display: flex;
     flex-direction: column;
