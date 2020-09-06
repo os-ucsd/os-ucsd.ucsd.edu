@@ -8,7 +8,7 @@ import '../css/projects.css';
 class Project extends React.Component {
     render() {
         return (
-            <div style={{ paddingTop: "100px" }}>
+            <div style={{ paddingTop: "100px", paddingBottom: "50px" }}>
                 <h2 className="firstTitle" style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>
                     Projects
                 </h2>

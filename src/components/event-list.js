@@ -14,13 +14,13 @@ const EventList = props => {
         <div className="event-card-container" key={i}>
             <EventCard 
                 image={event.imageUrl ? event.imageUrl : defaultImg} 
-                title={event.name}
+                title={event.title}
                 description=""
                 date={event.date}
                 startTime={event.startTime}
                 endTime={event.endTime}
                 location={event.location}
-                facebookLink={event.facebookUrl}/>
+                facebookLink={event.facebookLink}/>
         </div>
 ) : null
 

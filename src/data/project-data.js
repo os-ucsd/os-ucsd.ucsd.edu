@@ -1,10 +1,12 @@
-import bitmojiImg from "../images/bitmoji-wall-img.png"
+import bitmojiImg from "../images/projects-imgs/bitmoji-wall-img.png";
+import osWebsiteImg from "../images/projects-imgs/os-ucsd-website-img.png";
+import workshopFacilitatorImg from "../images/projects-imgs/workshop-facilitator-img.png";
 
 let projects_list = [
     {
         title: 'Workshop Facilitator',
         owner: 'OS @ UCSD',
-        image: '',
+        image: workshopFacilitatorImg,
         description: 'A tool for student orgs to facilitate workshops',
         link: 'https://github.com/os-ucsd/workshop-facilitator',
         linkText: 'LEARN MORE'
@@ -20,7 +22,7 @@ let projects_list = [
     {
         title: 'Open Source Website',
         owner: 'OS @ UCSD',
-        image: '',
+        image: osWebsiteImg,
         description: 'Official website of OS at UCSD',
         link: 'https://github.com/os-ucsd/os-ucsd.ucsd.edu',
         linkText: 'LEARN MORE'
