@@ -23,7 +23,7 @@ class Footer extends React.Component {
                         <a href="/contact"><MailIcon className="button" style={{ fill: "white", width: 50, height: 50 }} /></a>
                     </li>
                     <li>
-                        <a href="https://discord.gg/v4BrEx"><img className="button" src={discordIcon} height="50px" width="50px"/></a>
+                        <a href="https://discord.gg/v4BrEx"><img className="button" src={discordIcon} height="50px" width="50px" alt="discord"/></a>
                     </li>
                 </ul>
 

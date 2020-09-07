@@ -164,9 +164,9 @@ class Home extends React.Component {
                         <div className="home-icon-container">
                             <img src={planningIcon} className="home-icon" alt="icon" />
                             <div className="text-with-icon">
-                                <strong className="get-involved-title">Join our planning committee</strong>
+                                <strong className="get-involved-title">Want to help out?</strong>
                                 <p className="sub-text">
-                                    Help plan events for us pls
+                                    Fill out this <a href="https://forms.gle/QbddRt8hkV8m9CdCA">form</a> to let us know what you're interested in, and we'll get back to you!
                                 </p>
                             </div>
                         </div>
