@@ -4,16 +4,12 @@ import image from '../images/octocat_flip.png';
 import Emoji from '../components/emoji';
 import Timeline from '../components/timeline/Timeline';
 import getAllPRs from '../components/timeline/getTimelineData';
-<<<<<<< HEAD
-//import osLogo from '../images/os-logo-small.png'
-=======
 
 import calendarIcon from "../images/icons/home-icons/calendar_icon.svg";
 import mailboxIcon from "../images/icons/home-icons/mailbox_icon.svg";
 import projectIcon from "../images/icons/home-icons/project_icon.svg";
 import writingIcon from "../images/icons/home-icons/writing_icon.svg";
 import planningIcon from "../images/icons/home-icons/planning_icon.svg";
->>>>>>> 2fcd5cb6f55f33fe0d7a018b6e6182253bb1aff3
 
 class Home extends React.Component {
     constructor() {
@@ -53,11 +49,7 @@ class Home extends React.Component {
             });
         } else {
             // didn't need to call api, so just set state to stored data
-<<<<<<< HEAD
-            console.log("no new data");
-=======
             console.log("no new data", data.data);
->>>>>>> 2fcd5cb6f55f33fe0d7a018b6e6182253bb1aff3
             this.setState({ prs: data.data });
         }
     }
