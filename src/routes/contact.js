@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from '@material-ui/core/Button';
 import SendIcon from '@material-ui/icons/Send';
 import emailjs from 'emailjs-com';
+import Emoji from '../components/emoji'
 
 class Contact extends React.Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class Contact extends React.Component {
         return (
             <div style={{ paddingTop: "100px" }}>
                 <h2 className="firstTitle" style={{ fontSize: "30px", textAlign: "center", padding: "10px" }}>
-                    Leave us a message and we'll get back to you :)
+                    Leave us a message and we'll get back to you <Emoji symbol="🙂" />
                 </h2>
                 <div style={{ textAlign: 'center' }}>
                     <form onSubmit={this.handleSubmit} style={{ display: 'inline-block' }}>
@@ -62,7 +63,7 @@ class Contact extends React.Component {
                             InputProps={{
                                 style: { fontSize: 15, marginTop: '10px' }
                             }}
-                            style={{ width: '400px', marginBottom: '6px' }}
+                            style={{ width: '500px', marginBottom: '6px', border: 'none' }}
                             value={this.state.name}
                             onChange={this.onNameChange.bind(this)}
                         />
@@ -77,7 +78,7 @@ class Contact extends React.Component {
                             InputProps={{
                                 style: { fontSize: 15, marginTop: '10px' }
                             }}
-                            style={{ width: '400px', marginBottom: '6px' }}
+                            style={{ width: '500px', marginBottom: '6px' }}
                             value={this.state.email}
                             onChange={this.onEmailChange.bind(this)}
                         />
@@ -93,12 +94,13 @@ class Contact extends React.Component {
                             InputProps={{
                                 style: { fontSize: 20, marginTop: '10px' }
                             }}
-                            style={{ width: '400px', marginBottom: '10px' }}
+                            style={{ width: '500px', marginBottom: '10px' }}
                             value={this.state.message}
                             onChange={this.onMessageChange.bind(this)}
                         />
                         <br />
-                        <Button type="submit" variant="contained" endIcon={<SendIcon />} style={{ marginBottom: '45px', fontSize: '15px', backgroundColor: '#314858', color: 'white' }}>
+                        <Button type="submit" variant="contained" endIcon={<SendIcon />}
+                            style={{ marginBottom: '45px', fontSize: '15px', backgroundColor: '#314858', color: 'white', borderRadius: 25 }}>
                             Send
                         </Button>
                     </form>

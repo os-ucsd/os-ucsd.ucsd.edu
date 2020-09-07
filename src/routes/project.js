@@ -1,7 +1,7 @@
 import React from "react"
 import CardWithLink from "../components/card-with-link";
 import projects_list from "../data/project-data";
-
+import Emoji from '../components/emoji'
 import '../css/projects.css';
 
 class Project extends React.Component {
@@ -27,7 +27,10 @@ class Project extends React.Component {
                         ) : null
                     }
                 </div>
-                <h3 style={{ textAlign: "center" }}>Want to show off your projects? <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact us </a > !!</h3>
+                <h3 style={{ textAlign: "center" }}>
+                    Want to show off your projects?
+                    <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}> <Emoji symbol="👉" />Contact us !!<Emoji symbol="👈" /></a >
+                </h3>
             </div >
         )
     }
