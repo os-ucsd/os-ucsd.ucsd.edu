@@ -1,6 +1,7 @@
 import React from "react"
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from './header'
+import Footer from './footer'
+import Emoji from './emoji'
 import { Redirect } from "react-router-dom"
 
 class FormSubmit extends React.Component {
@@ -27,7 +28,9 @@ class FormSubmit extends React.Component {
             return (
                 <div>
                     <Header />
-                    <h3 style={{ marginTop: "200px", textAlign: "center" }}>Thank you for contacting us! We will get back to you as soon as possible. </h3>
+                    <h3 style={{ marginTop: "200px", textAlign: "center" }}>
+                        Thank you for contacting us! We will get back to you as soon as possible. <Emoji symbol="⏳" />
+                    </h3>
                     <div style={{ position: 'fixed', bottom: '0', width: '100%' }}>
                         <Footer />
                     </div>

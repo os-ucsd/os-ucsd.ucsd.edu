@@ -1,5 +1,6 @@
 import React from "react"
 import tutorialData from "../data/tutorial-data.js";
+import Emoji from "../components/emoji"
 import Moment from 'react-moment';
 import "../css/tutorial.css";
 import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
@@ -58,7 +59,7 @@ class Tutorial extends React.Component {
                 <div className="tutorialList">{tutorialCards}</div>
                 <h3 style={{ textAlign: "center", marginTop: '80px' }}>
                     <a href="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact us </a >
-                    if you want to feature your tutorial on our site!
+                    if you want to feature your tutorial on our site! <Emoji symbol="🤙" />
                 </h3>
             </div>
         )

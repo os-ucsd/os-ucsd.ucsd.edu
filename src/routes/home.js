@@ -105,16 +105,16 @@ class Home extends React.Component {
 
             arrayOfStars.push(
                 <div className="star" style={{
-                    top: this.generateRandomNumber(5, 95, true) + "vh", 
+                    top: this.generateRandomNumber(5, 95, true) + "vh",
                     left: this.generateRandomNumber(5, 95, true) + "vw",
-                    animation: num === 0 ? `twinkling ${speed}s infinite` 
+                    animation: num === 0 ? `twinkling ${speed}s infinite`
                         : num === 1 ? `med-twinkling ${speed}s infinite`
-                        : num === 2 ? `slow-twinkling ${speed}s infinite` 
-                        : "none"
+                            : num === 2 ? `slow-twinkling ${speed}s infinite`
+                                : "none"
                 }}></div>
             );
         }
-        
+
         return arrayOfStars;
     }
 
@@ -129,7 +129,7 @@ class Home extends React.Component {
                         arrayOfStars && arrayOfStars.length > 0 ? arrayOfStars.map(star =>
                             star
                         ) : null
-                    }   
+                    }
                     <div className="star" id="star-1"></div>
                     <div className="star" id="star-2"></div>
                     <div className="star" id="star-3"></div>
@@ -146,7 +146,9 @@ class Home extends React.Component {
                     <div className="image-header-container">
                         <div className="header-text">
                             <h1 id="header-title">Open Source @ UCSD</h1>
-                            <h3 id="header-desc">{/*<img src={osLogo} className="oslogo" alt="oslogo" style={{ width: '90px' }} /> */}Join our open source community  </h3>
+                            <h3 id="header-desc">{/*<img src={osLogo} className="oslogo" alt="oslogo" style={{ width: '90px' }} /> */}
+                                Join our open source community <Emoji symbol="🚀" />
+                            </h3>
                         </div>
                         <img className="img" id='cat' src={image} alt="octocat" width="45%" />
                     </div>
@@ -214,7 +216,7 @@ class Home extends React.Component {
                         <h1 className="section-title">Our live GitHub contributions</h1>
                         <p className="sub-text">Check out some of the most recent contributions to our GitHub!</p>
                         {
-                            this.state.prs && this.state.prs.length > 0 ? 
+                            this.state.prs && this.state.prs.length > 0 ?
                                 <Timeline prs={this.state.prs} />
                                 : <h3>Loading...</h3>
                         }
