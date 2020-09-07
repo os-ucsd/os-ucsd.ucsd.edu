@@ -91,10 +91,45 @@ class Home extends React.Component {
         return prsAndYours;
     }
 
+    generateRandomNumber = (start, end, isInt) => {
+        // Generates a random number between 5 and 95 for height and width for stars
+        return isInt ? Math.floor((Math.random() * end) + start) : (Math.random() * end) + start;
+    }
+
+    generateRandomStars = numStars => {
+        const arrayOfStars = [];
+        for (let i = 0; i < numStars; i++) {
+            // Use num and speed to determine random twinkling speed
+            const num = this.generateRandomNumber(0, 3, true);
+            const speed = this.generateRandomNumber(1, 2, false);
+
+            arrayOfStars.push(
+                <div className="star" style={{
+                    top: this.generateRandomNumber(5, 95, true) + "vh", 
+                    left: this.generateRandomNumber(5, 95, true) + "vw",
+                    animation: num === 0 ? `twinkling ${speed}s infinite` 
+                        : num === 1 ? `med-twinkling ${speed}s infinite`
+                        : num === 2 ? `slow-twinkling ${speed}s infinite` 
+                        : "none"
+                }}></div>
+            );
+        }
+        
+        return arrayOfStars;
+    }
+
     render() {
+        const arrayOfStars = this.generateRandomStars(8);
+
         return (
             <div>
                 <header id="header">
+                    {
+                        // Generate stars in random locations with random twinkling speed
+                        arrayOfStars && arrayOfStars.length > 0 ? arrayOfStars.map(star =>
+                            star
+                        ) : null
+                    }   
                     <div className="star" id="star-1"></div>
                     <div className="star" id="star-2"></div>
                     <div className="star" id="star-3"></div>
@@ -104,6 +139,9 @@ class Home extends React.Component {
                     <div className="star" id="star-7"></div>
                     <div className="star" id="star-8"></div>
                     <div className="star" id="star-9"></div>
+                    <div className="star" id="star-10"></div>
+                    <div className="star" id="star-11"></div>
+                    <div className="star" id="star-12"></div>
 
                     <div className="image-header-container">
                         <div className="header-text">
