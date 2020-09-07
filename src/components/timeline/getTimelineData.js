@@ -1,5 +1,8 @@
+<<<<<<< HEAD:src/components/timeline/getTimelineData.js
 // const fetch = require('node-fetch');
 
+=======
+>>>>>>> 2fcd5cb6f55f33fe0d7a018b6e6182253bb1aff3:src/timeline/getTimelineData.js
 /*
  * Gets the name of the user who made a given PR and the repo they made the PR to
  */
@@ -34,14 +37,6 @@ function getListOfReposAndPRs(allPRs){
 		let dateA = new Date(a.merged_time);
 		let dateB = new Date(b.merged_time);
 		return dateB - dateA;	
-		/*
-		if (dateA - dateB === 0){	
-			let timeA = Date.parse('1/01/2019 ' + a.time);
-			let timeB = Date.parse('1/01/2019 ' + b.time);	
-			return timeB - timeA;
-		}
-		return new Date(b.date) - new Date(a.date);
-	*/
 	});
 	
 	return listOfPRs;

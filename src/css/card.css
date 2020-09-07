@@ -44,6 +44,7 @@
     /* Add curve to top of image to match curve of entire card */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    object-fit: cover;
 }
 
 .facebook-event-link {

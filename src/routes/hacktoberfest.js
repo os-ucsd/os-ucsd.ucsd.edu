@@ -3,10 +3,10 @@ import EventCard from "../components/event-card";
 
 import '../css/hacktoberfest.css';
 import logo from '../images/hacktoberfest_logo.png';
-import gettingStartedIcon from '../images/icons/getting_started_icon.svg';
-import tutorialIcon from '../images/icons/tutorial_icon.svg';
-import otherProjectsIcon from '../images/icons/other_projects_icon.svg'
-import helpIcon from '../images/icons/help_icon.svg';
+import gettingStartedIcon from '../images/icons/faq-icons/getting_started_icon.svg';
+import tutorialIcon from '../images/icons/faq-icons/tutorial_icon.svg';
+import otherProjectsIcon from '../images/icons/faq-icons/other_projects_icon.svg'
+import helpIcon from '../images/icons/faq-icons/help_icon.svg';
 
 import { guestSpeakers, contributhons } from "../data/hacktoberfest-data";
 
