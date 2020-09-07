@@ -4,7 +4,12 @@ import image from '../images/octocat_flip.png';
 import Emoji from '../components/emoji';
 import Timeline from '../components/timeline/Timeline';
 import getAllPRs from '../components/timeline/getTimelineData';
-//import osLogo from '../images/os-logo-small.png'
+
+import calendarIcon from "../images/icons/home-icons/calendar_icon.svg";
+import mailboxIcon from "../images/icons/home-icons/mailbox_icon.svg";
+import projectIcon from "../images/icons/home-icons/project_icon.svg";
+import writingIcon from "../images/icons/home-icons/writing_icon.svg";
+import planningIcon from "../images/icons/home-icons/planning_icon.svg";
 
 class Home extends React.Component {
     constructor() {
@@ -118,19 +123,55 @@ class Home extends React.Component {
                             use the program for any purpose; there are no licensing fees or other restrictions on the software.
                         </p>
                         <h1 className="section-title">How to get involved? <Emoji symbol="😍" /></h1>
-                        <p className="sub-text">
-                            <strong><Emoji symbol="📅" />  Weekly meetings: </strong>
-                            Weekly meetings for Winter 2020 are Tuesdays 5PM-7PM in Student Services Center 300 (check our Events page for the most accurate
-                            time and location). Everyone is welcomed!
-                        </p>
-                        <p className="sub-text"><strong><Emoji symbol="📫" /> Stay up to date: </strong> Subscribe to our mailing list to get notified of our upcoming events. Stay up-to-date with us by joining our Facebook group and Discord channel!</p>
-                        <p className="sub-text"><strong><Emoji symbol="💻" /> Join our projects team: </strong> Contribute to existing Open Source @ UCSD projects or come talk to us if you're interested in leading a project for Open Source!</p>
-                        <p className="sub-text">
-                            <strong><Emoji symbol="😎" /> Join our technical team: </strong>
-                            Technical writing is an awesome way to share knowledge and strengthen your understanding of a topic. Whether it's writing a tutorial on a
-                            technical topic you're passionate about, developing a workshop series on an open source technology, or giving a lightning talk, we would love to have your help!
-                        </p>
+                        <div className="home-icon-container">
+                            <img src={calendarIcon} className="home-icon" alt="icon" />
+                            <div className="text-with-icon">
+                                <strong className="get-involved-title">Weekly meetings</strong>
+                                <p className="sub-text">
+                                    Weekly meetings for Winter 2020 are Tuesdays 5PM-7PM in Student Services Center 300 (check our Events page for the most accurate
+                                    time and location). Everyone is welcomed!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="home-icon-container">
+                            <img src={mailboxIcon} className="home-icon" alt="icon" />
+                            <div className="text-with-icon">
+                                <strong className="get-involved-title">Stay up to date</strong>
+                                <p className="sub-text">
+                                    Subscribe to our mailing list to get notified of our upcoming events. Stay up-to-date with us by joining our Facebook group and Discord channel!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="home-icon-container">
+                            <img src={projectIcon} className="home-icon" alt="icon" />
+                            <div className="text-with-icon">
+                                <strong className="get-involved-title">Join our projects team</strong>
+                                <p className="sub-text">
+                                    Contribute to existing Open Source @ UCSD projects or come talk to us if you're interested in leading a project for Open Source!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="home-icon-container">
+                            <img src={writingIcon} className="home-icon" alt="icon" />
+                            <div className="text-with-icon">
+                                <strong className="get-involved-title">Join our technical team</strong>
+                                <p className="sub-text">
+                                    Technical writing is an awesome way to share knowledge and strengthen your understanding of a topic. Whether it's writing a tutorial on a
+                                    technical topic you're passionate about, developing a workshop series on an open source technology, or giving a lightning talk, we would love to have your help!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="home-icon-container">
+                            <img src={planningIcon} className="home-icon" alt="icon" />
+                            <div className="text-with-icon">
+                                <strong className="get-involved-title">Join our planning committee</strong>
+                                <p className="sub-text">
+                                    Help plan events for us pls
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
                     <div id="home-timeline-container">
                         <h1 className="section-title">Our live GitHub contributions</h1>
                         <p className="sub-text">Check out some of the most recent contributions to our GitHub!</p>

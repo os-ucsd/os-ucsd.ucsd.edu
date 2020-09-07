@@ -3,6 +3,7 @@ import '../css/footer.css'
 import FacebookIcon from "@material-ui/icons/Facebook";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MailIcon from "@material-ui/icons/Mail";
+import discordIcon from "../images/icons/discord_icon_white.svg";
 
 class Footer extends React.Component {
     render() {
@@ -20,6 +21,9 @@ class Footer extends React.Component {
                     </li>
                     <li>
                         <a href="/contact"><MailIcon className="button" style={{ fill: "white", width: 50, height: 50 }} /></a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/v4BrEx"><img className="button" src={discordIcon} height="50px" width="50px"/></a>
                     </li>
                 </ul>
 
