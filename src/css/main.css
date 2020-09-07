@@ -232,8 +232,8 @@
 }
 
 #star-12{
-    top: 75vh;
-    left: 60vw;
+    top: 16vh;
+    left: 5vw;
      /* twinkling animation */
      animation: med-twinkling 1.8s infinite;
 }
