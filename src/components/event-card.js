@@ -62,11 +62,11 @@ class EventCard extends React.Component {
                         <div className="date-time-contaner event-desc" style={{
                             fontSize: descFontSize + "px"
                         }}>
-                            <p className="event-text">When: {date} {startTime} - {endTime}</p>
+                            <p className="event-text"><strong>When: </strong>{date} {startTime} - {endTime}</p>
                         </div>
                         <p className="event-text event-desc" style={{
                             fontSize: descFontSize + "px"
-                        }}>Where: {location}</p>
+                        }}><strong>Where: </strong>{location}</p>
                     </div>
                 </a>
             </div>
