@@ -1,9 +1,10 @@
 import React from 'react';
 import './PullRequestItem.css'; 
+import defaultProfilePicture from '../../images/default-profile-picture.png';
 
 class PullRequestItem extends React.Component{
 	render(){
-        const {prData} = this.props;
+        const {prData, imgSide, cardSide} = this.props;
         let allPRTimes = []
         // if the pr is 'your contribution', don't do this part
         if (prData.user !== "I"){
@@ -27,7 +28,6 @@ class PullRequestItem extends React.Component{
 
 		return(
             <div className="item-container">
-            
             {
                (prData.user === "I") ?
                     (   <div className="item-content">
@@ -38,15 +38,35 @@ class PullRequestItem extends React.Component{
                         </div>
                     ) 
                 :
-                    (   <div className="item-content">
+                    (   <div className={cardSide === "r" ? "item-content right-card" : "item-content left-card"}>
                             {  
                                 allPRTimes.map((prTime, i) => 
                                     <p key={i}>{prTime}</p>
                                 )
                             }
-                            <a href={prData.repoURL} className="pr-link">
-                                <p>{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
-                            </a>
+                            <div className="user-container">
+                                {
+                                    // If the card is on the right, show profile picture on the leftg
+                                    imgSide === 'l' ? 
+                                        <img className="profile-pic left-pic"
+                                            src={"https://github.com/" + prData.user + ".png"} 
+                                            onError={evt => evt.target.src = "https://github.com/blau0123.png"}
+                                            width="30px" height="30px"
+                                            alt={prData.user}/> : null
+                                }
+                                <a href={prData.repoURL} className="pr-link">
+                                    <p>{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
+                                </a>
+                                {
+                                    // If the card is on the left, show profile picture on the right
+                                    imgSide === 'r' ? 
+                                        <img className="profile-pic right-pic"
+                                            src={"https://github.com/" + prData.user + ".png"} 
+                                            onError={evt => evt.target.src = defaultProfilePicture}
+                                            width="30px" height="30px"
+                                            alt={prData.user}/> : null
+                                }
+                            </div>
                         </div>
                     )
             }

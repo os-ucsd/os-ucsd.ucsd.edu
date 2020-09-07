@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
-
 /*
  * Gets the name of the user who made a given PR and the repo they made the PR to
  */
@@ -34,14 +32,6 @@ function getListOfReposAndPRs(allPRs){
 		let dateA = new Date(a.merged_time);
 		let dateB = new Date(b.merged_time);
 		return dateB - dateA;	
-		/*
-		if (dateA - dateB === 0){	
-			let timeA = Date.parse('1/01/2019 ' + a.time);
-			let timeB = Date.parse('1/01/2019 ' + b.time);	
-			return timeB - timeA;
-		}
-		return new Date(b.date) - new Date(a.date);
-	*/
 	});
 	
 	return listOfPRs;
@@ -81,7 +71,7 @@ async function getRepos(){
 	}
 }
 
-async function getAllPRs(){
+function getAllPRs(){
 	return getRepos();
 }
 

@@ -1,10 +1,10 @@
 const officers = [
     {
         name: "Vivian Lee",
-        image: "https://content.fortune.com/wp-content/uploads/2019/01/boo.jpg",
+        image: "https://i.pinimg.com/originals/32/93/2a/32932abc2400f4f6a4e67eecd14e9b9e.jpg",
         position: "President",
         link: "https://viviaann.github.io/",
-        fun_fact: "",
+        fun_fact: '"😅"',
         email: "vyl003@ucsd.edu",
         github: "https://github.com/Viviaann"
     },
@@ -24,17 +24,17 @@ const officers = [
             "https://media1.popsugar-assets.com/files/thumbor/28sxsg_1c6gWBJiukX1lPDDh3lA/183x0:2851x2668/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/01/27/146/n/44701584/9f72ae5c5e2f9d0c49ead0.00496867_/i/types-golden-retrievers.jpg",
         position: "Project Chair",
         link: "",
-        fun_fact: '"It\'s everyday bro, do you give up at night?"',
+        fun_fact: '"I plead the fifth"',
         email: "bwlau@ucsd.edu",
         github: "https://github.com/blau0123"
     },
     {
         name: "Brandon Foey",
         image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ8rqkKNbpDl5IBaEyusyduVYkO1svjKie9Q&usqp=CAU",
+            "https://thespinoff.co.nz/wp-content/uploads/2019/03/GettyImages-139720130.jpg",
         position: "Workshop Chair",
         link: "",
-        fun_fact: "",
+        fun_fact: '"xD"',
         email: "bfoey@ucsd.edu",
         github: "https://github.com/BrandonFoey"
     },
