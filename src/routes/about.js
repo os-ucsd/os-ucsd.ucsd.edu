@@ -38,7 +38,6 @@ class About extends React.Component {
                         <Officer
                             key={officer.name}
                             name={officer.name}
-                            major={officer.major}
                             image={officer.image}
                             position={officer.position}
                             fun_fact={officer.fun_fact}
@@ -55,7 +54,7 @@ class About extends React.Component {
 
 const Officer = props => {
     const {
-        name, major, image, position, fun_fact, link,
+        name, image, position, fun_fact, link,
         email, github
     } = props;
 
@@ -67,7 +66,6 @@ const Officer = props => {
             <div className="officer-info">
                 <h2>{name}</h2>
                 <h4>{position}</h4>
-                <h4>{major}</h4>
                 <p>{fun_fact}</p>
                 <div className="officer-contact">
                     <a className="officer-link-icon" href={"mailto:" + email}>
