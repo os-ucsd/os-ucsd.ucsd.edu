@@ -1,3 +1,6 @@
+import baoBitmoji from "../images/bao.PNG"
+import brendanBitmoji from "../images/brendan.PNG"
+import chauBitmoji from "../images/chau.PNG"
 const officers = [
     {
         name: "Vivian Lee",
@@ -12,8 +15,7 @@ const officers = [
     {
         name: "Chau Vu",
         major: "Computer Engineering",
-        image:
-            "https://i.pinimg.com/originals/8a/7b/5e/8a7b5e0d1b237ca10e006f0c986b5fe6.jpg",
+        image: chauBitmoji,
         link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
         position: "Vice President",
         fun_fact: '"I\'m a fun-sized, super nice guy"',
@@ -23,8 +25,7 @@ const officers = [
     {
         name: "Brendan Lau",
         major: "Computer Engineering",
-        image:
-            "https://media1.popsugar-assets.com/files/thumbor/28sxsg_1c6gWBJiukX1lPDDh3lA/183x0:2851x2668/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/01/27/146/n/44701584/9f72ae5c5e2f9d0c49ead0.00496867_/i/types-golden-retrievers.jpg",
+        image: brendanBitmoji,
         position: "Project Chair",
         link: "",
         fun_fact: '"I plead the fifth"',
@@ -45,7 +46,7 @@ const officers = [
     {
         name: "Bao Hoang",
         major: "Computer Engineering",
-        image: "https://png.pngitem.com/pimgs/s/45-452635_cute-cat-transparent-image-cute-cat-png-png.png",
+        image: baoBitmoji,
         position: "Event Chair",
         link: "",
         fun_fact: '"I have a good personality"',
