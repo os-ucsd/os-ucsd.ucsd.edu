@@ -1,11 +1,13 @@
 import baoBitmoji from "../images/bao.PNG"
 import brendanBitmoji from "../images/brendan.PNG"
 import chauBitmoji from "../images/chau.PNG"
+import vivianBitmoji from "../images/vivian.PNG"
+
 const officers = [
     {
         name: "Vivian Lee",
         major: "Computer Engineering",
-        image: "https://i.pinimg.com/originals/32/93/2a/32932abc2400f4f6a4e67eecd14e9b9e.jpg",
+        image: vivianBitmoji,
         position: "President",
         link: "https://viviaann.github.io/",
         fun_fact: '"😅"',
