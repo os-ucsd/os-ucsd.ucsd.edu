@@ -245,3 +245,7 @@
         font-size: 65px;
     }
 }
+
+.styleText fieldset{
+    border-radius: 35px;
+}
