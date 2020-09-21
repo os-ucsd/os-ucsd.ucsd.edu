@@ -1,6 +1,7 @@
 import React from "react"
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
+//import libmoji from 'libmoji'
 
 import officers from '../data/officer-data';
 
@@ -13,6 +14,7 @@ class About extends React.Component {
     }
 
     render() {
+
         return (
             <div style={{ paddingTop: "100px" }}>
                 {/* WHAT WE DO */}
@@ -57,6 +59,42 @@ const Officer = props => {
         name, image, position, fun_fact, link,
         email, github
     } = props;
+    /*
+    const data = {
+        "name": "Chau",
+        "gender": "female",
+        "traits": {
+            "brow": "768",
+            "cheek_details": "-1",
+            "eyelash": "-1",
+            "eye_details": "939",
+            "face_lines": "-1",
+            "glasses": "954",
+            "hair": "1260",
+            "hat": "1178",
+            "mouth": "1055",
+            "nose": "1032",
+            "blush_tone": "-1",
+            "brow_tone": "0",
+            "eyeshadow_tone": "-1",
+            "hair_tone": "2039326",
+            "lipstick_tone": "-1",
+            "pupil_tone": "5977116",
+            "skin_tone": "9655597",
+            "body": "7",
+            "breast": "3",
+            "face_proportion": "2"
+        },
+        "outfit": "1017915"
+    }
+
+    const { gender, traits, outfit } = data;
+    const bitmojiImage = libmoji.buildPreviewUrl("body", 4,
+        gender === 'female' ? 2 : 1,
+        4, 0,
+        Object.keys(traits).map(k => [k, traits[k]]),
+        outfit
+    );*/
 
     return (
         <div className="officer-container">
