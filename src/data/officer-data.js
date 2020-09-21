@@ -2,6 +2,8 @@ import baoBitmoji from "../images/bao.PNG"
 import brendanBitmoji from "../images/brendan.PNG"
 import chauBitmoji from "../images/chau.PNG"
 import vivianBitmoji from "../images/vivian.PNG"
+import miaBitmoji from '../images/mia.PNG'
+import brandonBitmoji from '../images/brandon.PNG'
 
 const officers = [
     {
@@ -37,8 +39,7 @@ const officers = [
     {
         name: "Brandon Foey",
         major: "Computer Engineering",
-        image:
-            "https://thespinoff.co.nz/wp-content/uploads/2019/03/GettyImages-139720130.jpg",
+        image: brandonBitmoji,
         position: "Workshop Chair",
         link: "",
         fun_fact: '"xD"',
@@ -58,7 +59,7 @@ const officers = [
     {
         name: "Mia Lucio",
         major: "Computer Engineering",
-        image: "https://mfiles.alphacoders.com/605/605158.jpg",
+        image: miaBitmoji,
         position: "Publicity Chair",
         link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
         fun_fact: '"Imma fight you"',

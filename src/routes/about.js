@@ -59,33 +59,33 @@ const Officer = props => {
         name, image, position, fun_fact, link,
         email, github
     } = props;
-
-    /*const data = {
-        "name": "Bao",
-        "gender": "male",
+    /*
+    const data = {
+        "name": "Chau",
+        "gender": "female",
         "traits": {
-            "beard": "-1",
-            "brow": "755",
+            "brow": "768",
             "cheek_details": "-1",
+            "eyelash": "-1",
             "eye_details": "939",
-            "face_lines": "942",
+            "face_lines": "-1",
             "glasses": "954",
-            "hair": "813",
-            "hat": "1081",
-            "mouth": "763",
-            "nose": "761",
-            "beard_tone": "3875595",
+            "hair": "1260",
+            "hat": "1178",
+            "mouth": "1055",
+            "nose": "1032",
             "blush_tone": "-1",
             "brow_tone": "0",
             "eyeshadow_tone": "-1",
-            "hair_tone": "2566954",
+            "hair_tone": "2039326",
             "lipstick_tone": "-1",
             "pupil_tone": "5977116",
-            "skin_tone": "15838344",
-            "body": "2",
-            "face_proportion": "3"
+            "skin_tone": "9655597",
+            "body": "7",
+            "breast": "3",
+            "face_proportion": "2"
         },
-        "outfit": "1018481"
+        "outfit": "1017915"
     }
 
     const { gender, traits, outfit } = data;
