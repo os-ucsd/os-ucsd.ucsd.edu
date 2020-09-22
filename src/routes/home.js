@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/main.css";
-import image from '../images/octocat_flip.png';
+import image from '../images/planet2.png';
 import Emoji from '../components/emoji';
 import Timeline from '../components/timeline/Timeline';
 import getAllPRs from '../components/timeline/getTimelineData';
