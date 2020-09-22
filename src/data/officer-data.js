@@ -1,9 +1,9 @@
-import baoBitmoji from "../images/bao.PNG"
-import brendanBitmoji from "../images/brendan.PNG"
-import chauBitmoji from "../images/chau.PNG"
-import vivianBitmoji from "../images/vivian.PNG"
-import miaBitmoji from '../images/mia.PNG'
-import brandonBitmoji from '../images/brandon.PNG'
+import baoBitmoji from "../images/bitmoji/bao.PNG"
+import brendanBitmoji from "../images/bitmoji/brendan.PNG"
+import chauBitmoji from "../images/bitmoji/chau.PNG"
+import vivianBitmoji from "../images/bitmoji/vivian.PNG"
+import miaBitmoji from '../images/bitmoji/mia.PNG'
+import brandonBitmoji from '../images/bitmoji/brandon.PNG'
 
 const officers = [
     {
