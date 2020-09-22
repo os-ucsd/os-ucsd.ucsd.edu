@@ -1,8 +1,15 @@
+import baoBitmoji from "../images/bitmoji/bao.PNG"
+import brendanBitmoji from "../images/bitmoji/brendan.PNG"
+import chauBitmoji from "../images/bitmoji/chau.PNG"
+import vivianBitmoji from "../images/bitmoji/vivian.PNG"
+import miaBitmoji from '../images/bitmoji/mia.PNG'
+import brandonBitmoji from '../images/bitmoji/brandon.PNG'
+
 const officers = [
     {
         name: "Vivian Lee",
         major: "Computer Engineering",
-        image: "https://i.pinimg.com/originals/32/93/2a/32932abc2400f4f6a4e67eecd14e9b9e.jpg",
+        image: vivianBitmoji,
         position: "President",
         link: "https://viviaann.github.io/",
         fun_fact: '"😅"',
@@ -12,8 +19,7 @@ const officers = [
     {
         name: "Chau Vu",
         major: "Computer Engineering",
-        image:
-            "https://i.pinimg.com/originals/8a/7b/5e/8a7b5e0d1b237ca10e006f0c986b5fe6.jpg",
+        image: chauBitmoji,
         link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
         position: "Vice President",
         fun_fact: '"I\'m a fun-sized, super nice guy"',
@@ -23,8 +29,7 @@ const officers = [
     {
         name: "Brendan Lau",
         major: "Computer Engineering",
-        image:
-            "https://media1.popsugar-assets.com/files/thumbor/28sxsg_1c6gWBJiukX1lPDDh3lA/183x0:2851x2668/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/01/27/146/n/44701584/9f72ae5c5e2f9d0c49ead0.00496867_/i/types-golden-retrievers.jpg",
+        image: brendanBitmoji,
         position: "Project Chair",
         link: "",
         fun_fact: '"I plead the fifth"',
@@ -34,8 +39,7 @@ const officers = [
     {
         name: "Brandon Foey",
         major: "Computer Engineering",
-        image:
-            "https://thespinoff.co.nz/wp-content/uploads/2019/03/GettyImages-139720130.jpg",
+        image: brandonBitmoji,
         position: "Workshop Chair",
         link: "",
         fun_fact: '"xD"',
@@ -45,7 +49,7 @@ const officers = [
     {
         name: "Bao Hoang",
         major: "Computer Engineering",
-        image: "https://png.pngitem.com/pimgs/s/45-452635_cute-cat-transparent-image-cute-cat-png-png.png",
+        image: baoBitmoji,
         position: "Event Chair",
         link: "",
         fun_fact: '"I have a good personality"',
@@ -55,7 +59,7 @@ const officers = [
     {
         name: "Mia Lucio",
         major: "Computer Engineering",
-        image: "https://mfiles.alphacoders.com/605/605158.jpg",
+        image: miaBitmoji,
         position: "Publicity Chair",
         link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
         fun_fact: '"Imma fight you"',
