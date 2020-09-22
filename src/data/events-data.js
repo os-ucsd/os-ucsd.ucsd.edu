@@ -25,12 +25,33 @@ import mongoImage from '../images/events-imgs/mongo.jpeg';
 import nodeImage from '../images/events-imgs/nodejs.png';
 import reactImage from '../images/events-imgs/react.jpg';
 import mernImage from '../images/events-imgs/mern.jpeg';
+import HacktoberfestImage from '../images/events-imgs/hacktoberfestKickoff.png'
 
 let events = [
     {
+        title: 'Fall 2020 GBM',
+        description: "Kickoff Hacktoberfest with OS @ UCSD",
+        date: "10/2/20",
+        startTime: "6:30pm",
+        endTime: "7:30pm",
+        facebookLink: "",
+        imageUrl: HacktoberfestImage,
+        location: "TBD"
+    },
+    {
+        title: 'The Path to Open Source Contributions',
+        description: "",
+        date: "10/6/20",
+        startTime: "5:00pm",
+        endTime: "6:00pm",
+        facebookLink: "",
+        imageUrl: null,
+        location: "TBD"
+    },
+    {
         title: "Open Source Project: Virtual Reef",
         description: "Speaker: Owen Pierce",
-        date: "10/6/20",
+        date: "10/13/20",
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
@@ -46,7 +67,7 @@ let events = [
         location: "TBD"
     },
     {
-        title: 'Hacktoberfest Kickoff',
+        title: 'Hacktoberfest Kickoff 2019',
         date: '10/3/19',
         startTime: '7:00pm',
         endTime: '8:30pm',
