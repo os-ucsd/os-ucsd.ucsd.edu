@@ -28,8 +28,9 @@
 }
 
 .officer-contact {
-    position: absolute;
+    position: absolute;   
     bottom: 0;
+    /*margin-top: 5px;*/
 }
 
 .officer-link-icon {

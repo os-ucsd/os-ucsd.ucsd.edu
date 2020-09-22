@@ -1,8 +1,18 @@
 const guestSpeakers = [
     {
+        title: 'The Path to Open Source Contributions',
+        description: "Speaker: Brian Dougie",
+        date: "10/6/20",
+        startTime: "5:00pm",
+        endTime: "6:00pm",
+        facebookLink: "",
+        imageUrl: null,
+        location: "TBD"
+    },
+    {
         title: "Open Source Project: Virtual Reef",
         description: "Speaker: Owen Pierce",
-        date: "10/6/20",
+        date: "10/13/20",
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
@@ -16,7 +26,7 @@ const guestSpeakers = [
         endTime: "7:30pm",
         facebookLink: "",
         location: "TBD"
-    }
+    },
 ];
 
 const contributhons = [
@@ -58,4 +68,4 @@ const contributhons = [
     }
 ];
 
-export {guestSpeakers, contributhons}
+export { guestSpeakers, contributhons }

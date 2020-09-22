@@ -104,6 +104,7 @@ const Officer = props => {
             <div className="officer-info">
                 <h2>{name}</h2>
                 <h4>{position}</h4>
+                {/*<h5>4th year Computer Engineering</h5>*/}
                 <p>{fun_fact}</p>
                 <div className="officer-contact">
                     <a className="officer-link-icon" href={"mailto:" + email}>
