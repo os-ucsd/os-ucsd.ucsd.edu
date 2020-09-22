@@ -8,8 +8,7 @@
 
 Here is our Bitmoji wall: https://os-bitmoji.glitch.me/
 
-Here is the github repository: https://github.com/os-
-ucsd/bitmoji
+Here is the github repository: https://github.com/os-ucsd/bitmoji
 
 Each every individual bitmoji you see here is its own open
 source contribution - or, a commit. A contributor added their
