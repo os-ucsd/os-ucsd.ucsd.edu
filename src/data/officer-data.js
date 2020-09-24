@@ -20,9 +20,9 @@ const officers = [
         name: "Chau Vu",
         major: "Computer Engineering",
         image: chauBitmoji,
-        link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
+        link: "https://linkedin.com/in/cqvu",
         position: "Vice President",
-        fun_fact: '"I\'m a fun-sized, super nice guy"',
+        fun_fact: '"In economy, still got leg room"',
         email: "chv004@ucsd.edu",
         github: "https://github.com/cqvu"
     },
@@ -61,7 +61,7 @@ const officers = [
         major: "Computer Engineering",
         image: miaBitmoji,
         position: "Publicity Chair",
-        link: "https://github.com/cqvu/os-ucsd.ucsd.edu",
+        link: "",
         fun_fact: '"Imma fight you"',
         email: "mlucio@ucsd.edu",
         github: "https://github.com/mlucio123"
