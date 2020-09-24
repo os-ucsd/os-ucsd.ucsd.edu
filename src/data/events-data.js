@@ -67,6 +67,15 @@ let events = [
         location: "TBD"
     },
     {
+        title: "Intro to DataViz with Observable Notebooks",
+        description: "Speaker: Alex Garcia",
+        date: "10/27/20",
+        startTime: "6:30pm",
+        endTime: "7:30pm",
+        facebookLink: "",
+        location: "TBD"
+    },
+    {
         title: 'Hacktoberfest Kickoff 2019',
         date: '10/3/19',
         startTime: '7:00pm',
