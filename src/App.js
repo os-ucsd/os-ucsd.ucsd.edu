@@ -15,7 +15,7 @@ import FormSubmit from "./components/formSubmit"
 function App() {
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
-      {window.location.protocol !== 'https' ? window.location.href = window.location.href.replace("http://", "https://") : null}
+      {/*window.location.protocol !== 'https' ? window.location.href = window.location.href.replace("http://", "https://") : null*/}
       <Header />
       <div style={{ paddingBottom: '8rem' }}>
         <Router>
