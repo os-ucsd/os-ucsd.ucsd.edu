@@ -6,7 +6,7 @@ import virtualReef from '../images/events-imgs/virtualReefEvent.png'
 const guestSpeakers = [
     {
         title: 'The Path to Open Source Contributions',
-        description: "Speaker: Brian Dougie",
+        description: "Speaker: Brian Douglas",
         date: "10/6/20",
         startTime: "5:00pm",
         endTime: "6:00pm",
