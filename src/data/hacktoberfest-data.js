@@ -1,3 +1,8 @@
+import brianImage from '../images/events-imgs/BrianDouglasEvent.png'
+import erinImage from '../images/events-imgs/ErinGlassEvent.png'
+import alexImage from '../images/events-imgs/AlexEvent.png'
+import virtualReef from '../images/events-imgs/virtualReefEvent.png'
+
 const guestSpeakers = [
     {
         title: 'The Path to Open Source Contributions',
@@ -6,7 +11,7 @@ const guestSpeakers = [
         startTime: "5:00pm",
         endTime: "6:00pm",
         facebookLink: "",
-        imageUrl: null,
+        imageUrl: brianImage,
         location: "TBD"
     },
     {
@@ -16,6 +21,7 @@ const guestSpeakers = [
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: virtualReef,
         location: "TBD"
     },
     {
@@ -25,6 +31,7 @@ const guestSpeakers = [
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: erinImage,
         location: "TBD"
     },
     {
@@ -34,6 +41,7 @@ const guestSpeakers = [
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: alexImage,
         location: "TBD"
     },
 ];

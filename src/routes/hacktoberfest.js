@@ -3,6 +3,7 @@ import EventCard from "../components/event-card";
 
 import '../css/hacktoberfest.css';
 import logo from '../images/hacktoberfest_logo.png';
+import defaultImg from '../images/events-imgs/default.jpg';
 import registerIcon from '../images/icons/faq-icons/register_icon.svg';
 import gettingStartedIcon from '../images/icons/faq-icons/getting_started_icon.svg';
 import tutorialIcon from '../images/icons/faq-icons/tutorial_icon.svg';
@@ -20,9 +21,9 @@ class Hacktoberfest extends React.Component {
                     <h2 className="title-text">What is Hacktoberfest? <span role="img" aria-label="ghost">👻</span></h2>
                     <div className="desc-text vert-centered-text">
                         <p>Hacktoberfest is a month long virtual event to celebrate the open source community and encourage open source contributions by Digital Ocean and DEV.
-                           During the month of October 2020, you can earn a limited Hacktoberfest 2020 edition t-shirt by making 4 pull requests to any repository (make sure to follow the contribution guidelines for the pull request to count). This is a great opportunity to explore the world of Open Source!
+                        During the month of October 2020, you can earn a limited Hacktoberfest 2020 edition t-shirt by making 4 pull requests to any repository (make sure to follow the contribution guidelines for the pull request to count). This is a great opportunity to explore the world of Open Source!
                         </p>
-                        <p>Read more about Hacktoberfest 2020 here <span role="img" aria-label="point-right">👉</span> <a href="https://hacktoberfest.digitalocean.com/">https://hacktoberfest.digitalocean.com/</a></p>                 
+                        <p>Read more about Hacktoberfest 2020 here <span role="img" aria-label="point-right">👉</span> <a href="https://hacktoberfest.digitalocean.com/">https://hacktoberfest.digitalocean.com/</a></p>
                     </div>
                 </div>
                 <div className="body-content">
@@ -34,6 +35,7 @@ class Hacktoberfest extends React.Component {
                                 guestSpeakers.map(event =>
                                     <div className="event-card">
                                         <EventCard title={event.title}
+                                            image={event.imageUrl ? event.imageUrl : defaultImg}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
@@ -49,6 +51,7 @@ class Hacktoberfest extends React.Component {
                                 contributathons.map(event =>
                                     <div className="event-card">
                                         <EventCard title={event.title}
+                                            image={event.imageUrl ? event.imageUrl : defaultImg}
                                             description={event.description} date={event.date}
                                             startTime={event.startTime} endTime={event.endTime}
                                             facebookLink={event.facebookLink}
@@ -94,7 +97,7 @@ class Hacktoberfest extends React.Component {
                                             http://os-ucsd.ucsd.edu/tutorial/Graffiti-Wal</a>
                                         </p>
                                         <p>Bitmoji: <a href="http://os-ucsd.ucsd.edu/tutorial/Bitmoji">http://os-ucsd.ucsd.edu/tutorial/Bitmoji</a></p>
-                                    
+
                                         <p>Be sure to come to our workshops and contributathons for more resources and help!</p>
 
                                     </div>
@@ -117,7 +120,7 @@ class Hacktoberfest extends React.Component {
                                         <p><a href="https://gauger.io/contrib/">Contrib</a></p>
                                         <p><a href="http://issuehub.io/">IssueHub</a></p>
 
-                                        <p>You can earn even MORE swags through other companies participating in Hacktoberfest! 
+                                        <p>You can earn even MORE swags through other companies participating in Hacktoberfest!
                                             Checkout the <a href="https://github.com/crweiner/hacktoberfest-swag-list">Hacktoberfest Swag List</a></p>
 
                                         <p>The fun doesn’t stop at 4 pull requests, keep making contributions and getting involved in the open source community <span role="img" aria-label="smiley">😃</span></p>

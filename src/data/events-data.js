@@ -26,15 +26,19 @@ import nodeImage from '../images/events-imgs/nodejs.png';
 import reactImage from '../images/events-imgs/react.jpg';
 import mernImage from '../images/events-imgs/mern.jpeg';
 import HacktoberfestImage from '../images/events-imgs/hacktoberfestKickoff.png'
+import brianImage from '../images/events-imgs/BrianDouglasEvent.png'
+import erinImage from '../images/events-imgs/ErinGlassEvent.png'
+import alexImage from '../images/events-imgs/AlexEvent.png'
+import virtualReef from '../images/events-imgs/virtualReefEvent.png'
 
 let events = [
     {
-        title: 'Fall 2020 GBM',
+        title: 'Fall Quarter GBM / HacktoberFest Kickoff',
         description: "Kickoff Hacktoberfest with OS @ UCSD",
         date: "10/2/20",
-        startTime: "6:30pm",
-        endTime: "7:30pm",
-        facebookLink: "",
+        startTime: "5:00pm",
+        endTime: "5:45pm",
+        facebookLink: "https://www.facebook.com/events/672407073677504/",
         imageUrl: HacktoberfestImage,
         location: "TBD"
     },
@@ -45,7 +49,7 @@ let events = [
         startTime: "5:00pm",
         endTime: "6:00pm",
         facebookLink: "",
-        imageUrl: null,
+        imageUrl: brianImage,
         location: "TBD"
     },
     {
@@ -55,6 +59,7 @@ let events = [
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: virtualReef,
         location: "TBD"
     },
     {
@@ -64,6 +69,7 @@ let events = [
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: erinImage,
         location: "TBD"
     },
     {
@@ -73,6 +79,7 @@ let events = [
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: alexImage,
         location: "TBD"
     },
     {
