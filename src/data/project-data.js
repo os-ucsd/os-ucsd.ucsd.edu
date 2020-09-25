@@ -1,6 +1,7 @@
 import bitmojiImg from "../images/projects-imgs/bitmoji-wall-img.png";
 import osWebsiteImg from "../images/projects-imgs/os-ucsd-website-img.png";
 import workshopFacilitatorImg from "../images/projects-imgs/workshop-facilitator-img.png";
+import osMarketplace from "../images/projects-imgs/os-marketplace.PNG"
 
 let projects_list = [
     {
@@ -14,7 +15,7 @@ let projects_list = [
     {
         title: 'OS Marketplace',
         owner: 'OS @ UCSD',
-        image: '',
+        image: osMarketplace,
         description: 'React App that displayed your projects on GitHub',
         link: 'https://github.com/os-ucsd/os-MarketPlace',
         linkText: 'LEARN MORE'
