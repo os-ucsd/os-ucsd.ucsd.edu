@@ -234,10 +234,35 @@
      animation: med-twinkling 1.8s infinite;
 }
 
+#star-10{
+    top: 10vh;
+    left: 10vw;
+     /* twinkling animation */
+     animation: twinkling 1.8s infinite;
+}
+
+#star-11{
+    top: 5vh;
+    left: 12vw;
+     /* twinkling animation */
+     animation: med-twinkling 1.8s infinite;
+}
+
+#star-12{
+    top: 16vh;
+    left: 5vw;
+     /* twinkling animation */
+     animation: med-twinkling 1.8s infinite;
+}
+
 
 @media only screen and (min-width: 1500px) {
     /* with large enough screen size, increase font size of header*/
     #header-title{
         font-size: 65px;
     }
+}
+
+.styleText fieldset{
+    border-radius: 35px;
 }

@@ -25,15 +25,41 @@ import mongoImage from '../images/events-imgs/mongo.jpeg';
 import nodeImage from '../images/events-imgs/nodejs.png';
 import reactImage from '../images/events-imgs/react.jpg';
 import mernImage from '../images/events-imgs/mern.jpeg';
+import HacktoberfestImage from '../images/events-imgs/hacktoberfestKickoff.png'
+import brianImage from '../images/events-imgs/BrianDouglasEvent.png'
+import erinImage from '../images/events-imgs/ErinGlassEvent.png'
+import alexImage from '../images/events-imgs/AlexEvent.png'
+import virtualReef from '../images/events-imgs/virtualReefEvent.png'
 
 let events = [
     {
+        title: 'Fall Quarter GBM / HacktoberFest Kickoff',
+        description: "Kickoff Hacktoberfest with OS @ UCSD",
+        date: "10/2/20",
+        startTime: "5:00pm",
+        endTime: "5:45pm",
+        facebookLink: "https://www.facebook.com/events/672407073677504/",
+        imageUrl: HacktoberfestImage,
+        location: "TBD"
+    },
+    {
+        title: 'The Path to Open Source Contributions',
+        description: "",
+        date: "10/6/20",
+        startTime: "5:00pm",
+        endTime: "6:00pm",
+        facebookLink: "",
+        imageUrl: brianImage,
+        location: "TBD"
+    },
+    {
         title: "Open Source Project: Virtual Reef",
         description: "Speaker: Owen Pierce",
-        date: "10/6/20",
+        date: "10/13/20",
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: virtualReef,
         location: "TBD"
     },
     {
@@ -43,10 +69,21 @@ let events = [
         startTime: "6:30pm",
         endTime: "7:30pm",
         facebookLink: "",
+        imageUrl: erinImage,
         location: "TBD"
     },
     {
-        title: 'Hacktoberfest Kickoff',
+        title: "Intro to DataViz with Observable Notebooks",
+        description: "Speaker: Alex Garcia",
+        date: "10/27/20",
+        startTime: "6:30pm",
+        endTime: "7:30pm",
+        facebookLink: "",
+        imageUrl: alexImage,
+        location: "TBD"
+    },
+    {
+        title: 'Hacktoberfest Kickoff 2019',
         date: '10/3/19',
         startTime: '7:00pm',
         endTime: '8:30pm',

@@ -28,6 +28,11 @@
 .title-text {
     font-size: 25px;
     padding-top: 20px;
+    font-weight: bold;
+}
+
+.subtitle-text {
+    font-size: 20px;
 }
 
 .desc-text {

@@ -79,4 +79,4 @@
 
 Breakpoints: https://www.npmjs.com/package/react-breakpoints
 
-Website: http://os-ucsd.ucsd.edu/
+Website: https://os-ucsd.ucsd.edu/
