@@ -85,4 +85,25 @@
     .desc-text{
         font-size: 15px ;
     }
+    .hacktoberfest-header-text {
+        padding: 10px 10px;
+        width: 100%;
+    }
+    .icon{
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+    }
+    .faq-question {
+        font-weight: bold;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+    .faq-answer {
+        font-size: 14px;
+    }
+    .faq {
+        width: 60%;
+    }
+    
 }

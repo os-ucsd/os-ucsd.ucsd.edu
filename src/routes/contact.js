@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import SendIcon from '@material-ui/icons/Send';
 import emailjs from 'emailjs-com';
 import Emoji from '../components/emoji'
-import '../css/main.css'
+import '../css/contact.css'
 
 class Contact extends React.Component {
     constructor(props) {
@@ -48,75 +48,177 @@ class Contact extends React.Component {
 
     render() {
         return (
-            <div style={{ paddingTop: "100px" }}>
-                <h2 className="firstTitle" style={{ fontSize: "30px", textAlign: "center", padding: "10px" }}>
+            <div className="contact-container">
+                <h2 className="firstTitle">
                     Leave us a message and we'll get back to you <Emoji symbol="🙂" />
                 </h2>
-                <div style={{ textAlign: 'center' }}>
-                    <form onSubmit={this.handleSubmit} style={{ display: 'inline-block' }}>
-                        <div className="styleText">
-                            <TextField
-                                id="name"
-                                label={<Typography variant="h4" component="h4"> Name </Typography>}
-                                placeholder='Name'
-                                rows={1}
-                                variant="outlined"
-                                required
-                                InputProps={{
-                                    style: { fontSize: 15, marginTop: '10px' }
-                                }}
-                                style={{ width: '500px', marginBottom: '6px' }}
-                                value={this.state.name}
-                                onChange={this.onNameChange.bind(this)}
+                {window.innerWidth > 500 ? <QuestionForm
+                    handleSubmit={this.handleSubmit}
+                    name={this.state.name}
+                    email={this.state.email}
+                    message={this.state.message}
+                    onNameChange={this.onNameChange}
+                    onEmailChange={this.onEmailChange}
+                    onMessageChange={this.onMessageChange}
+                    parent={this}
+                /> :
+                    <QuestionFormSmall
+                        handleSubmit={this.handleSubmit}
+                        name={this.state.name}
+                        email={this.state.email}
+                        message={this.state.message}
+                        onNameChange={this.onNameChange}
+                        onEmailChange={this.onEmailChange}
+                        onMessageChange={this.onMessageChange}
+                        parent={this}
+                    />
+                }
 
-                            />
-
-                            <br />
-                            <TextField
-                                id="email"
-                                label={<Typography variant="h4" component="h4"> Email </Typography>}
-                                placeholder='Email'
-                                rows={1}
-                                variant="outlined"
-                                required
-                                InputProps={{
-                                    style: { fontSize: 15, marginTop: '10px' }
-                                }}
-                                style={{ width: '500px', marginBottom: '6px' }}
-                                value={this.state.email}
-                                onChange={this.onEmailChange.bind(this)}
-                                className="styleText"
-
-                            />
-                            <br />
-                            <TextField
-                                id="message"
-                                label={<Typography variant="h4" component="h4"> Message </Typography>}
-                                placeholder='Message'
-                                multiline
-                                rows={10}
-                                variant="outlined"
-                                required
-                                InputProps={{
-                                    style: { fontSize: 20, marginTop: '10px' }
-                                }}
-                                style={{ width: '500px', marginBottom: '10px' }}
-                                value={this.state.message}
-                                onChange={this.onMessageChange.bind(this)}
-                                className="styleText"
-
-                            />
-                            <br />
-                        </div>
-                        <Button type="submit" variant="contained" endIcon={<SendIcon />}
-                            style={{ marginBottom: '45px', fontSize: '15px', backgroundColor: '#314858', color: 'white', borderRadius: 25 }}>
-                            Send
-                        </Button>
-                    </form>
-                </div>
             </div >
         )
     }
+}
+
+/* Display form on phones */
+const QuestionFormSmall = props => {
+    const { handleSubmit, name, email, message, onNameChange,
+        onMessageChange, onEmailChange, parent
+    } = props
+    return (
+        <div style={{ textAlign: 'center' }}>
+            <form onSubmit={handleSubmit}>
+                <div className="styleText">
+                    <TextField
+                        id="name"
+                        label={<Typography variant="body1" component="p"> Name </Typography>}
+                        placeholder='Name'
+                        rows={1}
+                        variant="outlined"
+                        required
+                        InputProps={{
+                            style: { fontSize: 15, marginTop: '10px' }
+                        }}
+                        style={{ width: '300px', marginBottom: '6px' }}
+                        value={name}
+                        onChange={onNameChange.bind(parent)}
+
+                    />
+
+                    <br />
+                    <TextField
+                        id="email"
+                        label={<Typography variant="body1" component="p"> Email </Typography>}
+                        placeholder='Email'
+                        rows={1}
+                        variant="outlined"
+                        required
+                        InputProps={{
+                            style: { fontSize: 15, marginTop: '10px' }
+                        }}
+                        style={{ width: '300px', marginBottom: '6px' }}
+                        value={email}
+                        onChange={onEmailChange.bind(parent)}
+                        className="styleText"
+
+                    />
+                    <br />
+                    <TextField
+                        id="message"
+                        label={<Typography variant="body1" component="p"> Message </Typography>}
+                        placeholder='Message'
+                        multiline
+                        rows={10}
+                        variant="outlined"
+                        required
+                        InputProps={{
+                            style: { fontSize: 15, marginTop: '10px' }
+                        }}
+                        style={{ width: '300px', marginBottom: '10px' }}
+                        value={message}
+                        onChange={onMessageChange.bind(parent)}
+                        className="styleText"
+
+                    />
+                    <br />
+                </div>
+                <Button type="submit" variant="contained" endIcon={<SendIcon />}
+                    style={{ marginBottom: '45px', fontSize: '15px', backgroundColor: '#314858', color: 'white', borderRadius: 25 }}>
+                    Send
+                </Button>
+            </form>
+        </div>
+    )
+}
+
+/* Display form on browsers */
+const QuestionForm = props => {
+    const { handleSubmit, name, email, message, onNameChange,
+        onMessageChange, onEmailChange, parent
+    } = props
+    return (
+        <div style={{ textAlign: 'center' }}>
+            <form onSubmit={handleSubmit}>
+                <div className="styleText">
+                    <TextField
+                        id="name"
+                        label={<Typography variant="h4" component="h4"> Name </Typography>}
+                        placeholder='Name'
+                        rows={1}
+                        variant="outlined"
+                        required
+                        InputProps={{
+                            style: { fontSize: 15, marginTop: '10px' }
+                        }}
+                        style={{ width: '500px', marginBottom: '6px' }}
+                        value={name}
+                        onChange={onNameChange.bind(parent)}
+
+                    />
+
+                    <br />
+                    <TextField
+                        id="email"
+                        label={<Typography variant="h4" component="h4"> Email </Typography>}
+                        placeholder='Email'
+                        rows={1}
+                        variant="outlined"
+                        required
+                        InputProps={{
+                            style: { fontSize: 15, marginTop: '10px' }
+                        }}
+                        style={{ width: '500px', marginBottom: '6px' }}
+                        value={email}
+                        onChange={onEmailChange.bind(parent)}
+                        className="styleText"
+
+                    />
+                    <br />
+                    <TextField
+                        id="message"
+                        label={<Typography variant="h4" component="h4"> Message </Typography>}
+                        placeholder='Message'
+                        multiline
+                        rows={10}
+                        variant="outlined"
+                        required
+                        InputProps={{
+                            style: { fontSize: 20, marginTop: '10px' }
+                        }}
+                        style={{ width: '500px', marginBottom: '10px' }}
+                        value={message}
+                        onChange={onMessageChange.bind(parent)}
+                        className="styleText"
+
+                    />
+                    <br />
+                </div>
+                <Button type="submit" variant="contained" endIcon={<SendIcon />}
+                    style={{ marginBottom: '45px', fontSize: '15px', backgroundColor: '#314858', color: 'white', borderRadius: 25 }}>
+                    Send
+                </Button>
+            </form>
+        </div>
+    )
 }
 
 export default Contact

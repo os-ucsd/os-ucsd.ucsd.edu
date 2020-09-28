@@ -3,24 +3,6 @@ import '../css/header.css'
 import { slide as Menu } from 'react-burger-menu'
 
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            width: 0
-        }
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    }
-
-    componentDidMount() {
-        console.log(window.innerWidth)
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-        console.log(this.state.width)
-    }
-
-    updateWindowDimensions() {
-        this.setState({ width: window.innerWidth });
-    }
 
     render() {
         let buttonStyles = {
@@ -83,7 +65,6 @@ class Header extends React.Component {
                         <a className="menu-item" href="/hacktoberfest">Hacktoberfest</a>
                         <a className="menu-item" href="/contact">Contact</a>
                     </Menu >
-                    {console.log(this.state.width)}
                 </div>
 
             )
