@@ -28,7 +28,6 @@ class Home extends React.Component {
      */
     componentDidMount() {
         //localStorage.clear();
-        /*
         const data = JSON.parse(localStorage.getItem("prs"));
         // if haven't gotten data before or if data is old, then retrieve the data again (every 10 min)
         if (!data || (data && new Date() - new Date(data.lastRetrieved) > 10 * 60 * 1000)) {
@@ -52,7 +51,7 @@ class Home extends React.Component {
             // didn't need to call api, so just set state to stored data
             console.log("no new data", data.data);
             this.setState({ prs: data.data });
-        }*/
+        }
     }
 
     /*

@@ -12,7 +12,7 @@ class About extends React.Component {
     render() {
 
         return (
-            <div style={{ paddingTop: "100px" }}>
+            <div className="aboutContainer" >
                 {/* WHAT WE DO */}
                 <div>
                     <h2 className="whatwedo" >What We Do</h2>
