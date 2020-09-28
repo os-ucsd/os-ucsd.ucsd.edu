@@ -8,22 +8,15 @@ import officers from '../data/officer-data';
 import '../css/about.css';
 
 class About extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
 
     render() {
 
         return (
-            <div style={{ paddingTop: "100px" }}>
+            <div className="aboutContainer" >
                 {/* WHAT WE DO */}
                 <div>
-                    <h2 style={{ fontSize: "40px", textAlign: "center", padding: "10px" }}>What We Do</h2>
-                    <p style={{
-                        marginTop: "10px", fontSize: "20px", display: 'block', overflow: 'auto',
-                        width: "900px", maxWidth: '900px', margin: '0 auto'
-                    }}>
+                    <h2 className="whatwedo" >What We Do</h2>
+                    <p className="intro" >
                         Open Source @ UCSD aims to build an all-inclusive open source
                         community at UC San Diego. We strive to promote open source by
                         engaging students through educational workshops, collaborative

@@ -32,8 +32,8 @@ class Hacktoberfest extends React.Component {
                         <h3 className="subtitle-text">Guest Speakers and Workshops</h3>
                         <div className="events-list">
                             {
-                                guestSpeakers.map(event =>
-                                    <div className="event-card">
+                                guestSpeakers.map((event, i) =>
+                                    <div className="event-card" key={i}>
                                         <EventCard title={event.title}
                                             image={event.imageUrl ? event.imageUrl : defaultImg}
                                             description={event.description} date={event.date}
@@ -49,7 +49,7 @@ class Hacktoberfest extends React.Component {
                         <div className="events-list">
                             {
                                 contributathons.map(event =>
-                                    <div className="event-card">
+                                    <div className="event-card" key={event.title}>
                                         <EventCard title={event.title}
                                             image={event.imageUrl ? event.imageUrl : defaultImg}
                                             description={event.description} date={event.date}
