@@ -28,6 +28,7 @@
     animation: mover 1s infinite alternate;
     float: right;
     z-index: 1;
+    width: 45%
     
 }
 
@@ -248,4 +249,11 @@
 
 .styleText fieldset{
     border-radius: 35px;
+}
+
+@media screen and (max-width: 400px){
+    .img {
+        width: 0;
+        display: none;
+    }
 }

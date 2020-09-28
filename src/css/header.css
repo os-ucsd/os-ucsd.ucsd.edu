@@ -39,3 +39,22 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+.menu-item{
+    color:  white;
+    text-decoration: none;
+}
+
+.menu-bar{
+    border: none;
+    background-color: #314858;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+
+@media screen and (max-width: 500px){
+    #nav-container{        
+        display: none;
+    }
+}
