@@ -9,6 +9,11 @@
     font-weight: bold;
 }
 
+.contribute-message{
+    font-size: 0.9rem;
+    color: blue;
+}
+
 .user-container {
     display: flex;
     flex-direction: row;
@@ -16,6 +21,8 @@
 
 .profile-pic {
     border-radius: 5px;
+    width: 30px;
+    height: 30px;
 }
 
 .right-pic {
@@ -53,4 +60,23 @@
 
 .item-content:hover{
     transform: scale(0.95);
+}
+
+@media screen and (max-width: 500px){
+    .item-content{
+        max-width: 100px;
+        padding: 5px 20px;
+    }
+    .contribute-message{
+        font-size: 0.7rem;
+    }
+    .right-pic{
+        margin: 5px;
+    }
+    .left-pic{
+        margin: 5px;
+    }
+    .description{
+        font-size: 9px;
+    }
 }

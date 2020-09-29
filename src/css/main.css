@@ -250,9 +250,8 @@
     border-radius: 35px;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 700px){
     .img {
-        width: 0;
         display: none;
     }
     #header{

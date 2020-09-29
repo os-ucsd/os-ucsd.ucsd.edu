@@ -104,7 +104,7 @@ class Home extends React.Component {
             const speed = this.generateRandomNumber(1, 2, false);
 
             arrayOfStars.push(
-                <div className="star" style={{
+                <div key={i} className="star" style={{
                     top: this.generateRandomNumber(5, 95, true) + "vh",
                     left: this.generateRandomNumber(5, 95, true) + "vw",
                     animation: num === 0 ? `twinkling ${speed}s infinite`
