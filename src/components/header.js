@@ -3,6 +3,25 @@ import '../css/header.css'
 import { slide as Menu } from 'react-burger-menu'
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            width: 0
+        }
+
+        this.updateWindowSize = this.updateWindowSize.bind(this);
+
+    }
+
+    componentDidMount() {
+        //this.setState({ width: window.innerWidth })
+        window.addEventListener('resize', this.updateWindowSize);
+
+    }
+
+    updateWindowSize() {
+        this.setState({ width: window.innerWidth })
+    }
 
     render() {
         let buttonStyles = {
@@ -36,9 +55,10 @@ class Header extends React.Component {
                 background: '#314858'
             }
         }
-        if (window.innerWidth > 500) {
+        if (this.state.width > 700) {
             return (
                 <div className="header">
+                    {console.log(this.state.width)}
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
                     <nav id="nav-container">
                         <ul id="nav-list">
