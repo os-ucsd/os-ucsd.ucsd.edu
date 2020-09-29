@@ -31,9 +31,9 @@ class PullRequestItem extends React.Component {
                 {
                     (prData.user === "I") ?
                         (<div className="item-content">
-                            <p className="description">NOW</p>
+                            <p>NOW</p>
                             <a href="https://github.com/os-ucsd" className="pr-link">
-                                <p className="contribute-message">Make this your contribution!</p>
+                                <p style={{ fontSize: "0.9rem", color: "blue" }}>Make this your contribution!</p>
                             </a>
                         </div>
                         )
@@ -41,7 +41,7 @@ class PullRequestItem extends React.Component {
                         (<div className={cardSide === "r" ? "item-content right-card" : "item-content left-card"}>
                             {
                                 allPRTimes.map((prTime, i) =>
-                                    <p className="description" key={i}>{prTime}</p>
+                                    <p key={i}>{prTime}</p>
                                 )
                             }
                             <div className="user-container">
@@ -51,10 +51,11 @@ class PullRequestItem extends React.Component {
                                         <img className="profile-pic left-pic"
                                             src={"https://github.com/" + prData.user + ".png"}
                                             onError={evt => evt.target.src = "https://github.com/blau0123.png"}
+                                            width="30px" height="30px"
                                             alt={prData.user} /> : null
                                 }
                                 <a href={prData.repoURL} className="pr-link">
-                                    <p className="description">{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
+                                    <p>{prData.user + " made a pull request to " + prData.repoName + "!"}</p>
                                 </a>
                                 {
                                     // If the card is on the left, show profile picture on the right
@@ -62,6 +63,7 @@ class PullRequestItem extends React.Component {
                                         <img className="profile-pic right-pic"
                                             src={"https://github.com/" + prData.user + ".png"}
                                             onError={evt => evt.target.src = defaultProfilePicture}
+                                            width="30px" height="30px"
                                             alt={prData.user} /> : null
                                 }
                             </div>

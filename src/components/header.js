@@ -55,7 +55,7 @@ class Header extends React.Component {
                 background: '#314858'
             }
         }
-        if (this.state.width > 700) {
+        if (window.innerWidth > 700) {
             return (
                 <div className="header">
                     {console.log(this.state.width)}
