@@ -89,3 +89,7 @@
     right: auto;
     left: -37px;
 }
+
+@media screen and (max-width: 400px){
+
+}

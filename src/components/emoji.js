@@ -1,4 +1,5 @@
 import React from 'react';
+import "../css/emoji.css"
 
 const Emoji = props => (
     <span
@@ -6,7 +7,6 @@ const Emoji = props => (
         role="img"
         aria-label={props.label ? props.label : ""}
         aria-hidden={props.label ? "false" : "true"}
-        style={{fontSize: '50px'}}
     >
         {props.symbol}
     </span>

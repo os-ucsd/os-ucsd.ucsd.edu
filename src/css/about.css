@@ -1,3 +1,22 @@
+.aboutContainer{
+    padding-top: 100px
+}
+
+.intro{
+    margin-top: 10px;
+    font-size: 20px; 
+    display: block; 
+    overflow: auto;
+    width: 900px;
+    margin: 0 auto
+}
+
+.whatwedo{
+    font-size: 40px; 
+    text-align: center;
+    padding: 10px
+}
+
 .officer-outer-container {
     display: flex;
     flex-direction: row;
@@ -30,9 +49,34 @@
 .officer-contact {
     position: absolute;   
     bottom: 0;
-    /*margin-top: 5px;*/
 }
 
 .officer-link-icon {
     margin: 5px;
+}
+
+@media screen and (max-width: 500px){
+    .aboutContainer{
+        padding-top: 10px;
+    }
+    .intro{
+        margin-top: 10px;
+        font-size: 15px; 
+        display: block; 
+        overflow: auto;
+        width: 70%;
+        margin: 0 auto
+    }
+    .officer-container {
+        height: 450px;
+        position: relative;
+        margin: 20px;
+    }
+    
+    .officer-img {
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        transition: all .2s ease-in-out;
+    }
 }

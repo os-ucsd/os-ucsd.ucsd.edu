@@ -20,5 +20,13 @@ footer{
 .button{
     margin: 0px 8px;
     padding-top: 15px;
+    fill: white;
+} 
+
+@media screen and (max-width: 500px){
+    footer{
+        height: 4rem;
+        padding-top: 0;
+    }
 }
 
