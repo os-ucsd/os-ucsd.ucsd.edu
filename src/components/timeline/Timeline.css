@@ -1,9 +1,5 @@
 .total-timeline-container{
-<<<<<<< HEAD:src/components/timeline/Timeline.css
-    height:100vh;
-=======
     height:150vh;
->>>>>>> 2fcd5cb6f55f33fe0d7a018b6e6182253bb1aff3:src/timeline/Timeline.css
     /*width: 50%;*/
     overflow: auto;
     overflow-x: hidden;
