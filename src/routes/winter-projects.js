@@ -1,14 +1,14 @@
 import React from 'react';
 
 import '../css/winter-projects.css';
-import logo from '../images/winter_projects_header.png';
+import winterProjectsHeader from '../images/winter_projects_header.png';
 import scheduleImg from '../images/winter_projects_schedule.png';
 
 class WinterProjects extends React.Component {
     render() {
         return (
             <div className="wip-container">
-                <img className="wp-header-img" src={logo} alt="Winter Projects" width="100%" />
+                <img className="wp-header-img" src={winterProjectsHeader} alt="Winter Projects" width="100%" />
                 <div className="wp-header-text vert-centered">
                     <h2 className="wp-title-text">What are winter projects? <span role="img" aria-label="snowflake">⛄</span></h2>
                     <div className="wp-desc-text vert-centered-text">
