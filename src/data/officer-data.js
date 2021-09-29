@@ -7,14 +7,14 @@ import brandonBitmoji from '../images/bitmoji/brandon.PNG'
 
 const officers = [
     {
-        name: "Vivian Lee",
-        major: "Computer Engineering",
+        name: "Vishvesh Bhat",
+        major: "Computer Science",
         image: vivianBitmoji,
         position: "President",
-        link: "https://viviaann.github.io/",
+        link: "https://vishvesh8.github.io/",
         fun_fact: '"😅"',
-        email: "vyl003@ucsd.edu",
-        github: "https://github.com/Viviaann"
+        email: "vbhat@ucsd.edu",
+        github: "https://github.com/Vishvesh8"
     },
     {
         name: "Chau Vu",
